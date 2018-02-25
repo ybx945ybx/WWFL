@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/bg"
+              android:orientation="vertical">
+
+    <com.haitao.view.HtHeadView
+        android:id="@+id/hv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:center_text="@string/my_rebate" />
+
+    <com.haitao.view.refresh.XListView
+        android:id="@+id/lvList"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:divider="@null"
+        android:dividerHeight="0dp"
+        android:scrollbars="none" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/greyE6E6E6" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- 提现 -->
+        <TextView
+            android:id="@+id/tv_withdraw"
+            style="@style/BottomNavItem"
+            android:drawableTop="@mipmap/ic_withdraw_account_manage"
+            android:text="@string/withdraw" />
+
+        <!-- 筛选 -->
+        <TextView
+            android:id="@+id/tv_filter"
+            style="@style/BottomNavItem"
+            android:drawableTop="@mipmap/ic_filter_withdraw"
+            android:text="@string/filter" />
+
+        <!-- 返利说明 -->
+        <TextView
+            android:id="@+id/tv_rebate_desc"
+            style="@style/BottomNavItem"
+            android:drawableTop="@mipmap/ic_rebate_declare"
+            android:text="@string/rebate_desc" />
+
+    </LinearLayout>
+
+</LinearLayout>

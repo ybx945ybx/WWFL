@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white">
+    <!-- 顶部 -->
+    <com.haitao.view.HtHeadView
+        android:id="@+id/head_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:center_text="55海淘"
+        app:divider_visible="false"
+        app:right_text="@string/reigster"
+        app:right_text_color="@color/orangeFF804D">
+
+    </com.haitao.view.HtHeadView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/llyt_thrid_login"
+        android:layout_below="@+id/head_view"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_register_tips"
+            android:layout_width="match_parent"
+            android:layout_height="24dp"
+            android:background="@color/orange1AFF804D"
+            android:gravity="center"
+            android:text="@string/quick_login_tips"
+            android:textColor="@color/orangeFF804D"
+            android:textSize="12sp">
+
+        </TextView>
+
+        <!--国家和手机号-->
+        <com.haitao.view.HtEditTextView
+            android:id="@+id/et_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="32dp"
+            android:layout_marginTop="24dp"
+            android:inputType="phone"
+            android:maxLines="1"
+            app:edit_hit_text="@string/please_input_telephone"
+            app:left_right_image="@mipmap/ic_down_black_triangle"
+            app:left_txt="+86"/>
+
+        <!--验证码-->
+        <com.haitao.view.HtEditTextView
+            android:id="@+id/et_code"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="32dp"
+            android:layout_marginTop="16dp"
+            android:inputType="number"
+            android:maxLines="1"
+            app:edit_hit_text="@string/please_input_verify_code"
+            app:left_txt="@string/verify_code"
+            app:right_txt="@string/get_verify_code"
+            app:right_txt_color="@color/gray_orange_selector"
+            app:right_txt_enabled="false"/>
+
+        <!--快读登录按钮-->
+        <TextView
+            android:id="@+id/tv_quick_login"
+            style="@style/SubmitButtonOrange"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="32dp"
+            android:layout_marginTop="24dp"
+            android:enabled="false"
+            android:text="@string/quick_login"/>
+
+        <!--试用账号密码登录-->
+        <TextView
+            android:id="@+id/tv_account_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp"
+            android:paddingBottom="16dp"
+            android:text="@string/use_account"
+            android:textColor="@color/orangeFF804D"
+            android:textSize="14sp"/>
+    </LinearLayout>
+
+    <!-- 底部第三方登录 -->
+    <LinearLayout
+        android:id="@+id/llyt_thrid_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="32dp">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@+id/iv_left"
+                android:background="@color/greyE6E6E6"/>
+
+            <ImageView
+                android:id="@+id/iv_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_toLeftOf="@+id/tv_other"
+                android:src="@mipmap/ic_prismatic"/>
+
+            <TextView
+                android:id="@+id/tv_other"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:paddingLeft="@dimen/px15"
+                android:paddingRight="@dimen/px15"
+                android:text="@string/login_third"
+                android:textColor="@color/middle_grey2"
+                android:textSize="@dimen/text_size_small"/>
+
+            <ImageView
+                android:id="@+id/iv_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_toRightOf="@+id/tv_other"
+                android:src="@mipmap/ic_prismatic"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/iv_right"
+                android:background="@color/greyE6E6E6"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="40dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="32dp"
+            android:layout_marginTop="24dp"
+            android:orientation="horizontal">
+
+            <!--QQ登录-->
+            <ImageView
+                android:id="@+id/ivQQ"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@mipmap/ic_new_qq"/>
+
+            <!--微博登录-->
+            <ImageView
+                android:id="@+id/ivSina"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@mipmap/ic_new_weibo"/>
+
+            <!--微信登录-->
+            <ImageView
+                android:id="@+id/ivWx"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@mipmap/ic_new_wxi"/>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

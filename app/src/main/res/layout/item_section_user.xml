@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:fresco="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:id="@+id/ll_section_name"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+    <View
+        android:id="@+id/view_divider"
+        style="@style/Divider_BG" />
+
+    <TextView
+        android:id="@+id/tv_section_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingBottom="2dp"
+        android:paddingLeft="16dp"
+        android:paddingTop="2dp"
+        android:textColor="@color/grey78787D"
+        android:textSize="@dimen/text_size_medium"
+        tools:ignore="RtlHardcoded,RtlSymmetry"
+        tools:text="标题" />
+
+</LinearLayout>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/white"
+              android:gravity="center"
+              android:orientation="vertical">
+
+    <!-- 取消按钮 -->
+    <ImageButton
+        android:id="@+id/ib_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginRight="4dp"
+        android:layout_marginTop="4dp"
+        android:background="@null"
+        android:padding="@dimen/px12"
+        android:src="@mipmap/ic_close" />
+
+    <!-- 标题 -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/dlg_sign_title"
+        android:textColor="@color/grey1D1D1F"
+        android:textSize="@dimen/text_size_largelarge"
+        android:textStyle="bold" />
+
+    <!-- 副标题 -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/dlg_sign_subtitle"
+        android:textColor="@color/grey78787D"
+        android:textSize="@dimen/text_size_medium" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:src="@mipmap/ic_dlg_sign" />
+
+    <!-- 查看我的金币 -->
+    <!--<TextView
+        android:id="@+id/tv_check_coin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/px48"
+        android:gravity="center"
+        android:padding="@dimen/px10"
+        android:text="@string/check_my_gold_coin"
+        android:textColor="@color/warmGrey"
+        android:textSize="@dimen/text_size_medium" />-->
+
+    <!-- 签到并领取金币 -->
+    <TextView
+        android:id="@+id/tv_sign_get_coin"
+        style="@style/SubmitButtonOrange"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/sign_get_gold_coin" />
+</LinearLayout>

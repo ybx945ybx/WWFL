@@ -1,0 +1,11 @@
+<com.haitao.view.refresh.XListView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:divider="@color/transparent"
+    android:dividerHeight="0dp"
+    android:scrollbars="none">
+
+</com.haitao.view.refresh.XListView>

@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:cardElevation="10dp">
+
+    <LinearLayout
+        android:id="@+id/ll_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- 图片 -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.haitao.view.CustomImageView
+                android:id="@+id/img_discount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                fresco:actualImageScaleType="fitCenter"
+                fresco:placeholderImage="@mipmap/ic_default_650"
+                fresco:placeholderImageScaleType="fitCenter"
+                fresco:viewAspectRatio="1" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignTop="@+id/tv_reabte"
+                android:layout_marginStart="10dp"
+                android:visibility="invisible">
+
+                <TextView
+                    android:id="@+id/tv_day"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="2dp"
+                    android:textColor="@color/midGrey2"
+                    android:textSize="30sp"
+                    tools:text="14" />
+
+                <TextView
+                    android:id="@+id/tv_month"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/tv_day"
+                    android:layout_marginTop="7dp"
+                    android:layout_toRightOf="@id/tv_day"
+                    android:textColor="@color/midGrey2"
+                    android:textSize="10sp"
+                    tools:text="11月" />
+
+                <TextView
+                    android:id="@+id/tv_weekday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@id/tv_day"
+                    android:layout_toRightOf="@id/tv_day"
+                    android:textColor="@color/midGrey2"
+                    android:textSize="10sp"
+                    tools:text="星期四" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_reabte"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/bg_round_corner_rect_orange"
+                android:paddingBottom="1dp"
+                android:paddingLeft="5dp"
+                android:paddingTop="1dp"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                tools:text="最高返40%" />
+
+
+        </RelativeLayout>
+
+        <!-- 详情信息 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_item_selectable"
+            android:orientation="vertical"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingTop="12dp">
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:lineSpacingExtra="4dp"
+                android:maxLines="2"
+                android:textColor="@color/darkGrey2"
+                android:textSize="18sp"
+                tools:text="【55专享】优惠升级！Perricone MD 裴礼康官网：精选产品" />
+
+            <TextView
+                android:id="@+id/tv_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:textColor="@color/brightOrange"
+                android:textSize="16sp"
+                tools:text="低至7折，再享额外6折" />
+
+            <TextView
+                android:id="@+id/tv_store_rebate_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="4dp"
+                android:textColor="#6E6D6B"
+                android:textSize="12sp"
+                tools:text="Perricone MD · 3.8人下单获得返利" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_direct_transport_support"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="8dp"
+                    android:background="@drawable/border_round_corner_green"
+                    android:gravity="center"
+                    android:text="@string/direct_transport"
+                    android:textColor="@color/green"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tv_alipay_support"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/border_round_corner_blue"
+                    android:gravity="center"
+                    android:text="@string/alipay"
+                    android:textColor="@color/midBlue"
+                    android:textSize="12sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border_top"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp">
+
+            <!-- 保存 -->
+            <LinearLayout
+                android:id="@+id/ll_save"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/ic_save" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:gravity="center"
+                    android:text="@string/save"
+                    android:textColor="@color/darkGrey2"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+            <!-- 分享 -->
+            <LinearLayout
+                android:id="@+id/ll_share"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/border_left_right"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/ic_share_small" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:gravity="center"
+                    android:text="@string/share"
+                    android:textColor="@color/darkGrey2"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <!-- 购买 -->
+            <LinearLayout
+                android:id="@+id/ll_buy"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/ic_buy" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:gravity="center"
+                    android:text="@string/buy"
+                    android:textColor="@color/brightOrange"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</android.support.v7.widget.CardView>

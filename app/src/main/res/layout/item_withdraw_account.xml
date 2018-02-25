@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:fresco="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/white"
+              android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/ll_check_pending"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <View
+            style="@style/Divider_BG" />
+
+        <!-- 待审核 -->
+        <TextView
+            android:id="@+id/tv_check_pending"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:paddingBottom="12dp"
+            android:paddingLeft="16dp"
+            android:paddingTop="12dp"
+            android:text="@string/check_pending"
+            android:textColor="@color/grey1D1D1F"
+            android:textSize="@dimen/text_size_medium"
+            tools:ignore="RtlHardcoded,RtlSymmetry" />
+
+        <View
+            style="@style/Divider_List_E6E6E6" />
+    </LinearLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
+        android:orientation="horizontal"
+        android:padding="@dimen/px24">
+
+        <com.haitao.view.CustomImageView
+            android:id="@+id/ivImage"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            fresco:failureImage="@mipmap/ic_default_60"
+            fresco:failureImageScaleType="centerInside"
+            fresco:layout_constraintBottom_toBottomOf="parent"
+            fresco:layout_constraintStart_toStartOf="parent"
+            fresco:layout_constraintTop_toTopOf="parent"
+            fresco:placeholderImage="@mipmap/ic_default_60"
+            fresco:placeholderImageScaleType="centerInside" />
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:drawablePadding="@dimen/px15"
+            android:textColor="@color/midGrey2"
+            android:textSize="@dimen/text_size_mediumx"
+            fresco:layout_constraintBottom_toTopOf="@+id/tvDesc"
+            fresco:layout_constraintStart_toEndOf="@+id/ivImage"
+            fresco:layout_constraintTop_toTopOf="parent"
+            fresco:layout_constraintVertical_chainStyle="packed"
+            tools:text="关于返利" />
+
+        <TextView
+            android:id="@+id/tvDesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:textColor="@color/grey78787D"
+            android:textSize="@dimen/text_size_small"
+            fresco:layout_constraintBottom_toBottomOf="parent"
+            fresco:layout_constraintStart_toStartOf="@+id/tvName"
+            fresco:layout_constraintTop_toBottomOf="@+id/tvName"
+            fresco:layout_constraintVertical_chainStyle="packed"
+            tools:text="ljc***@gmail.com" />
+
+        <TextView
+            android:id="@+id/tvPending"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/available_after_check"
+            android:textColor="@color/grey78787D"
+            android:textSize="@dimen/text_size_small"
+            fresco:layout_constraintBottom_toBottomOf="@+id/tvDesc"
+            fresco:layout_constraintStart_toEndOf="@+id/tvDesc"
+            fresco:layout_constraintTop_toTopOf="@+id/tvDesc" />
+
+        <ImageView
+            android:id="@+id/img_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_more"
+            fresco:layout_constraintBottom_toBottomOf="parent"
+            fresco:layout_constraintEnd_toEndOf="parent"
+            fresco:layout_constraintTop_toTopOf="parent" />
+    </android.support.constraint.ConstraintLayout>
+
+    <View
+        android:id="@+id/view_divider"
+        style="@style/Divider_List_E6E6E6" />
+
+</LinearLayout>

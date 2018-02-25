@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/bg"
+              android:orientation="vertical">
+
+    <include layout="@layout/layout_common_header" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/px15"
+        android:text="设置URL"
+        android:textSize="@dimen/text_size_mediumx" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rbDev"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DEV环境">
+
+        </RadioButton>
+
+        <RadioButton
+            android:id="@+id/rbQa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="QA环境">
+
+        </RadioButton>
+
+        <RadioButton
+            android:id="@+id/rbRelease"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="正式环境">
+
+        </RadioButton>
+    </RadioGroup>
+
+    <com.haitao.view.ClearEditText
+        android:id="@+id/etUrl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/px15"
+        android:hint="输入URL地址"
+        android:textSize="@dimen/text_size_medium" />
+
+    <com.haitao.view.ClearEditText
+        android:id="@+id/etSwaggerUrl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/px15"
+        android:hint="输入Swagger URL地址"
+        android:textSize="@dimen/text_size_medium" />
+
+    <!--<TextView
+        android:id="@+id/btnSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/px15"
+        android:background="@drawable/shape_blue_rectangle"
+        android:gravity="center"
+        android:padding="@dimen/px15"
+        android:text="设置"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_large" />-->
+
+    <TextView
+        android:id="@+id/btnSubmit"
+        style="@style/SubmitButtonRoundCorner"
+        android:enabled="true"
+        android:text="@string/confirm" />
+
+</LinearLayout>

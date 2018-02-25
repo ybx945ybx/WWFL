@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:fresco="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/bg"
+              android:orientation="vertical">
+
+    <include
+        android:id="@+id/layoutTop"
+        layout="@layout/layout_common_header" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.haitao.view.StickyNavLayout
+            android:id="@+id/layoutContent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/id_stickynavlayout_topview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/px2">
+
+                <RelativeLayout
+                    android:id="@+id/layoutRecommendTalent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/px45"
+                    android:paddingTop="@dimen/px45">
+
+                    <RelativeLayout
+                        android:id="@+id/layoutUserInfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:paddingLeft="@dimen/px24"
+                        android:paddingRight="@dimen/px24">
+
+                        <com.haitao.view.CustomImageView
+                            android:id="@+id/ivImage"
+                            android:layout_width="@dimen/px105"
+                            android:layout_height="@dimen/px105"
+                            android:layout_marginRight="@dimen/px30"
+                            android:visibility="visible"
+                            fresco:failureImage="@mipmap/ic_default_avator"
+                            fresco:failureImageScaleType="centerInside"
+                            fresco:placeholderImage="@mipmap/ic_default_avator"
+                            fresco:placeholderImageScaleType="centerInside"
+                            fresco:roundAsCircle="true"
+                            fresco:roundWithOverlayColor="@color/white"
+                            fresco:roundingBorderColor="@color/greyE6E6E6"
+                            fresco:roundingBorderWidth="1dp" />
+
+                        <TextView
+                            android:id="@+id/tvName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/ivImage"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size_mediumx"
+                            tools:text="达人名称" />
+
+                        <TextView
+                            android:id="@+id/tvLevel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignLeft="@+id/tvName"
+                            android:layout_below="@+id/tvName"
+                            android:layout_marginTop="@dimen/px6"
+                            android:textColor="@color/grey"
+                            android:textSize="@dimen/text_size_medium"
+                            tools:text="信用卡达人" />
+
+                        <TextView
+                            android:id="@+id/tvPostNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignLeft="@+id/tvName"
+                            android:layout_below="@+id/tvLevel"
+                            android:layout_marginTop="@dimen/px6"
+                            android:textColor="@color/grey"
+                            android:textSize="@dimen/text_size_medium"
+                            tools:text="248个帖子    |     2个精华帖" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layoutFriend"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/px51"
+                        android:layout_alignLeft="@+id/layoutUserInfo"
+                        android:layout_alignRight="@+id/layoutUserInfo"
+                        android:layout_below="@+id/layoutUserInfo"
+                        android:layout_marginTop="@dimen/px22"
+                        android:orientation="horizontal"
+                        android:visibility="visible">
+
+                        <RelativeLayout
+                            android:id="@+id/layoutAdd"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="@dimen/px42"
+                            android:layout_weight="1"
+                            android:background="@drawable/border_oval_grey"
+                            android:visibility="visible">
+
+                            <TextView
+                                android:id="@+id/tvAdd"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:drawableLeft="@drawable/ic_add_friend"
+                                android:drawablePadding="@dimen/px6"
+                                android:text="@string/add_as_friend"
+                                android:textColor="@color/grey"
+                                android:textSize="@dimen/text_size_medium" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/tab_msgs"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/border_oval_grey">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:drawableLeft="@drawable/ic_send_message"
+                                android:drawablePadding="@dimen/px6"
+                                android:text="@string/send_msg"
+                                android:textColor="@color/grey"
+                                android:textSize="@dimen/text_size_medium" />
+                        </RelativeLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/id_stickynavlayout_indicator"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/px1"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <!-- tab切换 -->
+                <android.support.design.widget.TabLayout
+                    android:id="@+id/tab"
+                    style="@style/CustomTabLayout"
+                    android:background="@color/white"
+                    android:fillViewport="false" />
+            </RelativeLayout>
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/id_stickynavlayout_viewpager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            </android.support.v4.view.ViewPager>
+
+        </com.haitao.view.StickyNavLayout>
+
+        <include layout="@layout/common_progress" />
+    </RelativeLayout>
+
+</LinearLayout>

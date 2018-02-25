@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:fresco="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:background="@drawable/bg_item_selectable_bordless"
+              android:gravity="center_horizontal"
+              android:orientation="vertical"
+              android:paddingBottom="@dimen/px15"
+              android:paddingTop="@dimen/px15">
+
+    <com.haitao.view.CustomImageView
+        android:id="@+id/ivImage"
+        android:layout_width="@dimen/px45"
+        android:layout_height="@dimen/px45"
+        android:src="@mipmap/ic_question"
+        fresco:actualImageScaleType="fitCenter"
+        fresco:failureImage="@mipmap/ic_default_60"
+        fresco:failureImageScaleType="centerInside"
+        fresco:placeholderImage="@mipmap/ic_default_60"
+        fresco:placeholderImageScaleType="centerInside" />
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/px6"
+        android:gravity="center"
+        android:maxLines="1"
+        android:textColor="@color/midGrey2"
+        android:textSize="@dimen/text_size_mediums"
+        tools:text="丫丫米" />
+
+    <!--</RelativeLayout>-->
+
+
+</LinearLayout>

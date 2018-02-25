@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:gravity="center"
+              android:orientation="vertical">
+
+    <!-- 百度 -->
+    <LinearLayout
+        android:id="@+id/llyt_baidu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/bg"
+            android:gravity="center"
+            android:padding="16dp"
+            android:text="@string/baidu"
+            android:textColor="@color/grey29292C"
+            android:textSize="@dimen/text_size_mediumx"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.25dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@color/warmGrey"/>
+    </LinearLayout>
+
+    <!-- 高德 -->
+    <LinearLayout
+        android:id="@+id/llyt_gaode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/bg"
+            android:gravity="center"
+            android:padding="16dp"
+            android:text="@string/gaode"
+            android:textColor="@color/grey29292C"
+            android:textSize="@dimen/text_size_mediumx"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.25dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@color/warmGrey"/>
+    </LinearLayout>
+    <!-- google -->
+    <LinearLayout
+        android:id="@+id/llyt_google"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/bg"
+            android:gravity="center"
+            android:padding="16dp"
+            android:text="@string/google"
+            android:textColor="@color/grey29292C"
+            android:textSize="@dimen/text_size_mediumx"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.25dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@color/warmGrey"/>
+    </LinearLayout>
+    <!-- 腾讯 -->
+    <LinearLayout
+        android:id="@+id/llyt_tengxun"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/bg"
+            android:gravity="center"
+            android:padding="16dp"
+            android:text="@string/tengxun"
+            android:textColor="@color/grey29292C"
+            android:textSize="@dimen/text_size_mediumx"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.25dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@color/warmGrey"/>
+    </LinearLayout>
+
+
+</LinearLayout>

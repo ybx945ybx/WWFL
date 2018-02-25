@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:fresco="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@drawable/bg_item_selectable"
+              android:orientation="vertical">
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="@dimen/px24"
+        android:layout_marginRight="@dimen/px24"
+        android:background="@color/divider" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/px24">
+
+        <!-- 商家图标 -->
+        <com.haitao.view.CustomImageView
+            android:id="@+id/img_store_logo"
+            android:layout_width="@dimen/px90"
+            android:layout_height="@dimen/px90"
+            android:layout_marginRight="@dimen/px22"
+            android:background="@drawable/border_grey_979797"
+            fresco:actualImageScaleType="centerInside"
+            fresco:failureImage="@mipmap/ic_default_240"
+            fresco:placeholderImage="@mipmap/ic_default_240" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/img_store_logo"
+            android:orientation="vertical">
+
+            <!-- 商家名称 -->
+            <TextView
+                android:id="@+id/tv_store_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:textColor="@color/midGrey2"
+                android:textSize="@dimen/text_size_medium"
+                tools:text="Amazon" />
+
+            <!-- 时间 -->
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/px12"
+                android:textColor="@color/middle_grey2"
+                android:textSize="@dimen/text_size_small"
+                tools:text="2016-01-25" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/img_check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/sl_filter_select" />
+
+        <!-- 商家不支持丢单反馈 -->
+        <TextView
+            android:id="@+id/tv_feedback_not_support"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="@string/order_lost_feedback_not_support"
+            android:textColor="@color/warmGrey"
+            android:textSize="@dimen/text_size_small" />
+    </RelativeLayout>
+
+</LinearLayout>

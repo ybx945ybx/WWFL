@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/white"
+    >
+
+    <TextView android:id="@+id/tvName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/px30"
+        android:paddingTop="@dimen/px15"
+        android:paddingBottom="@dimen/px15"
+        android:paddingRight="@dimen/px30"
+        android:textSize="@dimen/text_size_medium"
+        android:singleLine="true"
+        android:textColor="@color/sl_tab_color"/>
+
+</LinearLayout>

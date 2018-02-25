@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="55dip"
+        android:background="#FDFDFD">
+
+        <TextView
+            android:id="@+id/title_left_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingLeft="10dip"
+            android:paddingRight="10dip"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="#FF525252"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <WebView
+        android:id="@+id/web_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/title_layout"/>
+
+    <cn.sharesdk.sina.weibo.LoadingBar
+        android:id="@+id/load_bar"
+        android:layout_width="match_parent"
+        android:layout_height="3dip"
+        android:layout_below="@id/title_layout" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dip"
+        android:layout_below="@id/title_layout"
+        android:background="@drawable/ssdk_weibo_common_shadow_top" />
+
+    <LinearLayout
+        android:id="@+id/retry_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dip"
+            android:src="@drawable/ssdk_weibo_empty_failed" />
+
+        <TextView
+            android:id="@+id/retry_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#FFBDBDBD"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/retry_btn"
+            android:layout_width="142dip"
+            android:layout_height="46dip"
+            android:layout_marginTop="10dip"
+            android:background="@drawable/ssdk_weibo_retry_btn_selector"
+            android:gravity="center"
+            android:text="重新加载"
+            android:textColor="#FF787878"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+
+</RelativeLayout>

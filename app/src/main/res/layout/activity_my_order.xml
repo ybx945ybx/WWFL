@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/bg"
+              android:orientation="vertical">
+
+    <!--<include
+        android:id="@+id/layoutTop"
+        layout="@layout/layout_common_header" />-->
+
+    <com.haitao.view.HtHeadView
+        android:id="@+id/hv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:center_text="@string/my_order"
+        app:divider_visible="false" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center">
+
+        <!-- tab切换 -->
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tab"
+            style="@style/CustomTabLayout" />
+
+    </LinearLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_order_list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/px1"
+        android:layout_weight="1" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/greyE6E6E6" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_online_service"
+            style="@style/BottomNavItem"
+            android:drawableTop="@mipmap/ic_service"
+            android:text="@string/online_service" />
+
+        <TextView
+            android:id="@+id/tv_order_lost_feedback"
+            style="@style/BottomNavItem"
+            android:drawableTop="@mipmap/ic_order_lost_feedback"
+            android:text="@string/order_lost_feedback" />
+
+    </LinearLayout>
+
+    <!--<TextView
+        android:id="@+id/tv_order_lost_feedback"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/brightOrange"
+        android:gravity="center"
+        android:padding="@dimen/px22"
+        android:text="@string/order_lost_feedback"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_mediumx" />-->
+
+</LinearLayout>

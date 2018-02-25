@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/bg"
+              android:orientation="vertical">
+    <!-- 顶部 -->
+    <include
+        android:id="@+id/layoutTop"
+        layout="@layout/layout_common_header" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="@dimen/px15">
+
+        <TextView
+            android:id="@+id/tvReason"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="申请理由"
+            android:textColor="@color/darkGrey"
+            android:textSize="@dimen/text_size_medium" />
+
+        <EditText
+            android:id="@+id/etReason"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/px15"
+            android:layout_toRightOf="@+id/tvReason"
+            android:background="@null"
+            android:gravity="right"
+            android:hint="填写试用理由，可容易申请成功"
+            android:maxLines="1"
+            android:textColorHint="@color/lightGrey"
+            android:textSize="@dimen/text_size_medium" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/px15"
+        android:text="收货信息"
+        android:textColor="@color/darkGrey"
+        android:textSize="@dimen/text_size_mediumx" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="@dimen/px15">
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="姓名"
+            android:textColor="@color/darkGrey"
+            android:textSize="@dimen/text_size_medium" />
+
+        <EditText
+            android:id="@+id/etName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/px15"
+            android:layout_toRightOf="@+id/tvName"
+            android:background="@null"
+            android:gravity="right"
+            android:hint="必填"
+            android:maxLines="1"
+            android:textColorHint="@color/lightGrey"
+            android:textSize="@dimen/text_size_medium" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/px1"
+        android:background="@color/white"
+        android:padding="@dimen/px15">
+
+        <TextView
+            android:id="@+id/tvPhone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="手机号码"
+            android:textColor="@color/darkGrey"
+            android:textSize="@dimen/text_size_medium" />
+
+        <EditText
+            android:id="@+id/etPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/px15"
+            android:layout_toRightOf="@+id/tvPhone"
+            android:background="@null"
+            android:gravity="right"
+            android:hint="必填"
+            android:inputType="phone"
+            android:maxLines="1"
+            android:textColorHint="@color/lightGrey"
+            android:textSize="@dimen/text_size_medium" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/px1"
+        android:background="@color/white"
+        android:padding="@dimen/px15">
+
+        <TextView
+            android:id="@+id/tvCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="邮编"
+            android:textColor="@color/darkGrey"
+            android:textSize="@dimen/text_size_medium" />
+
+        <EditText
+            android:id="@+id/etCode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/px15"
+            android:layout_toRightOf="@+id/tvCode"
+            android:background="@null"
+            android:gravity="right"
+            android:hint="必填"
+            android:inputType="text"
+            android:maxLines="1"
+            android:textColorHint="@color/lightGrey"
+            android:textSize="@dimen/text_size_medium" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layoutAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/px1"
+        android:background="@color/white"
+        android:padding="@dimen/px15">
+
+        <TextView
+            android:id="@+id/tvAddressTips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="所在地"
+            android:textColor="@color/darkGrey"
+            android:textSize="@dimen/text_size_medium" />
+
+        <TextView
+            android:id="@+id/etAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/px15"
+            android:layout_toRightOf="@+id/tvAddressTips"
+            android:background="@null"
+            android:drawablePadding="@dimen/px6"
+            android:drawableRight="@mipmap/ic_next"
+            android:gravity="right"
+            android:maxLines="1"
+            android:textSize="@dimen/text_size_medium" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/px1"
+        android:background="@color/white"
+        android:padding="@dimen/px15">
+
+        <TextView
+            android:id="@+id/tvDetailAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="详细地址"
+            android:textColor="@color/darkGrey"
+            android:textSize="@dimen/text_size_medium" />
+
+        <EditText
+            android:id="@+id/etDetailAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/px15"
+            android:layout_toRightOf="@+id/tvDetailAddress"
+            android:background="@null"
+            android:gravity="right"
+            android:hint="必填"
+            android:maxLines="1"
+            android:textColorHint="@color/lightGrey"
+            android:textSize="@dimen/text_size_medium" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tvSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/px15"
+        android:layout_marginRight="@dimen/px15"
+        android:layout_marginTop="@dimen/px42"
+        android:background="@drawable/sl_submit"
+        android:gravity="center"
+        android:padding="@dimen/px22"
+        android:text="提交申请"
+        android:textColor="@color/sl_button_color"
+        android:textSize="@dimen/text_size_mediumx" />
+</LinearLayout>

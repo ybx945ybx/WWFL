@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/transparent"/> <!-- 背景颜色 -->
+
+    <stroke
+        android:width="@dimen/px1"
+        android:color="@color/midBlue"/> <!-- 图片边框属性 -->
+
+    <corners
+        android:radius="@dimen/px51"/>
+</shape>

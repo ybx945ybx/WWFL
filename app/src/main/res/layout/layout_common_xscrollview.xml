@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <include layout="@layout/layout_common_header"
+        android:id="@+id/layoutHead"/>
+    <com.haitao.view.refresh.XScrollView
+        android:layout_below="@+id/layoutHead"
+        android:id="@+id/layoutScroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:background="@color/bg">
+
+    </com.haitao.view.refresh.XScrollView>
+    <ImageView android:layout_height="wrap_content"
+        android:id="@+id/btnTop"
+        android:layout_width="wrap_content"
+        android:layout_alignParentRight="true"
+        android:visibility="gone"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="@dimen/px10"
+        android:layout_marginBottom="@dimen/px10"
+        android:padding="@dimen/px15"
+        android:src="@mipmap/ic_top"/>
+
+</RelativeLayout>

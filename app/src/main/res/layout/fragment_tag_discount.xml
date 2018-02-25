@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorGrayF5F5F5"
+    android:orientation="vertical">
+
+    <!-- 多状态布局容器 -->
+    <com.haitao.view.MultipleStatusView
+        android:id="@+id/msv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/content_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!-- 筛选标签列表 -->
+            <com.haitao.view.HorizontalListView
+                android:id="@+id/lv_filter"
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/white"
+                android:visibility="gone" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/greyE6E6E6" />
+
+            <!-- 优惠列表 -->
+            <com.haitao.view.refresh.XListView
+                android:id="@+id/content_listview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="@null" />
+
+        </LinearLayout>
+
+    </com.haitao.view.MultipleStatusView>
+
+</LinearLayout>

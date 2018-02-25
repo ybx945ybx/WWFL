@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/bg"
+              android:orientation="vertical">
+    <!-- 顶部 -->
+    <include
+        android:id="@+id/layoutTop"
+        layout="@layout/layout_common_header" />
+
+    <TextView
+        android:id="@+id/tvTips"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingBottom="@dimen/px30"
+        android:paddingLeft="@dimen/px55"
+        android:paddingRight="@dimen/px55"
+        android:paddingTop="@dimen/px30"
+        android:text="@string/login_verify_phone"
+        android:textColor="@color/lightGrey"
+        android:textSize="@dimen/text_size_medium" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingLeft="@dimen/px15">
+
+
+        <com.haitao.view.ClearEditText
+            android:id="@+id/etVerify"
+            style="@style/login_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/tvGetVerify"
+            android:hint="@string/forget_verify_hint"
+            android:inputType="number" />
+
+        <TextView
+            android:id="@+id/tvGetVerify"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/etVerify"
+            android:layout_alignParentRight="true"
+            android:enabled="false"
+            android:padding="@dimen/px15"
+            android:text="@string/get_verify_code"
+            android:textColor="@color/sl_submit_color"
+            android:textSize="@dimen/text_size_small" />
+    </RelativeLayout>
+
+    <View style="@style/SeparateLine" />
+
+    <!--<Button
+        android:id="@+id/btnSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/px15"
+        android:layout_marginRight="@dimen/px15"
+        android:layout_marginTop="@dimen/px30"
+        android:background="@drawable/sl_submit"
+        android:enabled="false"
+        android:text="@string/bind_confirm"
+        android:textColor="@color/sl_button_color"
+        android:textSize="@dimen/text_size_mediumx" />-->
+
+    <TextView
+        android:id="@+id/btnSubmit"
+        style="@style/SubmitButtonRoundCorner"
+        android:text="@string/confirm"/>
+
+
+</LinearLayout>

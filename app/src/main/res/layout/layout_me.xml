@@ -1,0 +1,629 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/bg"
+            android:orientation="vertical">
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/cl_user_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_item_selectable">
+
+                <!-- 头像 -->
+                <com.haitao.view.CustomImageView
+                    android:id="@+id/img_avatar"
+                    android:layout_width="@dimen/me_avatar_size"
+                    android:layout_height="@dimen/me_avatar_size"
+                    android:layout_marginBottom="24dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="36dp"
+                    fresco:layout_constraintBottom_toBottomOf="parent"
+                    fresco:layout_constraintStart_toStartOf="parent"
+                    fresco:layout_constraintTop_toTopOf="parent"
+                    fresco:placeholderImageScaleType="centerCrop"
+                    fresco:roundAsCircle="true"
+                    fresco:roundWithOverlayColor="@color/white"
+                    fresco:roundingBorderColor="@color/greyE6E6E6"
+                    fresco:roundingBorderWidth="1dp" />
+
+                <!-- vip标记 -->
+                <ImageView
+                    android:id="@+id/img_vip_tag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:src="@mipmap/ic_vip"
+                    android:visibility="invisible"
+                    fresco:layout_constraintStart_toStartOf="@+id/img_avatar"
+                    fresco:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_username"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:maxLines="1"
+                    android:text="@string/my_no_login"
+                    android:textColor="@color/grey1D1D1F"
+                    android:textSize="@dimen/text_size_large"
+                    fresco:layout_constraintBottom_toTopOf="@+id/ll_tag"
+                    fresco:layout_constraintStart_toEndOf="@+id/img_avatar"
+                    fresco:layout_constraintTop_toTopOf="@+id/img_avatar" />
+
+                <LinearLayout
+                    android:id="@+id/ll_tag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginTop="10dp"
+                    fresco:layout_constraintBottom_toBottomOf="@+id/img_avatar"
+                    fresco:layout_constraintStart_toStartOf="@+id/tv_username"
+                    fresco:layout_constraintTop_toBottomOf="@+id/tv_username">
+
+                    <!-- 等级 -->
+                    <TextView
+                        android:id="@+id/tv_tag_level"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:background="@drawable/bg_oval_orange"
+                        android:paddingBottom="4dp"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp"
+                        android:paddingTop="4dp"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_size_small"
+                        android:visibility="visible"
+                        tools:text="等级" />
+
+                    <!-- 分组 -->
+                    <TextView
+                        android:id="@+id/tv_tag_group"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_oval_grey_f5f5f5"
+                        android:paddingBottom="4dp"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp"
+                        android:paddingTop="4dp"
+                        android:textColor="@color/grey4F4F53"
+                        android:textSize="@dimen/text_size_small"
+                        tools:ignore="RtlHardcoded"
+                        tools:text="天生爱买狂" />
+                </LinearLayout>
+
+                <ImageButton
+                    android:id="@+id/ib_setting"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginTop="8dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:padding="8dp"
+                    android:src="@mipmap/ic_setting"
+                    fresco:layout_constraintEnd_toEndOf="parent"
+                    fresco:layout_constraintTop_toTopOf="parent" />
+            </android.support.constraint.ConstraintLayout>
+
+            <!--<LinearLayout
+                android:id="@+id/ll_user"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_item_selectable"
+                android:gravity="center_vertical"
+                android:paddingBottom="@dimen/px36"
+                android:paddingLeft="@dimen/px36"
+                android:paddingRight="@dimen/px36"
+                android:paddingTop="@dimen/px60"
+                android:visibility="gone">
+
+                &lt;!&ndash; 头像 &ndash;&gt;
+                <com.haitao.view.CustomImageView
+                    android:id="@+id/img_avatar"
+                    android:layout_width="@dimen/me_avatar_size"
+                    android:layout_height="@dimen/me_avatar_size"
+                    android:layout_marginRight="16dp"
+                    fresco:failureImage="@mipmap/ic_default_avator"
+                    fresco:failureImageScaleType="centerCrop"
+                    fresco:placeholderImageScaleType="centerCrop"
+                    fresco:roundAsCircle="true"
+                    fresco:roundWithOverlayColor="@color/white" />
+
+                <LinearLayout
+                    android:id="@+id/ll_user_infos"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    &lt;!&ndash; 用户名 &ndash;&gt;
+                    <TextView
+                        android:id="@+id/tv_username"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"
+                        android:text="@string/my_no_login"
+                        android:textColor="@color/grey1D1D1F"
+                        android:textSize="@dimen/text_size_large" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_user_info"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center_vertical">
+
+                        &lt;!&ndash; 等级 &ndash;&gt;
+                        <TextView
+                            android:id="@+id/tv_level"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_round_corner_green_blur"
+                            android:paddingBottom="@dimen/px1"
+                            android:paddingTop="@dimen/px1"
+                            android:textColor="@color/green"
+                            android:textSize="@dimen/text_size_small"
+                            android:visibility="gone"
+                            tools:text="等级30" />
+
+                        &lt;!&ndash; 分组 &ndash;&gt;
+                        <TextView
+                            android:id="@+id/tv_group_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/px8"
+                            android:background="@drawable/bg_round_corner_mid_blue_blur"
+                            android:paddingBottom="@dimen/px1"
+                            android:paddingTop="@dimen/px1"
+                            android:textColor="@color/midBlue"
+                            android:textSize="@dimen/text_size_small"
+                            android:visibility="gone"
+                            tools:text="用户分组" />
+
+                        &lt;!&ndash; VIP &ndash;&gt;
+                        &lt;!&ndash;<TextView
+                            android:id="@+id/tv_vip"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/px8"
+                            android:background="@drawable/bg_round_corner_bright_orange_blur"
+                            android:paddingBottom="@dimen/px1"
+                            android:paddingTop="@dimen/px1"
+                            android:text="VIP"
+                            android:textColor="@color/brightOrange"
+                            android:textSize="@dimen/text_size_small"
+                            android:visibility="gone" />&ndash;&gt;
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>-->
+
+            <LinearLayout
+                android:id="@+id/ll_money"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/app_body_bg" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+
+                    <android.support.constraint.ConstraintLayout
+                        android:id="@+id/cl_currency"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="?attr/selectableItemBackground"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_dollar_notion_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="3dp"
+                            android:layout_marginEnd="2dp"
+                            android:text="@string/dollar_notion"
+                            android:textColor="@color/orangeFF804D"
+                            android:textSize="10sp"
+                            fresco:layout_constraintBottom_toBottomOf="@+id/tv_currency"
+                            fresco:layout_constraintEnd_toStartOf="@+id/tv_currency"
+                            fresco:layout_constraintHorizontal_chainStyle="packed"
+                            fresco:layout_constraintStart_toStartOf="parent"
+                            tools:ignore="SmallSp" />
+
+                        <TextView
+                            android:id="@+id/tv_currency"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:textColor="@color/orangeFF804D"
+                            android:textSize="@dimen/text_size_mediumx"
+                            fresco:layout_constraintEnd_toEndOf="parent"
+                            fresco:layout_constraintHorizontal_bias="0.5"
+                            fresco:layout_constraintHorizontal_chainStyle="packed"
+                            fresco:layout_constraintStart_toEndOf="@+id/tv_dollar_notion_1"
+                            fresco:layout_constraintTop_toTopOf="parent"
+                            tools:text="0.00" />
+
+                        <TextView
+                            android:id="@+id/tv_currency_label"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="16dp"
+                            android:layout_marginTop="4dp"
+                            android:text="@string/my_available"
+                            android:textColor="@color/grey78787D"
+                            android:textSize="@dimen/text_size_small"
+                            fresco:layout_constraintBottom_toBottomOf="parent"
+                            fresco:layout_constraintEnd_toEndOf="parent"
+                            fresco:layout_constraintStart_toStartOf="parent"
+                            fresco:layout_constraintTop_toBottomOf="@+id/tv_currency" />
+
+                    </android.support.constraint.ConstraintLayout>
+
+                    <android.support.constraint.ConstraintLayout
+                        android:id="@+id/cl_pending"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="?attr/selectableItemBackground"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_dollar_notion_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="3dp"
+                            android:layout_marginEnd="2dp"
+                            android:text="@string/dollar_notion"
+                            android:textColor="@color/orangeFF804D"
+                            android:textSize="10sp"
+                            fresco:layout_constraintBottom_toBottomOf="@+id/tv_my_pending"
+                            fresco:layout_constraintEnd_toStartOf="@+id/tv_my_pending"
+                            fresco:layout_constraintHorizontal_chainStyle="packed"
+                            fresco:layout_constraintStart_toStartOf="parent"
+                            tools:ignore="SmallSp" />
+
+                        <TextView
+                            android:id="@+id/tv_my_pending"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:textColor="@color/orangeFF804D"
+                            android:textSize="@dimen/text_size_mediumx"
+                            fresco:layout_constraintEnd_toEndOf="parent"
+                            fresco:layout_constraintHorizontal_bias="0.5"
+                            fresco:layout_constraintHorizontal_chainStyle="packed"
+                            fresco:layout_constraintStart_toEndOf="@+id/tv_dollar_notion_2"
+                            fresco:layout_constraintTop_toTopOf="parent"
+                            tools:text="0.00" />
+
+                        <TextView
+                            android:id="@+id/tv_my_pending_label"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="16dp"
+                            android:layout_marginTop="4dp"
+                            android:text="@string/my_pending"
+                            android:textColor="@color/grey78787D"
+                            android:textSize="@dimen/text_size_small"
+                            fresco:layout_constraintBottom_toBottomOf="parent"
+                            fresco:layout_constraintEnd_toEndOf="parent"
+                            fresco:layout_constraintStart_toStartOf="parent"
+                            fresco:layout_constraintTop_toBottomOf="@+id/tv_my_pending" />
+
+                    </android.support.constraint.ConstraintLayout>
+
+                    <android.support.constraint.ConstraintLayout
+                        android:id="@+id/cl_coin"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="?attr/selectableItemBackground"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_coin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:textColor="@color/orangeFF804D"
+                            android:textSize="@dimen/text_size_mediumx"
+                            fresco:layout_constraintEnd_toEndOf="parent"
+                            fresco:layout_constraintStart_toStartOf="parent"
+                            fresco:layout_constraintTop_toTopOf="parent"
+                            tools:text="0.00" />
+
+                        <TextView
+                            android:id="@+id/tv_coin_label"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="16dp"
+                            android:layout_marginTop="4dp"
+                            android:text="@string/my_coin"
+                            android:textColor="@color/grey78787D"
+                            android:textSize="@dimen/text_size_small"
+                            fresco:layout_constraintBottom_toBottomOf="parent"
+                            fresco:layout_constraintEnd_toEndOf="parent"
+                            fresco:layout_constraintStart_toStartOf="parent"
+                            fresco:layout_constraintTop_toBottomOf="@+id/tv_coin" />
+
+                    </android.support.constraint.ConstraintLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- VIP -->
+            <LinearLayout
+                android:id="@+id/ll_vip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/px12"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <!-- VIP专享商家 -->
+                <TextView
+                    android:id="@+id/tvVipStore"
+                    style="@style/MeFragmentVipStyle"
+                    android:drawableLeft="@mipmap/ic_vip_store"
+                    android:text="@string/my_vip_store"
+                    tools:ignore="RtlHardcoded" />
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="12dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@color/greyE6E6E6" />
+
+                <!-- VIP专享权益 -->
+                <TextView
+                    android:id="@+id/tv_vip_rights"
+                    style="@style/MeFragmentVipStyle"
+                    android:drawableLeft="@mipmap/ic_vip_rights"
+                    android:text="@string/my_vip_rights"
+                    tools:ignore="RtlHardcoded" />
+
+
+            </LinearLayout>
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/px12"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <!-- 我的返利 -->
+                <TextView
+                    android:id="@+id/tvRebate"
+                    style="@style/me_fragment_item"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackground"
+                    android:drawableTop="@mipmap/ic_rebate"
+                    android:text="@string/shortcut_rebate"
+                    fresco:layout_constraintEnd_toStartOf="@+id/tvOrder"
+                    fresco:layout_constraintHorizontal_bias="0.5"
+                    fresco:layout_constraintStart_toStartOf="parent" />
+
+                <!-- 我的订单 -->
+                <TextView
+                    android:id="@+id/tvOrder"
+                    style="@style/me_fragment_item"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackground"
+                    android:drawableTop="@mipmap/ic_order"
+                    android:text="@string/my_order"
+                    fresco:layout_constraintEnd_toStartOf="@+id/tv_withdraw"
+                    fresco:layout_constraintHorizontal_bias="0.5"
+                    fresco:layout_constraintStart_toEndOf="@+id/tvRebate"
+                    fresco:layout_constraintTop_toTopOf="@+id/tvRebate" />
+
+                <!-- 提现 -->
+                <TextView
+                    android:id="@+id/tv_withdraw"
+                    style="@style/me_fragment_item"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackground"
+                    android:drawableTop="@mipmap/ic_withdraw_record"
+                    android:text="@string/withdraw"
+                    fresco:layout_constraintEnd_toStartOf="@+id/tv_ordre_lost_trace"
+                    fresco:layout_constraintHorizontal_bias="0.5"
+                    fresco:layout_constraintStart_toEndOf="@+id/tvOrder"
+                    fresco:layout_constraintTop_toTopOf="@+id/tvOrder" />
+
+                <!-- 丢单追踪 -->
+                <TextView
+                    android:id="@+id/tv_ordre_lost_trace"
+                    style="@style/me_fragment_item"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackground"
+                    android:drawableTop="@mipmap/ic_order_lost_trace"
+                    android:text="@string/order_lost_trace"
+                    fresco:layout_constraintEnd_toEndOf="parent"
+                    fresco:layout_constraintHorizontal_bias="0.5"
+                    fresco:layout_constraintStart_toEndOf="@+id/tv_withdraw"
+                    fresco:layout_constraintTop_toTopOf="@+id/tv_withdraw" />
+
+                <!-- 我的好友 -->
+                <TextView
+                    android:id="@+id/tvFriend"
+                    style="@style/me_fragment_item"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackground"
+                    android:drawableTop="@mipmap/ic_friends"
+                    android:text="@string/my_friend"
+                    fresco:layout_constraintEnd_toStartOf="@+id/tvFav"
+                    fresco:layout_constraintHorizontal_bias="0.5"
+                    fresco:layout_constraintStart_toStartOf="parent"
+                    fresco:layout_constraintTop_toBottomOf="@+id/tvRebate"
+                    tools:ignore="RtlHardcoded" />
+
+                <!-- 我的收藏 -->
+                <TextView
+                    android:id="@+id/tvFav"
+                    style="@style/me_fragment_item"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackground"
+                    android:drawableTop="@mipmap/ic_fav"
+                    android:text="@string/my_fav"
+                    fresco:layout_constraintEnd_toStartOf="@+id/tvPost"
+                    fresco:layout_constraintHorizontal_bias="0.5"
+                    fresco:layout_constraintStart_toEndOf="@+id/tvFriend"
+                    fresco:layout_constraintTop_toTopOf="@+id/tvFriend" />
+
+                <!-- 我的帖子 -->
+                <TextView
+                    android:id="@+id/tvPost"
+                    style="@style/me_fragment_item"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackground"
+                    android:drawableTop="@mipmap/ic_post2"
+                    android:text="@string/my_post"
+                    fresco:layout_constraintEnd_toStartOf="@+id/tv_my_sample"
+                    fresco:layout_constraintHorizontal_bias="0.5"
+                    fresco:layout_constraintStart_toEndOf="@+id/tvFav"
+                    fresco:layout_constraintTop_toTopOf="@+id/tvFav" />
+
+                <!-- 我的试用 -->
+                <TextView
+                    android:id="@+id/tv_my_sample"
+                    style="@style/me_fragment_item"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackground"
+                    android:drawableTop="@mipmap/ic_my_sample"
+                    android:text="@string/sample_mine"
+                    fresco:layout_constraintEnd_toEndOf="parent"
+                    fresco:layout_constraintHorizontal_bias="0.5"
+                    fresco:layout_constraintStart_toEndOf="@+id/tvPost"
+                    fresco:layout_constraintTop_toTopOf="@+id/tvPost" />
+
+            </android.support.constraint.ConstraintLayout>
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/px12"
+                android:background="@color/white">
+
+                <!-- 每日签到 -->
+                <TextView
+                    android:id="@+id/tvSign"
+                    style="@style/me_fragment_item"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="?attr/selectableItemBackground"
+                    android:drawableTop="@mipmap/ic_my_sign"
+                    android:text="@string/my_sign"
+                    fresco:layout_constraintEnd_toStartOf="@+id/tvInvite"
+                    fresco:layout_constraintHorizontal_bias="0.5"
+                    fresco:layout_constraintStart_toStartOf="parent"
+                    fresco:layout_constraintTop_toTopOf="@+id/tvInvite" />
+
+                <!-- 邀请好友 -->
+                <TextView
+                    android:id="@+id/tvInvite"
+                    style="@style/me_fragment_item"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="?attr/selectableItemBackground"
+                    android:drawableTop="@mipmap/ic_invite"
+                    android:text="@string/invite_friends"
+                    fresco:layout_constraintEnd_toStartOf="@+id/tvDepreciate"
+                    fresco:layout_constraintHorizontal_bias="0.5"
+                    fresco:layout_constraintStart_toEndOf="@+id/tvSign"
+                    fresco:layout_constraintTop_toTopOf="@+id/tvDepreciate" />
+
+                <!-- 降价提醒 -->
+                <TextView
+                    android:id="@+id/tvDepreciate"
+                    style="@style/me_fragment_item"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="?attr/selectableItemBackground"
+                    android:drawableTop="@mipmap/ic_depreciate"
+                    android:text="@string/my_depreciate"
+                    fresco:layout_constraintEnd_toStartOf="@+id/tvService"
+                    fresco:layout_constraintHorizontal_bias="0.5"
+                    fresco:layout_constraintStart_toEndOf="@+id/tvInvite"
+                    fresco:layout_constraintTop_toTopOf="@+id/tvService" />
+
+                <!-- 在线客服 -->
+                <TextView
+                    android:id="@+id/tvService"
+                    style="@style/me_fragment_item"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="?attr/selectableItemBackground"
+                    android:drawableTop="@mipmap/ic_service_online"
+                    android:text="@string/online_service"
+                    fresco:layout_constraintEnd_toEndOf="parent"
+                    fresco:layout_constraintHorizontal_bias="0.5"
+                    fresco:layout_constraintStart_toEndOf="@+id/tvDepreciate"
+                    fresco:layout_constraintTop_toTopOf="parent" />
+
+                <!--线下返利-->
+                <TextView
+                    android:id="@+id/tvUnionPay"
+                    style="@style/me_fragment_item"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_weight="1"
+                    android:background="?attr/selectableItemBackground"
+                    android:drawableTop="@mipmap/ic_setting"
+                    android:text="线下返利"
+                    android:visibility="gone"
+                    fresco:layout_constraintStart_toStartOf="parent"
+                    fresco:layout_constraintTop_toBottomOf="@+id/tvSign" />
+
+            </android.support.constraint.ConstraintLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <!-- 活动入口 -->
+    <com.haitao.view.CustomImageView
+        android:id="@+id/img_event"
+        style="@style/ImgEvent" />
+</RelativeLayout>

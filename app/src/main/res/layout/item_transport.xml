@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:fresco="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@drawable/bg_item_selectable"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/px24">
+
+        <com.haitao.view.CustomImageView
+            android:id="@+id/ivImage"
+            android:layout_width="@dimen/px140"
+            android:layout_height="@dimen/px140"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/px36"
+            android:background="@drawable/shape_bg_image"
+            android:visibility="visible"
+            fresco:actualImageScaleType="fitCenter" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/ivImage"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/midGrey2"
+                android:textSize="@dimen/text_size_medium"
+                tools:text="抢红包活动" />
+
+            <LinearLayout
+                android:id="@+id/layoutStar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/px12"
+                android:orientation="horizontal">
+
+                <RatingBar
+                    android:id="@+id/rbStar"
+                    style="@style/RatingBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:focusable="false"
+                    android:numStars="5"
+                    android:rating="4" />
+
+                <TextView
+                    android:id="@+id/tvStar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/px9"
+                    android:textColor="@color/brightOrange"
+                    android:textSize="@dimen/text_size_small"
+                    tools:text="3.5星" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/px15"
+                android:textColor="@color/middle_grey2"
+                android:textSize="@dimen/text_size_small"
+                tools:text="223个晒单 | 9人收藏" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/viewSeparate"
+        style="@style/Divider_ECECEC" />
+
+</LinearLayout>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:fresco="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@drawable/bg_item_selectable"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:padding="@dimen/px24">
+
+        <!-- 用户头像 -->
+        <com.haitao.view.CustomImageView
+            android:id="@+id/img_avatar"
+            android:layout_width="@dimen/px68"
+            android:layout_height="@dimen/px68"
+            android:layout_marginRight="@dimen/px22"
+            fresco:failureImage="@mipmap/ic_default_avator"
+            fresco:failureImageScaleType="centerCrop"
+            fresco:placeholderImage="@mipmap/ic_default_avator"
+            fresco:placeholderImageScaleType="centerCrop"
+            fresco:roundAsCircle="true"
+            fresco:roundWithOverlayColor="@color/white" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <!-- 用户名 -->
+            <TextView
+                android:id="@+id/tv_username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:textColor="@color/midGrey2"
+                android:textSize="@dimen/text_size_medium"
+                tools:text="我是名字" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center_vertical">
+
+                <!-- 等级 -->
+                <TextView
+                    android:id="@+id/tv_level"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/border_round_corner_orange"
+                    android:paddingBottom="@dimen/px1"
+                    android:paddingTop="@dimen/px1"
+                    android:textColor="@color/brightOrange"
+                    android:textSize="@dimen/text_size_small"
+                    android:visibility="gone"
+                    tools:text="V30" />
+
+                <!-- 分组 -->
+                <TextView
+                    android:id="@+id/tv_group"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/px8"
+                    android:background="@drawable/border_round_corner_blue"
+                    android:paddingBottom="@dimen/px1"
+                    android:paddingTop="@dimen/px1"
+                    android:textColor="@color/midBlue"
+                    android:textSize="@dimen/text_size_small"
+                    android:visibility="gone"
+                    tools:text="用户分组" />
+
+                <!-- 性别 -->
+                <ImageView
+                    android:id="@+id/img_gender"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/px8"
+                    android:src="@mipmap/ic_female" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_next" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/divider"
+        style="@style/Divider_ECECEC" />
+
+
+</LinearLayout>

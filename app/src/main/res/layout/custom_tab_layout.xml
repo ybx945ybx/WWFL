@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center|bottom">
+
+    <TextView
+        android:id="@+id/tab_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="热门"
+        android:textColor="@color/color_tab_indicator"
+        android:textSize="14sp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_alignLeft="@+id/tab_title"
+        android:layout_alignRight="@+id/tab_title"
+        android:layout_below="@+id/tab_title"
+        android:layout_marginTop="6dp"
+        android:background="@drawable/tab_indicator_selector"/>
+
+</RelativeLayout>

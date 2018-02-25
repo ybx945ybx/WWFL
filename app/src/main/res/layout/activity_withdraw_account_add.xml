@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/bg"
+                android:orientation="vertical">
+
+    <com.haitao.view.HtHeadView
+        android:id="@+id/hv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:center_text="@string/add_withdraw_account" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/hv_title">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- 账号类型 -->
+            <com.haitao.view.HtItemTextView
+                android:id="@+id/hitv_account_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                app:hitv_center="true"
+                app:hitv_title="@string/account_type"
+                app:hitv_underline_visible="false" />
+
+            <!-- 银行 -->
+            <com.haitao.view.HtItemTextView
+                android:id="@+id/hitv_bank"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:hitv_center="true"
+                app:hitv_title="@string/bank" />
+
+            <!-- 卡号 -->
+            <com.haitao.view.HtItemEditView
+                android:id="@+id/hitv_card_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:maxLines="1"
+                app:hiev_hint_text="@string/please_input_card_number"
+                app:hiev_right_img="@mipmap/ic_scan"
+                app:hiev_title="@string/cash_credit" />
+
+            <!-- 姓名 -->
+            <com.haitao.view.HtItemEditView
+                android:id="@+id/hitv_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:maxLines="1"
+                app:hiev_hint_text="@string/please_input_card_owner"
+                app:hiev_title="@string/name" />
+
+            <!-- 有效期 -->
+            <com.haitao.view.HtItemTextView
+                android:id="@+id/hitv_validate_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:hitv_center="true"
+                app:hitv_title="@string/cash_valid"
+                app:hitv_underline_visible="false" />
+
+            <!-- 账号 -->
+            <com.haitao.view.HtItemEditView
+                android:id="@+id/hitv_account"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:maxLines="1"
+                app:hiev_hint_text="@string/cash_account_hint"
+                app:hiev_title="@string/cash_account" />
+
+            <!-- 账号确认 -->
+            <com.haitao.view.HtItemEditView
+                android:id="@+id/hitv_account_confirm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:maxLines="1"
+                app:hiev_hint_text="@string/cash_account_again_hint"
+                app:hiev_title="@string/cash_account"
+                app:hiev_underline_visible="false" />
+
+            <!-- 身份证号码 -->
+            <com.haitao.view.HtItemEditView
+                android:id="@+id/hitv_id_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:maxLines="1"
+                app:hiev_hint_text="@string/please_input_id_number"
+                app:hiev_raw_input="true"
+                app:hiev_right_img="@mipmap/ic_scan"
+                app:hiev_title="@string/id_number"
+                app:hiev_underline_visible="false" />
+
+            <!-- 选择返利订单 -->
+            <com.haitao.view.HtItemTextView
+                android:id="@+id/hitv_select_order"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                app:hitv_center="true"
+                app:hitv_title="@string/select_rebate_order"
+                app:hitv_underline_visible="false" />
+
+            <TextView
+                android:id="@+id/tv_order_pic_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:paddingBottom="8dp"
+                android:paddingLeft="16dp"
+                android:paddingTop="8dp"
+                android:text="@string/upload_store_order_pics"
+                android:textColorHint="@color/grey78787D"
+                android:textSize="@dimen/text_size_medium"
+                android:visibility="gone"
+                tools:ignore="RtlHardcoded,RtlSymmetry" />
+
+            <!-- 订单截图容器 -->
+            <LinearLayout
+                android:id="@+id/ll_order_pic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <!-- 订单截图列表 -->
+                <com.haitao.view.FullGirdView
+                    android:id="@+id/gv_order_pics"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:horizontalSpacing="4dp"
+                    android:numColumns="4"
+                    android:paddingBottom="16dp"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:paddingTop="8dp" />
+
+            </LinearLayout>
+
+            <!-- 提交 -->
+            <TextView
+                android:id="@+id/tv_submit"
+                style="@style/SubmitButtonOrange"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:layout_marginBottom="36dp"
+                android:enabled="false"
+                android:text="@string/submit" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="32dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:lineSpacingMultiplier="1.5"
+                android:text="@string/withdraw_account_add_hint"
+                android:textColor="@color/grey78787D"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

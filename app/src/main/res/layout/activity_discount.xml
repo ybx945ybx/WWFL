@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/layoutTop"
+        layout="@layout/layout_common_header" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/layoutChoose"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:id="@+id/layoutCategory"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/px15"
+                android:paddingTop="@dimen/px15">
+
+                <TextView
+                    android:id="@+id/tvCategory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="@dimen/px6"
+                    android:drawableRight="@drawable/sl_arrow"
+                    android:maxLines="1"
+                    android:text="全部分类"
+                    android:textColor="@color/sl_filter_color"
+                    android:textSize="@dimen/text_size_medium" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/px15"
+                android:layout_marginLeft="@dimen/px10"
+                android:layout_marginRight="@dimen/px10"
+                android:layout_marginTop="@dimen/px10"
+                android:background="@color/separate" />
+
+            <LinearLayout
+                android:id="@+id/layoutStore"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/px15"
+                android:paddingTop="@dimen/px15">
+
+                <TextView
+                    android:id="@+id/tvStore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="@dimen/px6"
+                    android:drawableRight="@drawable/sl_arrow"
+                    android:maxLines="1"
+                    android:text="全部商家"
+                    android:textColor="@color/sl_filter_color"
+                    android:textSize="@dimen/text_size_medium" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/px15"
+                android:layout_marginLeft="@dimen/px10"
+                android:layout_marginRight="@dimen/px10"
+                android:layout_marginTop="@dimen/px10"
+                android:background="@color/separate" />
+
+            <LinearLayout
+                android:id="@+id/layoutFilter"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/px15"
+                android:paddingTop="@dimen/px15">
+
+                <TextView
+                    android:id="@+id/tvFilter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="@dimen/px6"
+                    android:drawableRight="@drawable/sl_arrow"
+                    android:singleLine="true"
+                    android:text="筛选"
+                    android:textColor="@color/sl_filter_color"
+                    android:textSize="@dimen/text_size_medium" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            style="@style/SeparateLine"
+            android:layout_below="@id/layoutChoose" />
+
+        <com.haitao.view.refresh.XListView
+            android:id="@+id/lvList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/layoutChoose"
+            android:divider="@color/transparent"
+            android:dividerHeight="0dp" />
+
+        <include
+            layout="@layout/layout_common_error"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/layoutChoose"
+            android:layout_marginTop="@dimen/px1" />
+
+        <include layout="@layout/layout_common_progress" />
+
+    </RelativeLayout>
+</LinearLayout>

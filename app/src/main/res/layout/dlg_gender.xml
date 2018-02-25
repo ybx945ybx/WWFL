@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <!--<com.haitao.view.HtTitleView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border_bottom"
+        app:sub_title="@string/choose_gender" />-->
+
+    <TextView
+        android:id="@+id/tv_male"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border_bottom_0_5dp"
+        android:drawableLeft="@mipmap/ic_male"
+        android:drawablePadding="@dimen/px22"
+        android:gravity="center_vertical"
+        android:minHeight="@dimen/px90"
+        android:paddingLeft="@dimen/px30"
+        android:text="@string/male" />
+
+    <TextView
+        android:id="@+id/tv_female"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border_bottom_0_5dp"
+        android:drawableLeft="@mipmap/ic_female"
+        android:drawablePadding="@dimen/px22"
+        android:gravity="center_vertical"
+        android:minHeight="@dimen/px90"
+        android:paddingLeft="@dimen/px30"
+        android:text="@string/female" />
+
+    <!--<TextView
+        android:id="@+id/tv_keep_secret"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:drawableLeft="@mipmap/ic_keep_secret"
+        android:drawablePadding="@dimen/px22"
+        android:gravity="center_vertical"
+        android:minHeight="@dimen/px90"
+        android:paddingLeft="@dimen/px30"
+        android:text="@string/keep_secret" />-->
+
+</LinearLayout>

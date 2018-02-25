@@ -1,0 +1,127 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <!-- px尺寸 -->
+    <!-- px尺寸 -->
+    <dimen name="px1">1dp</dimen>
+    <dimen name="px2">2dp</dimen>
+    <dimen name="px3">3dp</dimen>
+    <dimen name="px6">4dp</dimen>
+    <dimen name="px8">5dp</dimen>
+    <dimen name="px9">6dp</dimen>
+    <dimen name="px10">7dp</dimen>
+    <dimen name="px12">8dp</dimen>
+    <dimen name="px14">9dp</dimen>
+    <dimen name="px15">10dp</dimen>
+    <dimen name="px16">11dp</dimen>
+    <dimen name="px18">12dp</dimen>
+    <dimen name="px20">13dp</dimen>
+    <dimen name="px21">14dp</dimen>
+    <dimen name="px22">15dp</dimen>
+    <dimen name="px24">16dp</dimen>
+    <dimen name="px26">17dp</dimen>
+    <dimen name="px27">18dp</dimen>
+    <dimen name="px30">20dp</dimen>
+    <dimen name="px32">21dp</dimen>
+    <dimen name="px33">22dp</dimen>
+    <dimen name="px35">23dp</dimen>
+    <dimen name="px36">24dp</dimen>
+    <dimen name="px37">25dp</dimen>
+    <dimen name="px39">26dp</dimen>
+    <dimen name="px42">28dp</dimen>
+    <dimen name="px45">30dp</dimen>
+    <dimen name="px48">32dp</dimen>
+    <dimen name="px51">34dp</dimen>
+    <dimen name="px52">35dp</dimen>
+    <dimen name="px54">36dp</dimen>
+    <dimen name="px55">37dp</dimen>
+    <dimen name="px56">38dp</dimen>
+    <dimen name="px58">39dp</dimen>
+    <dimen name="px63">42dp</dimen>
+    <dimen name="px60">45dp</dimen>
+    <dimen name="px68">45dp</dimen>
+    <dimen name="px72">48dp</dimen>
+    <dimen name="px75">50dp</dimen>
+    <dimen name="px80">53dp</dimen>
+    <dimen name="px81">54dp</dimen>
+    <dimen name="px87">58dp</dimen>
+    <dimen name="px90">60dp</dimen>
+    <dimen name="px94">62dp</dimen>
+    <dimen name="px100">67dp</dimen>
+    <dimen name="px102">68dp</dimen>
+    <dimen name="px105">70dp</dimen>
+    <dimen name="px110">73dp</dimen>
+    <dimen name="px117">78dp</dimen>
+    <dimen name="px118">79dp</dimen>
+    <dimen name="px120">80dp</dimen>
+    <dimen name="px124">83dp</dimen>
+    <dimen name="px128">85dp</dimen>
+    <dimen name="px130">87dp</dimen>
+    <dimen name="px136">91dp</dimen>
+    <dimen name="px140">92dp</dimen>
+    <dimen name="px144">96dp</dimen>
+    <dimen name="px150">100dp</dimen>
+    <dimen name="px157">104dp</dimen>
+    <dimen name="px160">106dp</dimen>
+    <dimen name="px163">110dp</dimen>
+    <dimen name="px165">115dp</dimen>
+    <dimen name="px166">111dp</dimen>
+    <dimen name="px178">119dp</dimen>
+    <dimen name="px180">120dp</dimen>
+    <dimen name="px188">125dp</dimen>
+    <dimen name="px200">133dp</dimen>
+    <dimen name="px206">137dp</dimen>
+    <dimen name="px220">150dp</dimen>
+    <dimen name="px230">155dp</dimen>
+    <dimen name="px240">160dp</dimen>
+    <dimen name="px250">166dp</dimen>
+    <dimen name="px254">169dp</dimen>
+    <dimen name="px255">170dp</dimen>
+    <dimen name="px270">180dp</dimen>
+    <dimen name="px318">212dp</dimen>
+    <dimen name="px320">213dp</dimen>
+    <dimen name="px408">272dp</dimen>
+    <dimen name="px400">250dp</dimen>
+    <dimen name="px501">334dp</dimen>
+    <dimen name="pop">300dp</dimen>
+
+    <!-- 字体尺寸 -->
+    <dimen name="text_size_huger">36sp</dimen>
+    <dimen name="text_size_huge">26sp</dimen>
+    <dimen name="text_size_largelarge">20sp</dimen>
+    <dimen name="text_size_largel">19sp</dimen>
+    <dimen name="text_size_large">18sp</dimen>
+    <dimen name="text_size_larges">17sp</dimen>
+    <dimen name="text_size_mediumx">16sp</dimen>
+    <dimen name="text_size_mediumm">15sp</dimen>
+    <dimen name="text_size_medium">14sp</dimen>
+    <dimen name="text_size_mediums">13sp</dimen>
+    <dimen name="text_size_small">12sp</dimen>
+    <dimen name="text_size_smalls">11sp</dimen>
+    <dimen name="text_size_smallsmall">10sp</dimen>
+    <dimen name="text_size_micro">8sp</dimen>
+
+    <dimen name="radioButton_size">12dp</dimen>
+
+    <!-- pull to refresh -->
+    <dimen name="indicator_right_padding">10dp</dimen>
+    <dimen name="indicator_corner_radius">12dp</dimen>
+    <dimen name="indicator_internal_padding">4dp</dimen>
+    <dimen name="header_footer_left_right_padding">24dp</dimen>
+    <dimen name="header_footer_top_bottom_padding">12dp</dimen>
+    <dimen name="vip_store_img_size">96dp</dimen>
+
+    <!-- 个人中心 头像尺寸 -->
+    <dimen name="me_avatar_size">64dp</dimen>
+
+    <!-- 通用边框圆角 -->
+    <dimen name="border_radius">2dp</dimen>
+    <dimen name="qr_code_size">52dp</dimen>
+    <dimen name="qr_code_size_70">70dp</dimen>
+    <dimen name="grid_img_size">104dp</dimen>
+
+    <!-- 优惠卡片尺寸 -->
+    <dimen name="deal_card_size">136dp</dimen>
+
+    <!-- 表单 文字居中 标题文本宽度 116 = 96 + 20 -->
+    <dimen name="hitv_left_title_width">116dp</dimen>
+</resources>

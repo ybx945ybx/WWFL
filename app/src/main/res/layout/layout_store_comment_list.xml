@@ -1,0 +1,94 @@
+<com.haitao.view.MultipleStatusView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/msv"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg">
+
+    <!--<LinearLayout-->
+        <!--android:id="@+id/content_view"-->
+
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:orientation="vertical">-->
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="0dp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:orientation="vertical"-->
+            <!--android:descendantFocusability="blocksDescendants">-->
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/content_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="none"
+                android:layout_above="@+id/layoutComment">
+
+            </android.support.v7.widget.RecyclerView>
+
+        <!--</LinearLayout>-->
+        <!--底部评论-->
+        <LinearLayout
+            android:id="@+id/layoutComment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white"
+            android:focusable="false"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/separate"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="12dp">
+
+                <com.haitao.view.CustomImageView
+                    android:id="@+id/img_avatar"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_alignTop="@+id/etContent"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="12dp"
+                    fresco:failureImage="@mipmap/ic_default_avator"
+                    fresco:failureImageScaleType="centerCrop"
+                    fresco:placeholderImage="@mipmap/ic_default_avator"
+                    fresco:placeholderImageScaleType="centerCrop"
+                    fresco:roundAsCircle="true"/>
+
+                <com.haitao.view.ClearEditText
+                    android:id="@+id/etContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="12dp"
+                    android:layout_toLeftOf="@+id/iv_send"
+                    android:layout_toRightOf="@id/img_avatar"
+                    android:background="@null"
+                    android:hint="@string/discount_comment_hint"
+                    android:imeOptions="actionSend"
+                    android:inputType="textMultiLine"
+                    android:textColor="@color/midGrey"
+                    android:textColorHint="@color/greyD1D2D8"
+                    android:textSize="@dimen/text_size_medium"/>
+
+                <ImageView
+                    android:id="@+id/iv_send"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/etContent"
+                    android:layout_alignParentRight="true"
+                    android:src="@mipmap/ic_comment_send"/>
+            </RelativeLayout>
+        </LinearLayout>
+    <!--</LinearLayout>-->
+
+</com.haitao.view.MultipleStatusView>

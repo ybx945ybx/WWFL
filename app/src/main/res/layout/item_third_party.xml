@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@drawable/bg_item_selectable"
+              android:orientation="vertical"
+              tools:ignore="RtlHardcoded">
+
+    <RelativeLayout
+        android:id="@+id/layoutQQ"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/px24">
+
+        <com.haitao.view.CustomImageView
+            android:id="@+id/ivImage"
+            android:layout_width="@dimen/px42"
+            android:layout_height="@dimen/px42"
+            android:layout_centerVertical="true" />
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/px36"
+            android:layout_toRightOf="@+id/ivImage"
+            android:textColor="@color/midGrey2"
+            android:textSize="@dimen/text_size_larges"
+            tools:text="@string/login_qq" />
+
+        <TextView
+            android:id="@+id/tvBind"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:textColor="@color/sl_submit_color_new"
+            android:textSize="@dimen/text_size_medium"
+            tools:text="解除绑定" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/divider"
+        style="@style/Divider_ECECEC" />
+
+</LinearLayout>

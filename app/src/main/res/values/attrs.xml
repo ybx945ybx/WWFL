@@ -1,0 +1,208 @@
+<resources>
+    <!-- 末行对齐方式 -->
+    <declare-styleable name="AlignTextView">
+        <attr name="align" format="enum">
+            <enum name="left" value="0" />
+            <enum name="center" value="1" />
+            <enum name="right" value="2" />
+        </attr>
+    </declare-styleable>
+    <!-- Declare custom theme attributes that allow changing which styles are
+         used for button bars depending on the API level.
+         ?android:attr/buttonBarStyle is new as of API 11 so this is
+         necessary to support previous API levels. -->
+    <declare-styleable name="ViewPagerIndicator">
+        <!-- Style of the tab indicator's tabs. -->
+        <attr name="vpiTabPageIndicatorStyle" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="roundedimageview">
+        <attr name="border_thickness" format="dimension" />
+        <attr name="border_inside_color" format="color" />
+        <attr name="border_outside_color" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="TagCloudLayout">
+        <attr name="lineSpacing" format="dimension" />
+        <attr name="tagSpacing" format="dimension" />
+    </declare-styleable>
+
+    <attr name="borderRadius" format="dimension" />
+    <attr name="type">
+        <enum name="circle" value="0" />
+        <enum name="round" value="1" />
+    </attr>
+
+    <declare-styleable name="RoundImageView">
+        <attr name="borderRadius" />
+        <attr name="type" />
+    </declare-styleable>
+
+    <declare-styleable name="WaveView">
+        <attr name="above_wave_color" format="color" />
+        <attr name="blow_wave_color" format="color" />
+        <attr name="progress" format="float" />
+        <attr name="wave_length" format="enum">
+            <enum name="large" value="1" />
+            <enum name="middle" value="2" />
+            <enum name="little" value="3" />
+        </attr>
+        <attr name="wave_height" format="enum">
+            <enum name="large" value="1" />
+            <enum name="middle" value="2" />
+            <enum name="little" value="3" />
+        </attr>
+        <attr name="wave_hz" format="enum">
+            <enum name="fast" value="1" />
+            <enum name="normal" value="2" />
+            <enum name="slow" value="3" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="Themes">
+        <attr name="waveViewStyle" format="reference" />
+    </declare-styleable>
+
+
+    <!-- 圆形进度条 -->
+    <declare-styleable name="RoundProgressBar">
+        <attr name="roundColor" format="color" />
+        <attr name="roundProgressColor" format="color" />
+        <attr name="roundWidth" format="dimension" />
+        <attr name="textColor" format="color" />
+        <attr name="textSize" format="dimension" />
+        <attr name="max" format="float" />
+        <attr name="textIsDisplayable" format="boolean" />
+        <attr name="startAngle" format="integer" />
+        <attr name="clockwise" format="boolean" />
+        <attr name="style">
+            <enum name="STROKE" value="0" />
+            <enum name="FILL" value="1" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="ExpandableTextView">
+        <attr name="maxCollapsedLines" format="integer" />
+        <attr name="animDuration" format="integer" />
+        <attr name="animAlphaStart" format="float" />
+        <attr name="expandDrawable" format="reference" />
+        <attr name="collapseDrawable" format="reference" />
+    </declare-styleable>
+
+
+    <declare-styleable name="RichTextEditor">
+        <attr name="hint" format="string" />
+    </declare-styleable>
+
+    <!-- 多状态布局容器 -->
+    <declare-styleable name="MultipleStatusView">
+        <attr name="loadingView" format="reference" />
+        <attr name="errorView" format="reference" />
+        <attr name="emptyView" format="reference" />
+        <attr name="noNetworkView" format="reference" />
+        <attr name="contentView" format="reference" />
+    </declare-styleable>
+
+    <!-- 通用两行条目 -->
+    <declare-styleable name="HtItemView">
+        <attr name="title" format="string" />
+        <attr name="content" format="string" />
+        <attr name="next_enabled" format="boolean" />
+        <attr name="divider_enabled" format="boolean" />
+    </declare-styleable>
+
+    <!-- 通用1图标2标题View -->
+    <declare-styleable name="HtIconTitlesView">
+        <attr name="icon_title" format="string" />
+        <attr name="icon_text" format="string" />
+        <attr name="icon" format="reference" />
+    </declare-styleable>
+
+    <!-- 通用Section标题 -->
+    <declare-styleable name="HtTitleView">
+        <attr name="sub_title" format="string" />
+        <attr name="sub_title_icon" format="reference" />
+        <!--<attr name="more" format="string" />-->
+    </declare-styleable>
+
+
+    <!-- 通用表单 文字+图标 -->
+    <declare-styleable name="HtItemTextView">
+        <attr name="hitv_title" format="string" />
+        <attr name="hitv_right_text" format="string" />
+        <attr name="hitv_left_img" format="reference" />
+        <attr name="hitv_right_img_visible" format="boolean" />
+        <attr name="hitv_underline_visible" format="boolean" />
+        <attr name="hitv_center" format="boolean" />
+        <attr name="hitv_ellipsize_end" format="boolean" />
+        <attr name="android:maxLines" />
+    </declare-styleable>
+
+    <!-- 通用表单 输入框+图标 -->
+    <declare-styleable name="HtItemEditView">
+        <attr name="hiev_title" format="string" />
+        <attr name="hiev_text" format="string" />
+        <attr name="hiev_hint_text" format="string" />
+        <attr name="hiev_right_img" format="reference" />
+        <attr name="hiev_underline_visible" format="boolean" />
+        <attr name="hiev_raw_input" format="boolean" />
+        <attr name="android:inputType" />
+        <attr name="android:maxLines" />
+    </declare-styleable>
+
+    <!-- 通用标题 -->
+    <declare-styleable name="HtHeadView">
+        <attr name="center_text" format="string" />
+        <attr name="right_text" format="string" />
+        <attr name="right_text_color" format="color" />
+        <attr name="right_text_enabled" format="boolean" />
+        <attr name="right_img" format="reference" />
+        <attr name="left_img" format="reference" />
+        <attr name="divider_visible" format="boolean" />
+        <attr name="level_1_title" format="boolean" />
+    </declare-styleable>
+
+    <!-- 登录注册editTextView -->
+    <declare-styleable name="HtEditTextView">
+        <attr name="edit_text" format="string" />
+        <attr name="edit_hit_text" format="string" />
+        <attr name="right_txt" format="string" />
+        <attr name="right_txt_color" format="color" />
+        <attr name="right_txt_enabled" format="boolean" />
+        <attr name="right_image" format="reference" />
+        <attr name="left_txt" format="string" />
+        <attr name="left_image" format="reference" />
+        <attr name="left_right_image" format="reference" />
+        <attr name="left_image_selected" format="boolean" />
+        <attr name="right_image_selected" format="boolean" />
+        <attr name="edit_clear_show" format="boolean" />
+        <attr name="edit_digits_show" format="boolean" />
+        <attr name="android:inputType" />
+        <attr name="android:maxLines" />
+        <attr name="android:focusable" />
+
+    </declare-styleable>
+
+
+    <!-- 登录注册TextView -->
+    <declare-styleable name="HtTextView">
+        <attr name="tv_text" format="string" />
+        <attr name="tv_right_image" format="reference" />
+        <attr name="tv_left_image" format="reference" />
+
+    </declare-styleable>
+
+    <!-- 主页Tab -->
+    <declare-styleable name="MainTabView">
+        <attr name="tab_name" format="string" />
+        <attr name="tab_drawable" format="reference" />
+        <attr name="tab_selected" format="boolean" />
+    </declare-styleable>
+
+    <!-- 优惠主页4Icon -->
+    <declare-styleable name="HomeTabView">
+        <attr name="home_tab_name" format="string" />
+        <attr name="home_tab_drawable" format="reference" />
+    </declare-styleable>
+
+</resources>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/bg"
+              android:orientation="vertical">
+
+    <!--<include layout="@layout/layout_common_header" />-->
+
+    <com.haitao.view.HtHeadView
+        android:id="@+id/ht_headview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.haitao.view.refresh.XListView
+            android:id="@+id/lvList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@null"
+            android:listSelector="@color/transparent"
+            android:scrollbars="none">
+
+        </com.haitao.view.refresh.XListView>
+
+        <include layout="@layout/layout_common_error" />
+
+        <include layout="@layout/layout_common_progress" />
+    </RelativeLayout>
+
+
+</LinearLayout>

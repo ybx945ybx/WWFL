@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.haitao.activity.DiscountDailyActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <!-- 标题 -->
+        <com.haitao.view.HtHeadView
+            android:id="@+id/ht_headview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:center_text="@string/discount_daily" />
+
+        <com.haitao.view.MultipleStatusView
+            android:id="@+id/msv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!-- 日报列表 -->
+            <android.support.v4.view.ViewPager
+                android:id="@+id/content_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToPadding="false"
+                android:paddingBottom="8dp"
+                android:paddingLeft="8dp"
+                android:paddingRight="40dp"
+                android:paddingTop="8dp" />
+
+        </com.haitao.view.MultipleStatusView>
+
+    </LinearLayout>
+
+    <!-- 保存图片视图 -->
+    <RelativeLayout
+        android:id="@+id/rl_save_pic"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:paddingBottom="24dp"
+        android:paddingLeft="38dp"
+        android:paddingRight="38dp"
+        android:paddingTop="24dp"
+        android:visibility="invisible">
+
+        <!-- 标题 -->
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/daily_discount"
+            android:textColor="@color/darkGrey2"
+            android:textSize="14sp" />
+
+        <!-- 日期 -->
+        <TextView
+            android:id="@+id/tv_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_title"
+            android:layout_marginTop="4dp"
+            android:gravity="center"
+            android:textColor="#545556"
+            android:textSize="12sp"
+            tools:text="2017.10.17" />
+
+        <!-- 商品图 -->
+        <com.haitao.view.CustomImageView
+            android:id="@+id/img_discount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_date"
+            android:layout_marginTop="16dp"
+            fresco:actualImageScaleType="fitCenter"
+            fresco:placeholderImage="@mipmap/ic_default_650"
+            fresco:placeholderImageScaleType="fitCenter"
+            fresco:viewAspectRatio="1" />
+
+        <!-- 优惠名 -->
+        <TextView
+            android:id="@+id/tv_discount_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/img_discount"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="8dp"
+            android:maxLines="2"
+            android:textColor="@color/darkGrey2"
+            android:textSize="18sp"
+            tools:text="【55专享】优惠升级！Perricone MD 裴礼康官网：精选产品" />
+
+        <!-- 价格信息 -->
+        <LinearLayout
+            android:id="@+id/ll_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_discount_name">
+
+            <TextView
+                android:id="@+id/tv_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/brightOrange"
+                android:textSize="14sp"
+                tools:text="低至7折，再享额外6折" />
+
+            <TextView
+                android:id="@+id/tv_reabte"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:background="@drawable/bg_round_corner_orange_2dp"
+                android:paddingBottom="1dp"
+                android:paddingLeft="4dp"
+                android:paddingRight="4dp"
+                android:paddingTop="1dp"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                tools:text="最高返40%" />
+
+        </LinearLayout>
+
+        <!-- 商家 & 返利信息 -->
+        <TextView
+            android:id="@+id/tv_store_rebate_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ll_price"
+            android:layout_marginBottom="6dp"
+            android:layout_marginTop="4dp"
+            android:textColor="#6E6D6B"
+            android:textSize="12sp"
+            tools:text="Perricone MD · 3.8人下单获得返利" />
+
+        <!-- 支付宝 直邮中国 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_store_rebate_info"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_direct_transport_support"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/border_round_corner_green"
+                android:text="@string/direct_transport"
+                android:textColor="@color/green"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tv_alipay_support"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border_round_corner_blue"
+                android:text="@string/alipay"
+                android:textColor="@color/midBlue"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <!-- 二维码 -->
+        <ImageView
+            android:id="@+id/img_qr_code"
+            android:layout_width="@dimen/qr_code_size"
+            android:layout_height="@dimen/qr_code_size"
+            android:layout_alignParentBottom="true" />
+
+        <!-- 注册即送5美元 -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/img_qr_code"
+            android:layout_alignTop="@id/img_qr_code"
+            android:layout_marginLeft="6dp"
+            android:layout_toRightOf="@id/img_qr_code"
+            android:gravity="left|center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/register_to_get_5_dollars"
+                android:textColor="@color/middle_grey2"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:text="@string/check_qr"
+                android:textColor="@color/middle_grey2"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/img_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/ic_logo_default" />
+
+    </RelativeLayout>
+</RelativeLayout>
+

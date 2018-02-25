@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- 标题 -->
+    <com.haitao.view.HtHeadView
+        android:id="@+id/hv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:center_text="@string/withdraw_account" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/bg">
+
+        <ListView
+            android:id="@+id/lvList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@null"
+            android:dividerHeight="0dp" />
+
+        <include layout="@layout/layout_common_error" />
+
+        <include layout="@layout/layout_common_progress" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/greyE6E6E6" />
+
+    <!-- 新增 -->
+    <TextView
+        android:id="@+id/tv_add"
+        style="@style/BottomNav"
+        android:drawableTop="@mipmap/ic_add_circle"
+        android:text="@string/add" />
+</LinearLayout>
+

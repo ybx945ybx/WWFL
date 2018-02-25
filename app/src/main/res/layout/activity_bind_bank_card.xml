@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white"
+              android:orientation="vertical">
+    <!-- 顶部 -->
+    <com.haitao.view.HtHeadView
+        android:id="@+id/head_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:center_text="@string/titlt_bind_card"
+        app:divider_visible="false">
+
+    </com.haitao.view.HtHeadView>
+
+    <!-- 手机号 -->
+    <com.haitao.view.HtEditTextView
+        android:id="@+id/et_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginTop="16dp"
+        android:inputType="number"
+        android:maxLines="1"
+
+        android:focusable="false"
+        app:edit_clear_show="false"
+        app:edit_hit_text="请输入手机号"
+        app:left_image="@drawable/ic_union_pay_phone_selector"/>
+
+    <!-- 银行卡号 -->
+    <com.haitao.view.HtEditTextView
+        android:id="@+id/et_card_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginTop="16dp"
+        android:inputType="number"
+        android:maxLines="1"
+        app:edit_hit_text="请输入银行卡号"
+        app:left_image="@drawable/ic_union_pay_card_selector"
+        app:right_image="@mipmap/ic_union_pay_scan_gray"/>
+
+    <!-- 持卡人姓名 -->
+    <com.haitao.view.HtEditTextView
+        android:id="@+id/et_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginTop="16dp"
+        android:maxLines="1"
+        app:edit_hit_text="请输入持卡人姓名"
+        app:left_image="@drawable/ic_union_pay_account_selector"/>
+
+    <!-- 提交按钮 -->
+    <TextView
+        android:id="@+id/tv_commit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/bg_purple_gradient_gray_6dp_selector"
+        android:enabled="false"
+        android:gravity="center"
+        android:paddingBottom="9dp"
+        android:paddingTop="9dp"
+        android:text="@string/commit_bind"
+        android:textColor="@color/white"
+        android:textSize="16sp"/>
+
+    <!-- 绑定说明 -->
+    <TextView
+        android:id="@+id/tv_bind_declare"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="16dp"
+        android:paddingBottom="16dp"
+        android:text="@string/bind_declare"
+        android:textColor="@color/colorPurple779CFC"
+        android:textSize="14sp"/>
+</LinearLayout>

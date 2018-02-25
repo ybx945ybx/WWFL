@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/bg"
+              android:focusable="true"
+              android:focusableInTouchMode="true"
+              android:orientation="vertical"
+              android:paddingBottom="@dimen/px15">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvActivity"
+            style="@style/home_fast_style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="?attr/selectableItemBackground"
+            android:drawableTop="@mipmap/ic_discovery_activity"
+            android:text="@string/discovery_activity" />
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/px26"
+            android:layout_marginTop="@dimen/px26"
+            android:background="@color/separate" />
+
+        <TextView
+            android:id="@+id/tvExchange"
+            style="@style/home_fast_style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="?attr/selectableItemBackground"
+            android:drawableTop="@mipmap/ic_discovery_exchange"
+            android:text="@string/discovery_exchange" />
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/px26"
+            android:layout_marginTop="@dimen/px26"
+            android:background="@color/separate" />
+
+        <TextView
+            android:id="@+id/tvTrial"
+            style="@style/home_fast_style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="?attr/selectableItemBackground"
+            android:drawableTop="@mipmap/ic_discovery_sample"
+            android:text="@string/discovery_trial" />
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/px26"
+            android:layout_marginTop="@dimen/px26"
+            android:background="@color/separate" />
+
+        <TextView
+            android:id="@+id/tvSail"
+            style="@style/home_fast_style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="?attr/selectableItemBackground"
+            android:drawableTop="@mipmap/ic_discovery_transfer"
+            android:text="@string/discovery_sail" />
+    </LinearLayout>
+
+    <!-- 推荐活动 -->
+    <com.haitao.view.HtTitleView
+        android:id="@+id/title_recommend_activity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/px8"
+        app:sub_title="@string/discovery_activiting" />
+        <!--app:more="@string/discovery_total_activity"-->
+
+    <com.haitao.view.FullListView
+        android:id="@+id/lvActivity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@null" />
+
+    <!-- 推荐试用 -->
+    <com.haitao.view.HtTitleView
+        android:id="@+id/title_recommend_trail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/px8"
+        app:sub_title="@string/discovery_tring" />
+        <!--app:more="@string/discovery_total_trial"-->
+
+    <com.haitao.view.FullListView
+        android:id="@+id/lvTrial"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@null" />
+
+    <!-- 推荐商家 -->
+    <com.haitao.view.HtTitleView
+        android:id="@+id/title_recommend_store"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/px8"
+        app:sub_title="@string/discovery_store" />
+        <!--app:more="@string/discovery_total_store"-->
+
+    <com.haitao.view.FullListView
+        android:id="@+id/lvStore"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@null" />
+
+    <!-- 推荐转运 -->
+    <com.haitao.view.HtTitleView
+        android:id="@+id/title_recommend_transport"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/px8"
+        app:sub_title="@string/discovery_transport" />
+        <!--app:more="@string/discovery_total_transport"-->
+
+    <com.haitao.view.FullListView
+        android:id="@+id/lvTransport"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@null" />
+
+</LinearLayout>

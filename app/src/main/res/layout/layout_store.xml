@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/bg"
+              android:focusable="true"
+              android:focusableInTouchMode="true"
+              android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:id="@+id/rl_banner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/img_bg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:src="@mipmap/bg_store_banner" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/img_bg"
+            android:layout_alignLeft="@id/img_bg"
+            android:layout_alignRight="@id/img_bg"
+            android:layout_alignTop="@id/img_bg"
+            android:layout_marginBottom="16dp"
+            android:layout_marginLeft="22dp"
+            android:layout_marginRight="22dp"
+            android:layout_marginTop="16dp"
+            android:background="@mipmap/front_store_banner"
+            android:orientation="horizontal">
+
+            <com.haitao.view.CustomImageView
+                android:id="@+id/img_super_store"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:padding="16dp"
+                app:actualImageScaleType="fitCenter"
+                app:viewAspectRatio="1" />
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/pinkFC7F7F">
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:gravity="center"
+                    android:text="限时超级返利"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <!-- 商家信息 -->
+                <TextView
+                    android:id="@+id/tv_super_store_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:maxLines="2"
+                    android:paddingLeft="25dp"
+                    android:paddingRight="25dp"
+                    android:textColor="@color/white"
+                    android:textSize="10sp"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView2"
+                    tools:ignore="SmallSp"
+                    tools:text="美国资历最老的\n奢侈品百货公司" />
+
+                <!-- 返利 -->
+                <TextView
+                    android:id="@+id/tv_super_rebate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="23dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@mipmap/border_cashbak"
+                    android:gravity="center"
+                    android:paddingBottom="2dp"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:paddingTop="2dp"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_super_store_info"
+                    app:layout_constraintVertical_bias="0.56"
+                    tools:text="返利15%" />
+            </android.support.constraint.ConstraintLayout>
+
+            <!--<LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/pinkFC7F7F"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:gravity="center"
+                    android:text="限时超级返利"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+                &lt;!&ndash; 商家信息 &ndash;&gt;
+                <TextView
+                    android:id="@+id/tv_super_store_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center"
+                    android:lines="2"
+                    android:textColor="@color/white"
+                    android:textSize="10sp"
+                    tools:ignore="SmallSp"
+                    tools:text="美国资历最老的\n奢侈品百货公司" />
+
+                &lt;!&ndash; 返利 &ndash;&gt;
+                <TextView
+                    android:id="@+id/tv_super_rebate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="13dp"
+                    android:background="@mipmap/border_cashbak"
+                    android:gravity="center"
+                    android:paddingBottom="2dp"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:paddingTop="2dp"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    tools:text="返利15%" />
+
+
+            </LinearLayout>-->
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <!-- 国家 -->
+    <com.haitao.view.HorizontalListView
+        android:id="@+id/lv_country"
+        android:layout_width="match_parent"
+        android:layout_height="88dp"
+        android:background="@color/white" />
+
+    <!-- 直邮中国 收藏的商家 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingBottom="16dp"
+        android:paddingTop="16dp">
+
+        <!-- 直邮中国 -->
+        <com.haitao.view.HtIconTitlesView
+            android:id="@+id/ht_china_direct"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:icon="@mipmap/ic_direct_transport"
+            app:icon_text="@string/buy_conveniently_without_transfer"
+            app:icon_title="@string/direct_transport" />
+
+        <!-- 竖分割线 -->
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="40dp"
+            android:background="@color/greyE6E6E6" />
+
+        <!-- 收藏的商家 -->
+        <com.haitao.view.HtIconTitlesView
+            android:id="@+id/ht_fav_store"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:icon="@mipmap/ic_fav_store"
+            app:icon_text="0个"
+            app:icon_title="@string/fav_store" />
+
+    </LinearLayout>
+
+    <!-- 广告 -->
+    <com.haitao.view.HtAdView
+        android:id="@+id/htav_ad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp" />
+
+    <!-- 今日加倍返利 标题 -->
+    <com.haitao.view.HtTitleView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:sub_title="@string/today_double_rebate" />
+
+</LinearLayout>

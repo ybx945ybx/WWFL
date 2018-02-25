@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white"
+              android:orientation="vertical">
+
+    <!-- 顶部 -->
+    <!--<include
+        android:id="@+id/layoutTop"
+        layout="@layout/layout_common_header" />-->
+
+    <com.haitao.view.HtHeadView
+        android:id="@+id/hv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:center_text="@string/order_detail"
+        app:right_img="@mipmap/ic_service" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/px35">
+
+            <!-- 丢单进度 -->
+            <com.haitao.view.OrderLostProgressView
+                android:id="@+id/pv_order_lost"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+
+            <!-- 日期 -->
+            <com.haitao.view.HtItemTextView
+                android:id="@+id/hitv_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:hitv_right_img_visible="false"
+                app:hitv_title="@string/date" />
+
+            <!-- 订单号 -->
+            <com.haitao.view.HtItemTextView
+                android:id="@+id/hitv_order_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:hitv_right_img_visible="false"
+                app:hitv_title="@string/order_number" />
+
+            <!-- 商家 -->
+            <com.haitao.view.HtItemTextView
+                android:id="@+id/hitv_store"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:hitv_right_img_visible="false"
+                app:hitv_title="@string/order_store" />
+
+            <!-- 消费金额 -->
+            <com.haitao.view.HtItemTextView
+                android:id="@+id/hitv_amount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:hitv_right_img_visible="false"
+                app:hitv_title="@string/order_money" />
+
+              <!-- 状态 -->
+            <com.haitao.view.HtItemTextView
+                android:id="@+id/hitv_status"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:hitv_right_img_visible="false"
+                app:hitv_title="@string/rebate_status" />
+
+            <!-- 返利金额 -->
+            <com.haitao.view.HtItemTextView
+                android:id="@+id/hitv_rebate_amount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:hitv_right_img_visible="false"
+                app:hitv_title="@string/order_rebate_amount" />
+
+            <!-- 预计生效日期 -->
+            <com.haitao.view.HtItemTextView
+                android:id="@+id/hitv_estimated_rebate_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:hitv_right_img_visible="false"
+                app:hitv_title="@string/estimate_take_effect_time" />
+
+            <!-- 备注 -->
+            <com.haitao.view.HtItemTextView
+                android:id="@+id/hitv_note"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:hitv_right_img_visible="false"
+                app:hitv_title="@string/note" />
+
+            <!-- 订单截图 -->
+            <LinearLayout
+                android:id="@+id/ll_order_pics"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/px24"
+                android:paddingRight="@dimen/px24"
+                android:paddingTop="@dimen/px24"
+                android:visibility="visible">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:text="@string/order_image"
+                    android:textColor="@color/midGrey2"
+                    android:textSize="@dimen/text_size_medium" />
+
+                <com.haitao.view.FullGirdView
+                    android:id="@+id/gv_order_pics"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/px24"
+                    android:background="@color/white"
+                    android:horizontalSpacing="@dimen/px24"
+                    android:numColumns="3" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_order_lost_tip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/px18"
+                android:text="@string/order_lost_tip"
+                android:textColor="@color/middle_grey2"
+                android:textSize="@dimen/text_size_medium" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

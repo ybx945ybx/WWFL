@@ -1,0 +1,23 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/ll_common_error"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white"
+              android:gravity="center"
+              android:orientation="vertical"
+              android:visibility="gone">
+
+    <!-- 错误信息 -->
+    <TextView
+        android:id="@+id/tvErrorMsg"
+        style="@style/DefaultViewImgTxt"
+        android:drawableTop="@mipmap/ic_error_logo"
+        android:text="@string/network_load_error" />
+
+    <!-- 刷新 -->
+    <TextView
+        android:id="@+id/btnRefresh"
+        style="@style/DefaultViewBtn"
+        android:text="@string/refresh" />
+
+</LinearLayout>

@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/px15"
+        android:paddingRight="@dimen/px15"
+        android:paddingTop="@dimen/px20"
+        android:paddingBottom="@dimen/px20">
+
+
+        <com.haitao.view.CustomImageView
+            android:id="@+id/img_avatar"
+            android:layout_width="@dimen/px55"
+            android:layout_height="@dimen/px55"
+            android:layout_marginRight="@dimen/px15"
+            fresco:placeholderImageScaleType="centerCrop"
+            fresco:placeholderImage="@mipmap/ic_default_avator"
+            fresco:failureImage="@mipmap/ic_default_avator"
+            fresco:failureImageScaleType="centerCrop"
+            fresco:roundAsCircle="true"
+            fresco:roundWithOverlayColor="@color/white"/>
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/img_avatar"
+            android:text="小胡的鸡蛋"
+            android:textColor="@color/midGrey"
+            android:textSize="@dimen/text_size_medium" />
+
+        <TextView
+            android:id="@+id/tvTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvName"
+            android:layout_alignLeft="@id/tvName"
+            android:layout_marginTop="@dimen/px6"
+            android:text="1天前"
+            android:textColor="@color/lightGrey"
+            android:textSize="@dimen/text_size_small" />
+
+        <TextView
+            android:id="@+id/tvReply"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/px60"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="@dimen/px15"
+            android:gravity="center_vertical"
+            android:text="@string/onReply"
+            android:textColor="@color/midBlue"
+            android:textSize="@dimen/text_size_medium" />
+
+        <TextView
+            android:id="@+id/tvContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/tvName"
+            android:layout_below="@id/img_avatar"
+            android:layout_marginTop="@dimen/px10"
+            android:lineSpacingExtra="@dimen/px2"
+            android:text="感觉很好看啊，话说买的    多少钱呢？"
+            android:textColor="@color/middleGrey"
+            android:textSize="@dimen/text_size_mediumx" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/ic_today_quotes"
+            android:layout_alignRight="@id/img_avatar"
+            android:layout_alignTop="@id/tvContent"
+            android:visibility="gone"
+            android:layout_marginTop="@dimen/px3"/>
+
+        <com.haitao.view.FullGirdView
+            android:id="@+id/gv_order_pics"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/tvContent"
+            android:layout_below="@+id/tvContent"
+            android:layout_marginTop="@dimen/px15"
+            android:horizontalSpacing="@dimen/px15"
+            android:listSelector="@color/transparent"
+            android:numColumns="3"
+            android:verticalSpacing="@dimen/px15"></com.haitao.view.FullGirdView>
+
+        <RelativeLayout
+            android:id="@+id/layoutQuote"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/gv_order_pics"
+            android:layout_below="@id/gv_order_pics"
+            android:layout_marginTop="@dimen/px10"
+            android:background="@drawable/shape_mini_light_grey_solid_rectangle"
+            android:padding="@dimen/px15">
+
+            <TextView
+                android:id="@+id/tvQuoteName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="“发烧的哆咪”"
+                android:textColor="@color/midBlue"
+                android:layout_marginRight="@dimen/px6"
+                android:textSize="@dimen/text_size_small" />
+
+            <TextView
+                android:id="@+id/tvQuoteContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvQuoteName"
+                android:layout_marginTop="@dimen/px10"
+                android:text="不错哦"
+                android:textColor="@color/middleGrey"
+                android:textSize="@dimen/text_size_medium" />
+            <ImageView android:id="@+id/ivArrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/sl_arrow_default"
+                android:layout_below="@+id/tvQuoteContent"
+                android:visibility="gone"
+                android:padding="@dimen/px15"
+                android:layout_alignRight="@+id/tvQuoteContent"/>
+
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/tvDevice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="来自于 iPhone 6 Plus"
+            android:textColor="@color/lightGrey"
+            android:textSize="@dimen/text_size_small"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_toRightOf="@+id/img_avatar"
+            android:layout_toEndOf="@+id/img_avatar"
+            android:layout_below="@+id/layoutQuote"
+            android:layout_marginTop="@dimen/px10"
+            android:drawableLeft="@mipmap/mobile"
+            android:drawablePadding="@dimen/px3"
+            />
+    </RelativeLayout>
+
+    <View android:id="@+id/viewSeparate"
+        android:layout_marginLeft="@dimen/px15"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px1"
+        android:background="@color/separate"/>
+
+</LinearLayout>

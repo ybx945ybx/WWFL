@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    tools:ignore="RtlHardcoded">
+
+    <!-- 图标 -->
+    <com.haitao.view.CustomImageView
+        android:id="@+id/img_country"
+        android:layout_width="32dp"
+        android:layout_height="32dp" />
+
+    <!-- 国家名 -->
+    <TextView
+        android:id="@+id/tv_country_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/img_country"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="6dp"
+        android:textColor="@color/grey6D6D72"
+        android:textSize="12sp"
+        tools:text="中国" />
+
+</RelativeLayout>

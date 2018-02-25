@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/bg"
+              android:orientation="vertical">
+
+    <!--<include layout="@layout/layout_common_header"/>-->
+
+    <com.haitao.view.HtHeadView
+        android:id="@+id/ht_headview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <include
+        android:id="@+id/friend_request"
+        layout="@layout/frend_request_layout"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/layoutComment">
+
+            <com.haitao.view.refresh.XListView
+                android:id="@+id/lvList"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToPadding="false"
+                android:divider="@color/transparent"
+                android:dividerHeight="0dp"
+                android:listSelector="@color/transparent"
+                android:paddingTop="8dp"
+                android:scrollbars="none">
+
+            </com.haitao.view.refresh.XListView>
+
+            <include layout="@layout/layout_common_error" />
+        </RelativeLayout>
+
+        <!--评论-->
+        <RelativeLayout
+            android:id="@+id/layoutComment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/greyE6E6E6" />
+
+            <TextView
+                android:id="@+id/btnCommint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/px15"
+                android:text="发送"
+                android:textColor="@color/brightOrange"
+                android:textSize="@dimen/text_size_mediumx" />
+
+            <EditText
+                android:id="@+id/edCommit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:layout_toLeftOf="@+id/btnCommint"
+                android:background="@drawable/bg_round_corner_gray_f5f5f5_6dp"
+                android:hint="输入内容"
+                android:maxLines="1"
+                android:padding="8dp"
+                android:textColor="@color/grey1D1D1F"
+                android:textColorHint="@color/greyA5A5A8"
+                android:textSize="@dimen/text_size_medium" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

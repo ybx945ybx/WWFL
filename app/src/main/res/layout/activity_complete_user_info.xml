@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <com.haitao.view.HtHeadView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:center_text="完善个人信息">
+    </com.haitao.view.HtHeadView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rlyt_select_photo"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="32dp">
+
+            <com.haitao.view.CustomImageView
+                android:id="@+id/iv_avatar"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                fresco:failureImage="@mipmap/ic_default_avator"
+                fresco:failureImageScaleType="centerCrop"
+                fresco:placeholderImage="@mipmap/ic_default_avator"
+                fresco:placeholderImageScaleType="centerCrop"
+                fresco:roundAsCircle="true"/>
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:background="@mipmap/ic_select_photo"/>
+        </RelativeLayout>
+
+        <com.haitao.view.HtEditTextView
+            android:id="@+id/et_account"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="32dp"
+            android:layout_marginTop="32dp"
+            android:inputType="text"
+            android:maxLines="1"
+            app:edit_hit_text="@string/register_user_name_hit"
+            app:left_txt="@string/username">
+
+        </com.haitao.view.HtEditTextView>
+
+        <com.haitao.view.HtEditTextView
+            android:id="@+id/et_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="32dp"
+            android:layout_marginTop="16dp"
+            android:inputType="textPassword"
+            android:maxLines="1"
+            app:edit_hit_text="@string/seeting_new_cash_password_hint"
+            app:left_txt="@string/login_pwd"
+            app:right_image="@drawable/ic_password_hide_show_selector">
+
+        </com.haitao.view.HtEditTextView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="32dp"
+            android:layout_marginTop="16dp"
+            android:gravity="center_vertical"
+            android:background="@mipmap/htedittext_bg">
+
+            <TextView
+                android:layout_width="72dp"
+                android:layout_height="wrap_content"
+                android:text="@string/gender"
+                android:textColor="@color/grey1D1D1F"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:id="@+id/tv_woman"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_radio_button"
+                android:drawablePadding="8dp"
+                android:text="女"
+                android:textColor="@color/grey1D1D1F"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:id="@+id/tv_man"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="32dp"
+                android:drawableLeft="@drawable/ic_radio_button"
+                android:drawablePadding="8dp"
+                android:text="男"
+                android:textColor="@color/grey1D1D1F"
+                android:textSize="14sp"/>
+        </LinearLayout>
+
+        <com.haitao.view.HtEditTextView
+            android:id="@+id/et_invite"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="32dp"
+            android:layout_marginTop="16dp"
+            android:visibility="gone"
+            app:edit_digits_show="true"
+            app:edit_hit_text="@string/please_input_invite_code"
+            app:left_txt="@string/login_invite">
+
+        </com.haitao.view.HtEditTextView>
+
+        <TextView
+            android:id="@+id/tv_commit"
+            style="@style/SubmitButtonOrange"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="32dp"
+            android:layout_marginTop="24dp"
+            android:enabled="false"
+            android:text="@string/confirm"/>
+
+        <TextView
+            android:id="@+id/tv_use_invite_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp"
+            android:paddingBottom="10dp"
+            android:text="@string/have_invite_code"
+            android:textColor="@color/orangeFF804D"
+            android:textSize="14sp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="32dp">
+
+        <TextView
+            android:id="@+id/tvAgree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_agree_selector"
+            android:drawablePadding="4dp"
+            android:text="@string/login_regist_agree"
+            android:textColor="@color/grey848588"
+            android:textSize="12sp"/>
+
+        <TextView
+            android:id="@+id/tvAgreeTerms"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/login_regist_terms"
+            android:textColor="@color/orangeFF804D"
+            android:textSize="12sp"/>
+    </LinearLayout>
+
+</LinearLayout>

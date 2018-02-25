@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:padding="@dimen/px15"
+        android:orientation="vertical">
+
+            <TextView android:id="@+id/tvTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/order_status"
+                android:textColor="@color/darkGrey"
+                android:textSize="@dimen/text_size_mediumx" />
+
+            <com.haitao.view.FullGirdView
+                android:id="@+id/gvCategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/px15"
+                android:horizontalSpacing="@dimen/px15"
+                android:numColumns="3"
+                android:listSelector="@null"
+                android:verticalSpacing="@dimen/px15"></com.haitao.view.FullGirdView>
+        </LinearLayout>
+
+    </LinearLayout>

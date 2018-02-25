@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.haitao.view.HtHeadView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:divider_visible="false">
+
+    </com.haitao.view.HtHeadView>
+
+    <com.haitao.view.MultipleStatusView
+        android:id="@+id/msv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/content_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_item_selectable"
+                    android:orientation="horizontal">
+
+                    <com.haitao.view.CustomImageView
+                        android:id="@+id/iv_store"
+                        android:layout_width="72dp"
+                        android:layout_height="72dp"
+                        fresco:actualImageScaleType="centerInside"
+                        fresco:failureImage="@mipmap/ic_default_240"
+                        fresco:failureImageScaleType="centerInside"
+                        fresco:placeholderImage="@mipmap/ic_default_240"
+                        fresco:placeholderImageScaleType="centerCrop"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="16dp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <com.haitao.view.CustomImageView
+                                android:id="@+id/ivCountry"
+                                android:layout_width="16dp"
+                                android:layout_height="16dp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginRight="4dp"
+                                fresco:failureImage="@mipmap/ic_default_60"
+                                fresco:placeholderImage="@mipmap/ic_default_60"
+                                fresco:placeholderImageScaleType="centerCrop"/>
+
+                            <TextView
+                                android:id="@+id/tv_store_group"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="1"
+                                android:textColor="@color/colorGray6D6D72"
+                                android:textSize="12sp"
+                                tools:text="综合商家"/>
+
+                            <TextView
+                                android:id="@+id/tv_rebate"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:background="@drawable/bg_oval_corner_779cfc"
+                                android:paddingBottom="2dp"
+                                android:paddingLeft="8dp"
+                                android:paddingRight="8dp"
+                                android:paddingTop="2dp"
+                                android:textColor="@color/white"
+                                android:textSize="10sp"
+                                tools:text="线下返利40%"/>
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tv_store_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:textColor="@color/grey29292C"
+                            android:textSize="16sp"
+                            tools:text="Amazon"/>
+
+                        <TextView
+                            android:id="@+id/tv_store_fav"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:textColor="@color/greyA5A5A8"
+                            android:textSize="12sp"
+                            tools:text="23.9万人获得返利 · 1.2万人收藏"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_store_desc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:lineSpacingExtra="3dp"
+                    android:maxLines="2"
+                    android:ellipsize="end"
+                    android:textColor="@color/grey6D6D72"
+                    android:textSize="12sp"
+                    tools:text="美国亚马逊（Amazon)是世界上最大的网上商店，致力于成为全球最以客户为中心的公司，使消费者能够在网上找到并发掘任美国亚马逊（Amazon)是世界上最大的网上商店，致力世界上最大的网上商店于成为全球最以客户为中心的公司，使消费者能够在网上找到并"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_item_selectable"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:drawableLeft="@mipmap/ic_department"
+                    android:drawablePadding="16dp"
+                    android:text="@string/department"
+                    android:textColor="@color/grey29292C"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:id="@+id/tv_department"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical|right"
+                    android:layout_marginLeft="16dp"
+                    android:textColor="@color/grey848588"
+                    android:textSize="14sp"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    tools:text="422 Fulton St Brooklyn, NY 11201"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@color/greyE6E6E6"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_item_selectable"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:drawableLeft="@mipmap/ic_offical_net"
+                    android:drawablePadding="16dp"
+                    android:text="@string/offical_net"
+                    android:textColor="@color/grey29292C"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:id="@+id/tv_offical_net"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical|right"
+                    android:layout_marginLeft="16dp"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:textColor="@color/grey848588"
+                    android:textSize="14sp"
+                    tools:text="422 Fulton St Brooklyn, NY 11201"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@color/greyE6E6E6"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_item_selectable"
+                android:padding="16dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:drawableLeft="@mipmap/ic_open_time"
+                    android:drawablePadding="16dp"
+                    android:text="@string/open_time"
+                    android:textColor="@color/grey29292C"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:id="@+id/tv_open_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical|right"
+                    android:layout_marginLeft="16dp"
+                    android:textColor="@color/grey848588"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:textSize="14sp"
+                    tools:text="422 Fulton St BrooklyFulton St Brooklyn, n, NY 11201"/>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlyt_offline_store"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_item_selectable"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:drawableLeft="@mipmap/ic_offline_store"
+                    android:drawablePadding="16dp"
+                    android:text="@string/offline_store"
+                    android:textColor="@color/grey29292C"
+                    android:textSize="16sp"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/ic_arrow_right_big_c8c8c8"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlyt_offline_discount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_item_selectable"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:drawableLeft="@mipmap/ic_offline_discount"
+                    android:drawablePadding="16dp"
+                    android:text="@string/offline_discount"
+                    android:textColor="@color/grey29292C"
+                    android:textSize="16sp"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/ic_arrow_right_big_c8c8c8"/>
+            </RelativeLayout>
+        </LinearLayout>
+    </com.haitao.view.MultipleStatusView>
+</LinearLayout>

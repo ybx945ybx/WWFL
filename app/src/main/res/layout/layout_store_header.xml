@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:id="@+id/layoutSuperRebate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/bg"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <RelativeLayout
+                android:id="@+id/layoutCatalog"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="@dimen/px6"
+                    android:layout_height="@dimen/px24"
+                    android:layout_centerVertical="true"
+                    android:background="@color/darkOrange" />
+
+                <TextView
+                    android:id="@+id/tvSectionName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/px20"
+                    android:text="今日加倍"
+                    android:textColor="@color/darkGrey"
+                    android:textSize="@dimen/text_size_mediumx" />
+            </RelativeLayout>
+
+            <com.haitao.view.FullListView
+                android:id="@+id/gvSuperRebate"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:divider="@color/transparent"
+                android:dividerHeight="0dp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/layoutContent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" />
+    </LinearLayout>
+
+
+</LinearLayout>

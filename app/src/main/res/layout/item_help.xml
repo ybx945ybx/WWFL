@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/white"
+              android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/ivName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_item_selectable"
+        android:drawablePadding="@dimen/px15"
+        android:drawableRight="@mipmap/ic_next"
+        android:padding="@dimen/px15"
+        android:textColor="@color/midGrey"
+        android:textSize="@dimen/text_size_medium"
+        tools:text="关于返利" />
+
+    <View
+        android:id="@+id/viewSeparate"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px1"
+        android:layout_marginLeft="@dimen/px15"
+        android:background="@color/separate" />
+
+</LinearLayout>

@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/bg"
+              android:orientation="vertical"
+              tools:ignore="SmallSp">
+
+    <!-- 标题 -->
+    <com.haitao.view.HtHeadView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:center_text="@string/withdraw" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- 提现方式 -->
+            <com.haitao.view.HtItemTextView
+                android:id="@+id/hitv_withdraw_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:maxLines="1"
+                app:hitv_center="true"
+                app:hitv_title="@string/withdraw_type"
+                app:hitv_underline_visible="false" />
+
+            <!-- 提现账户 -->
+            <!--<com.haitao.view.HtItemView
+                android:id="@+id/item_withdraw_account"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_item_selectable"
+                app:content="@string/unselected"
+                app:divider_enabled="false"
+                app:next_enabled="true"
+                app:title="@string/withdraw_account" /-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingBottom="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="12dp"
+                    android:text="@string/withdraw_money"
+                    android:textColor="@color/grey1D1D1F"
+                    android:textSize="@dimen/text_size_mediumx"
+                    tools:ignore="RtlHardcoded" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/border_bottom_e6e6e6_0_5dp"
+                    android:gravity="center_vertical"
+                    android:paddingBottom="8dp"
+                    android:paddingTop="8dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="$"
+                        android:textColor="@color/grey1D1D1F"
+                        android:textSize="@dimen/text_size_mediumx" />
+
+                    <com.haitao.view.ClearEditText
+                        android:id="@+id/et_amount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:background="@null"
+                        android:inputType="numberDecimal"
+                        android:textColor="@color/grey1D1D1F"
+                        android:textSize="@dimen/text_size_large"
+                        tools:ignore="RtlHardcoded" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvRate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/px24"
+                    android:layout_marginRight="@dimen/px24"
+                    android:layout_marginTop="@dimen/px12"
+                    android:textColor="@color/orangeFF804D"
+                    android:textSize="@dimen/text_size_small"
+                    tools:text="可用金额：$100" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/btn_submit"
+                style="@style/SubmitButtonRoundCorner"
+                android:layout_marginTop="16dp"
+                android:text="@string/withdraw_confirm" />
+
+            <TextView
+                android:id="@+id/tv_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="14dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="14dp"
+                android:lineSpacingMultiplier="1.4"
+                android:textColor="@color/grey78787D"
+                android:textSize="@dimen/text_size_medium"
+                tools:text="@string/withdraw_tip" />
+        </LinearLayout>
+
+    </ScrollView>
+
+    <!-- 底栏 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <!-- 提现记录 -->
+        <TextView
+            android:id="@+id/tv_withdraw_record"
+            style="@style/BottomNavItem"
+            android:drawableTop="@mipmap/ic_withdraw_record_grey"
+            android:text="@string/withdraw_record" />
+
+        <!-- 管理提现账户 -->
+        <TextView
+            android:id="@+id/tv_withdraw_account_manage"
+            style="@style/BottomNavItem"
+            android:drawableTop="@mipmap/ic_withdraw_account_manage"
+            android:text="@string/withdraw_account_manage" />
+
+    </LinearLayout>
+
+    <!-- 确认提现 -->
+    <!--<Button
+        android:id="@+id/btn_submit"
+        style="@style/SubmitButtonSolidRect"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/withdraw_confirm" />-->
+
+
+</LinearLayout>

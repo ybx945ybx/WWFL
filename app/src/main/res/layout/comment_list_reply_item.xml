@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/viewSeparate"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="48dp"
+        android:background="@color/greyE6E6E6"/>
+
+    <LinearLayout
+        android:id="@+id/llyt_comment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.haitao.view.CustomImageView
+                android:id="@+id/img_avatar"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                fresco:failureImage="@mipmap/ic_default_avator"
+                fresco:failureImageScaleType="centerCrop"
+                fresco:placeholderImage="@mipmap/ic_default_avator"
+                fresco:placeholderImageScaleType="centerCrop"
+                fresco:roundAsCircle="true"
+                fresco:roundWithOverlayColor="@color/white"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/grey6D6D72"
+                        android:textSize="12sp"
+                        tools:text="emm5zai"/>
+
+                    <TextView
+                        android:id="@+id/tv_group"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:background="@drawable/bg_oval_round_eeeeef"
+                        android:paddingRight="6dp"
+                        android:paddingTop="1dp"
+                        android:paddingBottom="1dp"
+                        android:drawableLeft="@drawable/ic_gender_selector"
+                        android:drawablePadding="4dp"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/grey6D6D72"
+                        android:textSize="10sp"
+                        tools:text="天生爱买狂">
+
+                    </TextView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp">
+
+                    <TextView
+                        android:id="@+id/tv_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/greyA5A5A8"
+                        android:textSize="10sp"
+                        tools:text="emm5zai"/>
+
+                    <TextView
+                        android:id="@+id/tv_source"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/greyA5A5A8"
+                        android:textSize="10sp"
+                        tools:text="天生爱买狂"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_comment_agree"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="4dp"
+                android:drawableRight="@drawable/agree_gray_orange_selector"
+                android:textColor="@color/greyA5A5A8"
+                android:textSize="12sp"
+                tools:text="12"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_comment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:paddingTop="16dp"
+            android:textSize="14sp"
+            android:textColor="@color/grey29292C"
+            tools:text="幸福妈现在开始澳淘了呀~现在澳淘真的好火，就是东西太容易缺货了"/>
+    </LinearLayout>
+</LinearLayout>

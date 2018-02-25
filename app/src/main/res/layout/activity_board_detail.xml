@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:fresco="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/bg"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/layoutHead"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px75"
+        android:background="@color/white">
+
+        <ImageButton
+            android:id="@+id/btnLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:padding="@dimen/px15"
+            android:src="@drawable/ic_back"
+            android:visibility="visible" />
+
+        <RelativeLayout
+            android:id="@+id/layoutSearch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/px15"
+            android:layout_toRightOf="@id/btnLeft"
+            android:background="@drawable/shape_bg_solid_rectangle"
+            android:padding="@dimen/px10">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerInParent="true"
+                android:drawableLeft="@drawable/et_search"
+                android:drawablePadding="@dimen/px6"
+                android:text="搜索版块内帖子"
+                android:textColor="@color/lightGrey2"
+                android:textSize="@dimen/text_size_small" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.haitao.view.StickyNavLayout
+            android:id="@+id/layoutContent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/id_stickynavlayout_topview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/px36"
+                    android:layout_marginRight="@dimen/px36"
+                    android:paddingBottom="@dimen/px36"
+                    android:paddingTop="@dimen/px36">
+
+                    <com.haitao.view.CustomImageView
+                        android:id="@+id/ivImage"
+                        android:layout_width="@dimen/px105"
+                        android:layout_height="@dimen/px105"
+                        android:layout_marginRight="@dimen/px20"
+                        android:src="@mipmap/ic_question"
+                        fresco:failureImage="@mipmap/ic_default_240"
+                        fresco:failureImageScaleType="centerInside"
+                        fresco:placeholderImage="@mipmap/ic_default_240"
+                        fresco:placeholderImageScaleType="centerInside"
+                        fresco:roundAsCircle="true" />
+
+                    <TextView
+                        android:id="@+id/tvName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/ivImage"
+                        android:maxLines="1"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size_largelarge"
+                        tools:text="丫丫米" />
+
+                    <TextView
+                        android:id="@+id/tvPostNum"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@id/tvName"
+                        android:layout_below="@+id/tvName"
+                        android:layout_marginTop="@dimen/px6"
+                        android:textColor="@color/grey"
+                        android:textSize="@dimen/text_size_medium"
+                        tools:text="帖子：1111" />
+
+                    <TextView
+                        android:id="@+id/tvNewNum"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@id/tvName"
+                        android:layout_below="@+id/tvPostNum"
+                        android:layout_marginTop="@dimen/px6"
+                        android:textColor="@color/grey"
+                        android:textSize="@dimen/text_size_medium"
+                        tools:text="精华：11223" />
+
+                    <TextView
+                        android:id="@+id/tvFav"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/tvNewNum"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/sl_bg_fav"
+                        android:drawableLeft="@drawable/sl_fav"
+                        android:gravity="center"
+                        android:minHeight="29dp"
+                        android:minWidth="94dp"
+                        android:paddingBottom="@dimen/px6"
+                        android:paddingLeft="@dimen/px15"
+                        android:paddingRight="@dimen/px15"
+                        android:paddingTop="@dimen/px6"
+                        android:text="收藏"
+                        android:textColor="@color/sl_fav_color"
+                        android:textSize="@dimen/text_size_medium" />
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/id_stickynavlayout_indicator"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/px1"
+                android:background="@color/white"
+                android:orientation="vertical">
+                <!-- tab切换 -->
+                <android.support.design.widget.TabLayout
+                    android:id="@+id/tab"
+                    style="@style/ForumTabLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/btnMore"
+                    android:background="@color/white"
+                    android:fillViewport="false" />
+
+                <ImageButton
+                    android:id="@+id/btnMore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@null"
+                    android:paddingBottom="@dimen/px15"
+                    android:paddingLeft="@dimen/px15"
+                    android:paddingRight="@dimen/px30"
+                    android:paddingTop="@dimen/px15"
+                    android:src="@drawable/ic_filter_down" />
+            </RelativeLayout>
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/id_stickynavlayout_viewpager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            </android.support.v4.view.ViewPager>
+
+        </com.haitao.view.StickyNavLayout>
+
+        <include layout="@layout/common_progress" />
+
+        <ImageView
+            android:id="@+id/ivPublish"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="@dimen/px36"
+            android:src="@mipmap/ic_publish"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+
+</LinearLayout>

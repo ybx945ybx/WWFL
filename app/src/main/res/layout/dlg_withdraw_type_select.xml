@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+    <com.haitao.view.HtHeadView
+        android:id="@+id/ht_headview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:center_text="@string/select_withdraw_type"
+        app:left_img="@mipmap/ic_close_20"
+        app:level_1_title="true" />
+
+    <com.haitao.view.FullListView
+        android:id="@+id/lv_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@null"
+        android:dividerHeight="0dp" />
+
+</LinearLayout>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/white"
+              android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingLeft="@dimen/px30"
+        android:paddingRight="@dimen/px30"
+        android:paddingTop="@dimen/px30"
+        android:text=""
+        android:textColor="@color/lightGrey"
+        android:textSize="@dimen/text_size_mediumx" />
+
+    <RelativeLayout
+        android:id="@+id/layoutContent"
+        android:layout_width="@dimen/pop"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="@dimen/px30" />
+
+
+    <LinearLayout
+        android:id="@+id/layoutContol"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/tab_bg"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/btnLeft"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="@dimen/px20"
+            android:text="@string/cancel"
+            android:textColor="@color/warmGrey"
+            android:textSize="@dimen/text_size_medium"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/btnRight"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="@dimen/px20"
+            android:text="@string/confirm"
+            android:textColor="@color/brightOrange"
+            android:textSize="@dimen/text_size_medium"
+            android:textStyle="bold" />
+    </LinearLayout>
+</LinearLayout>

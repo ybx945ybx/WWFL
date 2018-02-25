@@ -1,0 +1,16 @@
+<com.haitao.view.MultipleStatusView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/msv"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.haitao.view.refresh.XListView
+        android:id="@+id/content_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@null">
+
+    </com.haitao.view.refresh.XListView>
+
+</com.haitao.view.MultipleStatusView>

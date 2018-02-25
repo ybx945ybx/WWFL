@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/bg"
+              android:orientation="vertical">
+
+    <com.haitao.view.HtHeadView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:center_text="@string/rebate_detail" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- 日期 -->
+            <com.haitao.view.HtItemView
+                android:id="@+id/item_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                app:title="@string/date" />
+
+            <!-- 类型 -->
+            <com.haitao.view.HtItemView
+                android:id="@+id/item_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                app:divider_enabled="false"
+                app:title="@string/type" />
+
+            <!-- 状态 -->
+            <com.haitao.view.HtItemView
+                android:id="@+id/item_status"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/px8"
+                android:background="@color/white"
+                app:title="@string/status" />
+
+            <!-- 返利金额 -->
+            <com.haitao.view.HtItemView
+                android:id="@+id/item_rebate_amount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                app:title="@string/order_rebate_amount" />
+
+            <!-- 备注 -->
+            <com.haitao.view.HtItemView
+                android:id="@+id/item_note"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                app:divider_enabled="false"
+                app:title="@string/rebate_note" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

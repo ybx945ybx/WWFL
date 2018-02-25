@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/bg"
+              android:orientation="vertical">
+
+    <include layout="@layout/layout_common_header" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/ll_calendar_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/orangeFF804D"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvCurrentMonth"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="@dimen/px15"
+                    android:text="11月"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_mediumx" />
+
+                <TextView
+                    android:id="@+id/tvNum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/shape_white_background"
+                    android:gravity="center"
+                    android:paddingBottom="@dimen/px3"
+                    android:paddingLeft="@dimen/px9"
+                    android:paddingRight="@dimen/px9"
+                    android:paddingTop="@dimen/px3"
+                    android:text="11月"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_small" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/px15"
+                    android:paddingTop="@dimen/px15">
+
+                    <TextView
+                        style="@style/dateStyle"
+                        android:text="@string/sunday"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        style="@style/dateStyle"
+                        android:text="@string/monday"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        style="@style/dateStyle"
+                        android:text="@string/thesday"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        style="@style/dateStyle"
+                        android:text="@string/wednesday"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        style="@style/dateStyle"
+                        android:text="@string/thursday"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        style="@style/dateStyle"
+                        android:text="@string/friday"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        style="@style/dateStyle"
+                        android:text="@string/saturday"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <com.haitao.view.FullGirdView
+                android:id="@+id/gv_order_pics"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ll_calendar_header"
+                android:layout_marginTop="@dimen/px1"
+                android:gravity="center"
+                android:horizontalSpacing="@dimen/px1"
+                android:numColumns="7"
+                android:verticalSpacing="@dimen/px1" />
+
+            <LinearLayout
+                android:id="@+id/layoutTopic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/gv_order_pics"
+                android:layout_marginTop="@dimen/px15"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:padding="@dimen/px15"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/ic_today_topic" />
+
+                <View
+                    android:layout_width="@dimen/px1"
+                    android:layout_height="@dimen/px60"
+                    android:layout_marginLeft="@dimen/px15"
+                    android:layout_marginRight="@dimen/px15"
+                    android:background="@color/separate" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/ic_today_quotes" />
+
+                <TextView
+                    android:id="@+id/tvNotice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/px9"
+                    android:textColor="@color/darkGrey"
+                    android:textSize="@dimen/text_size_medium" />
+            </LinearLayout>
+            <!--回复-->
+            <LinearLayout
+                android:id="@+id/layoutReply"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/layoutTopic"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:padding="@dimen/px15"
+                android:visibility="gone">
+
+                <com.haitao.view.RoundedImageView
+                    android:id="@+id/ivImage"
+                    android:layout_width="@dimen/px60"
+                    android:layout_height="@dimen/px60" />
+
+                <TextView
+                    android:id="@+id/tvContent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/px9"
+                    android:layout_marginTop="@dimen/px9"
+                    android:background="@drawable/ic_message_left"
+                    android:paddingBottom="@dimen/px10"
+                    android:paddingLeft="@dimen/px18"
+                    android:paddingRight="@dimen/px10"
+                    android:paddingTop="@dimen/px10"
+                    android:text="【提醒】手机购物可能无法获得返利，建议收藏后在网站购买"
+                    android:textColor="@color/darkGrey"
+                    android:textSize="@dimen/text_size_medium" />
+            </LinearLayout>
+            <!--评论-->
+            <LinearLayout
+                android:id="@+id/layoutComment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/layoutReply"
+                android:layout_gravity="bottom"
+                android:background="@color/white"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="@dimen/px6"
+                android:visibility="gone">
+
+                <com.haitao.view.RoundedImageView
+                    android:id="@+id/img_avatar"
+                    android:layout_width="@dimen/px60"
+                    android:layout_height="@dimen/px60" />
+
+                <EditText
+                    android:id="@+id/edCommit"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/px10"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape_bg_solid_rectangle"
+                    android:hint="发表话题看法，可获得10金币"
+                    android:maxLines="1"
+                    android:padding="@dimen/px18"
+                    android:textColor="@color/darkGrey"
+                    android:textColorHint="@color/lightGrey"
+                    android:textSize="@dimen/text_size_medium" />
+
+                <TextView
+                    android:id="@+id/btnCommint"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/px15"
+                    android:text="评论"
+                    android:textColor="@color/invite_bg_color"
+                    android:textSize="@dimen/text_size_mediumx" />
+            </LinearLayout>
+
+            <android.support.v4.widget.Space
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <!-- 广告位 -->
+            <com.haitao.view.CustomImageView
+                android:id="@+id/img_ad"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:visibility="visible" />
+
+            <!-- 广告 -->
+            <WebView
+                android:id="@+id/wvBody"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/px30"
+                android:visibility="gone" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

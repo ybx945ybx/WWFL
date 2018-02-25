@@ -1,0 +1,135 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:background="@color/bg"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/px15"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:paddingLeft="@dimen/px15">
+
+            <com.haitao.view.ClearEditText
+                android:id="@+id/etUsername"
+                style="@style/login_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/login_username_hint" />
+
+            <View
+                style="@style/SeparateLine"
+                android:layout_below="@id/etUsername" />
+
+            <com.haitao.view.ClearEditText
+                android:id="@+id/etPhone"
+                style="@style/login_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/etUsername"
+                android:hint="@string/login_phone_hint"
+                android:inputType="phone" />
+
+            <View
+                style="@style/SeparateLine"
+                android:layout_below="@id/etPhone" />
+
+            <com.haitao.view.ClearEditText
+                android:id="@+id/etPassword"
+                style="@style/login_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/etPhone"
+                android:layout_toLeftOf="@+id/ivEye"
+                android:hint="@string/login_login_pwd_hint"
+                android:inputType="textPassword" />
+
+            <ImageButton
+                android:id="@+id/ivEye"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/etPassword"
+                android:layout_alignParentRight="true"
+                android:background="@null"
+                android:padding="@dimen/px15"
+                android:src="@drawable/sl_eye" />
+
+            <View
+                style="@style/SeparateLine"
+                android:layout_below="@id/etPassword" />
+
+            <com.haitao.view.ClearEditText
+                android:id="@+id/etInvite"
+                style="@style/login_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/etPassword"
+                android:hint="@string/login_invite_hint" />
+        </RelativeLayout>
+
+        <View style="@style/SeparateLine" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/bg"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="@dimen/px15">
+
+            <TextView
+                android:id="@+id/tvAgree"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/sl_filter_agree"
+                android:drawablePadding="@dimen/px15"
+                android:text="@string/login_regist_agree"
+                android:textColor="@color/midGrey"
+                android:textSize="@dimen/text_size_medium" />
+
+            <TextView
+                android:id="@+id/tvAgreeTerms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/tvAgree"
+                android:text="@string/login_regist_terms"
+                android:textColor="@color/brightOrange"
+                android:textSize="@dimen/text_size_medium" />
+
+            <TextView
+                android:id="@+id/tvInvite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="我有邀请码"
+                android:textColor="@color/brightOrange"
+                android:textSize="@dimen/text_size_medium"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <!--<Button
+            android:id="@+id/btnSubmit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/px15"
+            android:layout_marginRight="@dimen/px15"
+            android:layout_marginTop="@dimen/px42"
+            android:background="@drawable/sl_submit"
+            android:enabled="false"
+            android:text="@string/login_regist"
+            android:textColor="@color/sl_button_color"
+            android:textSize="@dimen/text_size_mediumx" />-->
+
+        <TextView
+            android:id="@+id/btnSubmit"
+            style="@style/SubmitButtonRoundCorner"
+            android:text="@string/reigster" />
+    </LinearLayout>
+
+</LinearLayout>

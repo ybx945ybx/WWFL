@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <com.haitao.view.HtHeadView
+        android:id="@+id/ht_headview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:center_text="@string/bind_declare"
+        app:divider_visible="false">
+
+    </com.haitao.view.HtHeadView>
+
+    <!--说明内容-->
+    <WebView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:id="@+id/web_view">
+
+    </WebView>
+    <!--立即绑卡激活-->
+    <RelativeLayout
+        android:id="@+id/rlyt_bind_agree"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:padding="8dp"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_round_corner_purple_gradient_6dp"
+            android:gravity="center"
+            android:paddingBottom="9dp"
+            android:paddingTop="9dp"
+            android:text="@string/agree_bind"
+            android:textColor="@color/white"
+            android:textSize="16sp"/>
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.haitao.view.HtHeadView
+        android:id="@+id/head_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:center_text="@string/notice_title"
+        app:divider_visible="false"
+        app:left_img="@mipmap/ic_title_add"
+        app:right_img="@mipmap/ic_title_readed">
+
+    </com.haitao.view.HtHeadView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.haitao.view.MultipleStatusView
+            android:id="@+id/msv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.haitao.view.refresh.XListView
+                android:id="@+id/content_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/bg"
+                android:clipToPadding="false"
+                android:divider="@null"
+                android:dividerHeight="0dp"
+                android:paddingTop="8dp"
+                android:scrollbars="none" />
+        </com.haitao.view.MultipleStatusView>
+
+        <!-- 活动入口 -->
+        <com.haitao.view.CustomImageView
+            android:id="@+id/img_event"
+            style="@style/ImgEvent" />
+    </RelativeLayout>
+</LinearLayout>

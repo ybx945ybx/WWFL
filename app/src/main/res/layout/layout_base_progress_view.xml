@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:id="@+id/ll_container"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@drawable/border_bottom_f8f8f8_1dp"
+              android:orientation="vertical"
+              android:paddingBottom="@dimen/px45"
+              android:paddingTop="@dimen/px45">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/img_progress_a"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_progress_untreated_new" />
+
+        <ImageView
+            android:id="@+id/img_line_a"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_progress_line_empty" />
+
+        <ImageView
+            android:id="@+id/img_progress_b"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_progress_untreated_new" />
+
+        <ImageView
+            android:id="@+id/img_line_b"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_progress_line_empty" />
+
+        <ImageView
+            android:id="@+id/img_progress_c"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_progress_untreated_new" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/px18">
+
+        <TextView
+            android:id="@+id/tv_progerss_a"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="@color/greyA5A5A8"
+            android:textSize="@dimen/text_size_small"
+            tools:text="审核中" />
+
+        <TextView
+            android:id="@+id/tv_progerss_b"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="@color/greyA5A5A8"
+            android:textSize="@dimen/text_size_small"
+            tools:text="审核通过" />
+
+        <TextView
+            android:id="@+id/tv_progerss_c"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="@color/greyA5A5A8"
+            android:textSize="@dimen/text_size_small"
+            tools:text="提现成功" />
+    </LinearLayout>
+
+    <!--<TextView
+        android:id="@+id/tv_progerss_sub_b"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/px8"
+        android:gravity="center"
+        android:textColor="@color/middle_grey2"
+        android:textSize="@dimen/text_size_mediums"
+        android:visibility="gone"
+        tools:text="(待付款)" />-->
+</LinearLayout>

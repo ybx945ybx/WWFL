@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:RichTextEditor="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/bg"
+                android:orientation="vertical">
+
+    <include
+        android:id="@+id/layoutTop"
+        layout="@layout/layout_common_header" />
+
+    <RelativeLayout
+        android:id="@+id/layoutBottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:drawableLeft="@drawable/ic_photo"
+            android:drawablePadding="@dimen/px10"
+            android:gravity="center"
+            android:padding="@dimen/px20"
+            android:text="@string/picture"
+            android:textColor="@color/midGrey"
+            android:textSize="@dimen/text_size_medium" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/separate" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/layoutBottom"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/layoutTop">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/px10">
+
+                <LinearLayout
+                    android:id="@+id/layoutBoard"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvBoard"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="@dimen/px6"
+                        android:drawableRight="@drawable/ic_down"
+                        android:gravity="center"
+                        android:padding="@dimen/px20"
+                        android:singleLine="true"
+                        android:text="版块：未选择"
+                        android:textColor="@color/sl_board_send_color"
+                        android:textSize="@dimen/text_size_medium" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layoutCategory"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/px10"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvCategory"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="@dimen/px6"
+                        android:drawableRight="@drawable/ic_down"
+                        android:gravity="center"
+                        android:padding="@dimen/px20"
+                        android:singleLine="true"
+                        android:text="分类：未选择"
+                        android:textColor="@color/sl_board_send_color"
+                        android:textSize="@dimen/text_size_medium" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/etSubject"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/px10"
+                android:background="@color/white"
+                android:hint="@string/post_send_title_hint"
+                android:padding="@dimen/px20"
+                android:textColor="@color/darkGrey"
+                android:textColorHint="@color/lightGrey"
+                android:textSize="@dimen/text_size_medium" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/px2"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:padding="@dimen/px15">
+
+                <com.haitao.view.richEdit.RichTextEditor
+                    android:id="@+id/etContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:minHeight="@dimen/px200"
+                    RichTextEditor:hint="输入帖子内容" />
+
+                <ImageView
+                    android:id="@+id/ivAdd"
+                    android:layout_width="@dimen/px100"
+                    android:layout_height="@dimen/px100"
+                    android:layout_below="@+id/etContent"
+                    android:layout_marginTop="@dimen/px15"
+                    android:contentDescription="@null"
+                    android:scaleType="fitCenter"
+                    android:src="@mipmap/img_add"
+                    android:visibility="gone" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

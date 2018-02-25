@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:fresco="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+    <RelativeLayout
+        android:id="@+id/layoutContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/px15"
+        android:background="@drawable/bg_item_selectable"
+        android:paddingBottom="@dimen/px15"
+        android:paddingTop="@dimen/px15">
+
+        <com.haitao.view.CustomImageView
+            android:id="@+id/ivImage"
+            android:layout_width="@dimen/px220"
+            android:layout_height="@dimen/px140"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/px15"
+            fresco:actualImageScaleType="centerCrop"
+            fresco:failureImage="@mipmap/ic_default_240"
+            fresco:placeholderImage="@mipmap/ic_default_240"
+            fresco:placeholderImageScaleType="fitCenter"
+            fresco:roundedCornerRadius="@dimen/px2" />
+
+        <!-- 剩余时间 -->
+        <TextView
+            android:id="@+id/tvTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/ivImage"
+            android:layout_alignLeft="@id/ivImage"
+            android:layout_alignRight="@id/ivImage"
+            android:background="@drawable/shape_bg_time"
+            android:drawablePadding="@dimen/px6"
+            android:gravity="center"
+            android:paddingBottom="@dimen/px3"
+            android:paddingTop="@dimen/px3"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_small"
+            android:visibility="gone"
+            tools:text="24小时" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ivImage"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:lineSpacingExtra="@dimen/px2"
+            android:lines="2"
+            android:textColor="@color/midGrey2"
+            android:textSize="@dimen/text_size_medium"
+            tools:text="Incase DSLR Pro Sling Pack 单肩相机包" />
+
+        <TextView
+            android:id="@+id/tvPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvTitle"
+            android:layout_marginTop="@dimen/px12"
+            android:maxLines="1"
+            android:textColor="@color/orangeFF804D"
+            android:textSize="@dimen/text_size_mediumx"
+            tools:text="￥99.00" />
+
+        <!--<TextView
+            android:id="@+id/tvMarketPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/tvPrice"
+            android:layout_marginLeft="@dimen/px10"
+            android:layout_toRightOf="@id/tvPrice"
+            android:maxLines="1"
+            android:textColor="@color/warmGrey"
+            android:textSize="@dimen/text_size_small"
+            android:visibility="gone"
+            tools:text="￥99.00" />-->
+    </RelativeLayout>
+
+    <!--<RelativeLayout
+        android:id="@+id/layoutMore"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/px15"
+        android:background="@color/bg"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tvMore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:maxLines="1"
+            android:text="查看更多"
+            android:textColor="@color/darkGrey"
+            android:textSize="@dimen/text_size_mediumx" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignLeft="@+id/tvMore"
+            android:layout_alignRight="@+id/tvMore"
+            android:layout_below="@+id/tvMore"
+            android:layout_marginTop="@dimen/px6"
+            android:background="@color/warmGrey" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvMore"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/px10"
+            android:maxLines="1"
+            android:paddingBottom="@dimen/px3"
+            android:paddingLeft="@dimen/px6"
+            android:paddingRight="@dimen/px6"
+            android:paddingTop="@dimen/px3"
+            android:text="M O R E"
+            android:textColor="@color/warmGrey"
+            android:textSize="@dimen/text_size_medium" />
+    </RelativeLayout>-->
+
+</RelativeLayout>

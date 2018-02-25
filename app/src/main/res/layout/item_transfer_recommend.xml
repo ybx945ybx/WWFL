@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/px15">
+
+        <com.haitao.view.CustomImageView
+            android:id="@+id/ivImage"
+            android:layout_width="@dimen/px120"
+            android:layout_height="@dimen/px120"
+            android:layout_centerHorizontal="true"
+            android:scaleType="centerCrop"/>
+        <TextView android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_below="@id/ivImage"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/px10"
+            android:textColor="@color/darkGrey"
+            android:textSize="@dimen/text_size_medium"
+            android:singleLine="true"
+            android:text="丫丫米"/>
+
+    </RelativeLayout>
+
+
+
+</LinearLayout>

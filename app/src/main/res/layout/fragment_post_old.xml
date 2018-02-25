@@ -1,0 +1,16 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <com.haitao.view.refresh.XListView
+        android:id="@+id/lvList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@null">
+
+    </com.haitao.view.refresh.XListView>
+
+    <include layout="@layout/common_progress" />
+
+    <include layout="@layout/layout_common_error" />
+</RelativeLayout>

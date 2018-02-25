@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="114dp"
+    android:layout_height="114dp">
+
+    <!-- 添加图片 -->
+    <LinearLayout
+        android:id="@+id/ll_add_img"
+        android:layout_width="@dimen/grid_img_size"
+        android:layout_height="@dimen/grid_img_size"
+        android:layout_gravity="bottom"
+        android:background="@color/colorGrayF5F5F5"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_add_grey" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/use_custom_cover"
+            android:textColor="@color/grey1D1D1F"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+    <!-- 图片 -->
+    <com.haitao.view.CustomImageView
+        android:id="@+id/img_cover"
+        android:layout_width="@dimen/grid_img_size"
+        android:layout_height="@dimen/grid_img_size"
+        android:layout_gravity="bottom"
+        android:cropToPadding="true"
+        android:scaleType="centerCrop"
+        android:visibility="gone" />
+
+    <ImageButton
+        android:id="@+id/ib_close_cover"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:background="@null"
+        android:src="@mipmap/ic_close_orange_circle"
+        android:visibility="gone" />
+</FrameLayout>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@drawable/bg_item_selectable"
+              android:orientation="vertical">
+    <View
+        android:id="@+id/viewSeparate"
+        style="@style/Divider_List_E6E6E6" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/px20">
+
+        <com.haitao.view.RoundedImageView
+            android:id="@+id/img_avatar"
+            android:layout_width="@dimen/px68"
+            android:layout_height="@dimen/px60"
+            android:layout_marginRight="@dimen/px20"
+            android:src="@mipmap/ic_default_avator" />
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/img_avatar"
+            android:textColor="@color/midGrey"
+            android:textSize="@dimen/text_size_medium"
+            tools:text="小胡的鸡蛋" />
+
+        <TextView
+            android:id="@+id/tvTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/tvName"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/warmGrey"
+            android:textSize="@dimen/text_size_small"
+            tools:text="1天前" />
+
+        <TextView
+            android:id="@+id/tvContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/tvName"
+            android:layout_below="@+id/tvName"
+            android:layout_marginTop="@dimen/px15"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/grey"
+            android:textSize="@dimen/text_size_small"
+            tools:text="这是消息内容" />
+
+        <TextView
+            android:id="@+id/tvNotice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/tvName"
+            android:layout_marginLeft="@dimen/px15"
+            android:layout_toRightOf="@+id/tvName"
+            android:background="@drawable/bg_oval_orange"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_small"
+            tools:text="1" />
+
+    </RelativeLayout>
+
+</LinearLayout>

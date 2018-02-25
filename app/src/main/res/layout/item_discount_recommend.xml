@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:background="@color/bg">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/px10">
+
+        <ImageView
+            android:id="@+id/ivImage"
+            android:layout_width="@dimen/px90"
+            android:layout_height="@dimen/px90"
+            android:layout_marginRight="@dimen/px15"
+            android:scaleType="centerCrop"/>
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/ivImage"
+            android:layout_toRightOf="@id/ivImage"
+            android:gravity="center_vertical"
+            android:text="订单满$50送最新Future Rescue 修复精华样品订单满$50送最新Future Rescue 修复精华样品"
+            android:lines="2"
+            android:maxLines="2"
+            android:textColor="@color/darkGrey"
+            android:textSize="@dimen/text_size_small" />
+        <TextView android:id="@+id/tvPrice"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_below="@id/tvTitle"
+                  android:layout_alignLeft="@id/tvTitle"
+                  android:textSize="@dimen/text_size_small"
+                  android:textColor="@color/darkOrange"
+                  android:text="降至$23.99（约153元）"
+                  android:layout_marginTop="@dimen/px15"/>
+        <TextView android:id="@+id/tvOldPrice"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_alignBottom="@id/tvPrice"
+                  android:layout_toRightOf="@id/tvPrice"
+                  android:textSize="@dimen/text_size_smallsmall"
+                  android:textColor="@color/lightGrey"
+                  android:text="约153元"
+                  android:layout_marginLeft="@dimen/px10"
+                  android:layout_marginTop="@dimen/px15"/>
+
+    </RelativeLayout>
+
+
+</LinearLayout>

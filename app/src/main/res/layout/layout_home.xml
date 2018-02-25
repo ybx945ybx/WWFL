@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:fresco="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/bg"
+              android:orientation="vertical">
+
+    <!-- Banner -->
+    <com.haitao.view.SlideCycleView
+        android:id="@+id/layoutCircle"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px270" />
+
+    <!-- 快速入口 -->
+    <LinearLayout
+        android:id="@+id/ll_icon_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <!-- 第1个 -->
+        <com.haitao.view.HomeTabView
+            android:id="@+id/tab_entry_one"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingBottom="8dp"
+            android:paddingTop="16dp" />
+
+        <!-- 第2个 -->
+        <com.haitao.view.HomeTabView
+            android:id="@+id/tab_entry_two"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingBottom="8dp"
+            android:paddingTop="16dp" />
+
+        <!-- 第3个 -->
+        <com.haitao.view.HomeTabView
+            android:id="@+id/tab_entry_three"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingBottom="8dp"
+            android:paddingTop="16dp" />
+
+        <!-- 第4个 -->
+        <com.haitao.view.HomeTabView
+            android:id="@+id/tab_entry_four"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingBottom="8dp"
+            android:paddingTop="16dp" />
+
+    </LinearLayout>
+
+    <!-- 快速入口 第二行 -->
+    <LinearLayout
+        android:id="@+id/ll_icon_container2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <!-- 第5个 -->
+        <com.haitao.view.HomeTabView
+            android:id="@+id/tab_entry_five"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingBottom="16dp"
+            android:paddingTop="8dp" />
+
+        <!-- 第6个 -->
+        <com.haitao.view.HomeTabView
+            android:id="@+id/tab_entry_six"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingBottom="16dp"
+            android:paddingTop="8dp" />
+
+        <!-- 第7个 -->
+        <com.haitao.view.HomeTabView
+            android:id="@+id/tab_entry_seven"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingBottom="16dp"
+            android:paddingTop="8dp" />
+
+        <!-- 第8个 -->
+        <com.haitao.view.HomeTabView
+            android:id="@+id/tab_entry_eight"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingBottom="16dp"
+            android:paddingTop="8dp" />
+
+    </LinearLayout>
+
+    <!-- 推荐专题 -->
+    <HorizontalScrollView
+        android:id="@+id/layoutSpecial"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@color/white"
+        android:scrollbars="none"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/px15">
+
+            <GridView
+                android:id="@+id/gvSpecial"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:numColumns="auto_fit"
+                android:stretchMode="spacingWidthUniform" />
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <!-- 热门优惠 -->
+    <LinearLayout
+        android:id="@+id/ll_top_deal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:orientation="vertical" />
+
+    <!-- 横栏广告 -->
+    <com.haitao.view.HtAdView
+        android:id="@+id/htav_ad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp" />
+
+    <!-- 最新优惠 -->
+    <com.haitao.view.HtTitleView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:sub_title="最新优惠"
+        app:sub_title_icon="@mipmap/ic_title_latest" />
+
+</LinearLayout>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:fresco="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@drawable/bg_item_selectable"
+              android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvSubTitle"
+        style="@style/sub_title_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawablePadding="@dimen/px6"
+        android:gravity="center_vertical"
+        android:paddingBottom="@dimen/px10"
+        android:text="热门标签"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/layoutContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:padding="16dp">
+
+        <com.haitao.view.CustomImageView
+            android:id="@+id/ivImage"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            fresco:failureImage="@mipmap/ic_default_240"
+            fresco:failureImageScaleType="centerInside"
+            fresco:placeholderImage="@mipmap/ic_default_240"
+            fresco:placeholderImageScaleType="centerInside" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:layout_toRightOf="@+id/ivImage"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/grey1D1D1F"
+                android:textSize="@dimen/text_size_medium"
+                tools:text="版块名称" />
+
+            <TextView
+                android:id="@+id/tvTopicCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:textColor="@color/grey78787D"
+                android:textSize="@dimen/text_size_small"
+                tools:text="帖子：2222" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/icArrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/ic_arrow_right_grey_24" />
+
+        <TextView
+            android:id="@+id/tvNotice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/icArrow"
+            android:background="@drawable/shape_notice_orange_solid_rectangle"
+            android:gravity="center"
+            android:minWidth="@dimen/px51"
+            android:paddingBottom="@dimen/px1"
+            android:paddingLeft="@dimen/px8"
+            android:paddingRight="@dimen/px8"
+            android:paddingTop="@dimen/px1"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_small"
+            tools:text="100" />
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/viewSeparate"
+        style="@style/Divider_List_E6E6E6" />
+
+    <TextView
+        android:id="@+id/tvOpen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:padding="@dimen/px24"
+        android:text="@string/forum_open_all"
+        android:textColor="@color/grey"
+        android:textSize="@dimen/text_size_small" />
+
+</LinearLayout>

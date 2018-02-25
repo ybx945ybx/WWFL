@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/white"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/layoutContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:padding="@dimen/px24">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            style="@style/list_title_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            tools:text="超全2015美国黑五海淘攻略+黑五海淘" />
+
+        <TextView
+            android:id="@+id/tvTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/tvTitle"
+            android:layout_marginTop="@dimen/px15"
+            android:textColor="@color/grey"
+            android:textSize="@dimen/text_size_small"
+            tools:text="11-11" />
+
+        <TextView
+            android:id="@+id/tvComment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/tvTime"
+            android:drawableLeft="@mipmap/ic_comment"
+            android:drawablePadding="@dimen/px6"
+            android:gravity="center"
+            android:textColor="@color/grey"
+            android:textSize="@dimen/text_size_small"
+            tools:text="111" />
+
+        <TextView
+            android:id="@+id/tvView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/tvTime"
+            android:layout_marginLeft="@dimen/px15"
+            android:layout_marginRight="@dimen/px15"
+            android:layout_toRightOf="@id/tvComment"
+            android:drawableLeft="@mipmap/ic_brower"
+            android:drawablePadding="@dimen/px6"
+            android:gravity="center"
+            android:textColor="@color/grey"
+            android:textSize="@dimen/text_size_small"
+            tools:text="111" />
+
+        <TextView
+            android:id="@+id/tvTop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/tvTime"
+            android:layout_marginLeft="@dimen/px15"
+            android:layout_toRightOf="@+id/tvView"
+            android:background="@drawable/shape_bg_top"
+            android:paddingLeft="@dimen/px10"
+            android:paddingRight="@dimen/px10"
+            android:text="@string/top"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_small" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tvOpen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="@dimen/px15"
+        android:text="@string/forum_open_all"
+        android:textColor="@color/lightGrey"
+        android:textSize="@dimen/text_size_medium" />
+
+    <View
+        android:id="@+id/viewSeparate"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px6"
+        android:background="@color/bg" />
+
+
+</LinearLayout>

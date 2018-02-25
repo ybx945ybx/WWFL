@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:fresco="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_round_corner_white_6dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/input_verify_code"
+            android:textColor="@color/grey1D1D1F"
+            android:textSize="@dimen/text_size_mediumx" />
+
+        <com.haitao.view.CustomImageView
+            android:id="@+id/ivImage"
+            android:layout_width="match_parent"
+            android:layout_height="63dp"
+            android:layout_marginTop="12dp"
+            android:background="@color/white"
+            fresco:actualImageScaleType="fitCenter" />
+
+        <EditText
+            android:id="@+id/etPassword"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="12dp"
+            android:background="@null"
+            android:gravity="center_vertical"
+            android:hint="@string/please_input_verify_code"
+            android:inputType="text"
+            android:maxLines="1"
+            android:textColor="@color/grey1D1D1F"
+            android:textColorHint="@color/greyA5A5A8"
+            android:textSize="@dimen/text_size_medium" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/greyE6E6E6" />
+
+        <TextView
+            android:id="@+id/tv_confirm"
+            style="@style/SubmitButtonOrange"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:enabled="false"
+            android:text="@string/confirm" />
+    </LinearLayout>
+
+    <!--关闭按钮-->
+    <ImageView
+        android:id="@+id/iv_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:padding="16dp"
+        android:src="@mipmap/ic_close" />
+</RelativeLayout>

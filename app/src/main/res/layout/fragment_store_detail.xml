@@ -1,0 +1,420 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/content_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/bg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!--商家详细描述-->
+        <TextView
+            android:id="@+id/tvDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:lineSpacingExtra="5dp"
+            android:paddingBottom="12dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingTop="12dp"
+            android:textColor="@color/grey6D6D72"
+            android:textSize="@dimen/text_size_medium"
+            tools:text="美国亚马逊（Amazon)是世界上最大的网上商店，致力于成为全球最以客户为中心的公司，使消费者能够在网上找到并发掘任何他们想购买的商品，并力图提供最低的价格。美国亚马逊及其他销售商为客户提供数"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <!--支付-->
+            <LinearLayout
+                android:id="@+id/llyt_pay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/pay"
+                        android:textColor="@color/grey1D1D1F"
+                        android:textSize="16sp"/>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right">
+
+                        <TextView
+                            android:id="@+id/tv_support_card"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:background="@drawable/bg_round_corner_orange_1a_6dp"
+                            android:paddingBottom="4dp"
+                            android:paddingLeft="8dp"
+                            android:paddingRight="8dp"
+                            android:paddingTop="4dp"
+                            android:text="@string/store_support1"
+                            android:textColor="@color/orangeFF804D"
+                            android:textSize="12sp"
+                            android:visibility="gone"/>
+
+                        <TextView
+                            android:id="@+id/tv_support_paypal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:background="@drawable/bg_round_corner_orange_1a_6dp"
+                            android:paddingBottom="4dp"
+                            android:paddingLeft="8dp"
+                            android:paddingRight="8dp"
+                            android:paddingTop="4dp"
+                            android:text="@string/store_support3"
+                            android:textColor="@color/orangeFF804D"
+                            android:textSize="12sp"
+                            android:visibility="gone"/>
+
+                        <TextView
+                            android:id="@+id/tv_support_alipay"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:background="@drawable/bg_round_corner_orange_1a_6dp"
+                            android:paddingBottom="4dp"
+                            android:paddingLeft="8dp"
+                            android:paddingRight="8dp"
+                            android:paddingTop="4dp"
+                            android:text="@string/store_support2"
+                            android:textColor="@color/orangeFF804D"
+                            android:textSize="12sp"
+                            android:visibility="gone"/>
+
+                        <TextView
+                            android:id="@+id/tv_support_weixin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:background="@drawable/bg_round_corner_orange_1a_6dp"
+                            android:paddingBottom="4dp"
+                            android:paddingLeft="8dp"
+                            android:paddingRight="8dp"
+                            android:paddingTop="4dp"
+                            android:text="@string/store_support11"
+                            android:textColor="@color/orangeFF804D"
+                            android:textSize="12sp"
+                            android:visibility="gone"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/view_pay"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:background="@color/greyE6E6E6"/>
+            </LinearLayout>
+
+            <!--配送-->
+            <LinearLayout
+                android:id="@+id/llyt_deliver"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/deliver"
+                        android:textColor="@color/grey1D1D1F"
+                        android:textSize="16sp"/>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right">
+
+                        <TextView
+                            android:id="@+id/tv_support_direct"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:background="@drawable/bg_round_corner_orange_1a_6dp"
+                            android:paddingBottom="4dp"
+                            android:paddingLeft="8dp"
+                            android:paddingRight="8dp"
+                            android:paddingTop="4dp"
+                            android:text="@string/store_support4"
+                            android:textColor="@color/orangeFF804D"
+                            android:textSize="12sp"
+                            android:visibility="gone"/>
+
+                        <TextView
+                            android:id="@+id/tv_support_trans"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:background="@drawable/bg_round_corner_orange_1a_6dp"
+                            android:paddingBottom="4dp"
+                            android:paddingLeft="8dp"
+                            android:paddingRight="8dp"
+                            android:paddingTop="4dp"
+                            android:text="@string/store_support5"
+                            android:textColor="@color/orangeFF804D"
+                            android:textSize="12sp"
+                            android:visibility="gone"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/view_deliver"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:background="@color/greyE6E6E6"/>
+            </LinearLayout>
+
+            <!--中文-->
+            <LinearLayout
+                android:id="@+id/llyt_chinese"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/chinese"
+                        android:textColor="@color/grey1D1D1F"
+                        android:textSize="16sp"/>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right">
+
+                        <TextView
+                            android:id="@+id/tv_support_chinese_address"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:background="@drawable/bg_round_corner_orange_1a_6dp"
+                            android:paddingBottom="4dp"
+                            android:paddingLeft="8dp"
+                            android:paddingRight="8dp"
+                            android:paddingTop="4dp"
+                            android:text="@string/store_support7"
+                            android:textColor="@color/orangeFF804D"
+                            android:textSize="12sp"
+                            android:visibility="gone"/>
+
+                        <TextView
+                            android:id="@+id/tv_support_chinese_service"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:background="@drawable/bg_round_corner_orange_1a_6dp"
+                            android:paddingBottom="4dp"
+                            android:paddingLeft="8dp"
+                            android:paddingRight="8dp"
+                            android:paddingTop="4dp"
+                            android:text="@string/store_support8"
+                            android:textColor="@color/orangeFF804D"
+                            android:textSize="12sp"
+                            android:visibility="gone"/>
+
+                        <TextView
+                            android:id="@+id/tv_support_chinese_page"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:background="@drawable/bg_round_corner_orange_1a_6dp"
+                            android:paddingBottom="4dp"
+                            android:paddingLeft="8dp"
+                            android:paddingRight="8dp"
+                            android:paddingTop="4dp"
+                            android:text="@string/store_support6"
+                            android:textColor="@color/orangeFF804D"
+                            android:textSize="12sp"
+                            android:visibility="gone"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/view_chinese"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:background="@color/greyE6E6E6"/>
+            </LinearLayout>
+
+            <!--访问-->
+            <LinearLayout
+                android:id="@+id/llyt_visit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/visit"
+                        android:textColor="@color/grey1D1D1F"
+                        android:textSize="16sp"/>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right">
+
+
+                        <TextView
+                            android:id="@+id/tv_support_visit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:paddingBottom="4dp"
+                            android:paddingLeft="8dp"
+                            android:paddingRight="8dp"
+                            android:paddingTop="4dp"
+                            android:text="@string/store_support10"
+                            android:textColor="@color/grey78787D"
+                            android:textSize="14sp"
+                            android:visibility="gone"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!--<android.support.v7.widget.RecyclerView-->
+                <!--android:id="@+id/rycv_support"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:paddingLeft="24dp"-->
+                <!--android:paddingRight="24dp"-->
+                <!--android:paddingTop="24dp"-->
+                <!--android:visibility="gone">-->
+
+            <!--</android.support.v7.widget.RecyclerView>-->
+
+            <!--&lt;!&ndash;大陆地区受限和拿到返利人数&ndash;&gt;-->
+            <!--<LinearLayout-->
+                <!--android:id="@+id/llyt_support_bottom"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginBottom="12dp"-->
+                <!--android:layout_marginLeft="24dp"-->
+                <!--android:layout_marginRight="24dp"-->
+                <!--android:layout_marginTop="4dp"-->
+                <!--android:orientation="horizontal"-->
+                <!--android:visibility="gone">-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/tv_obtain_rebate"-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginBottom="12dp"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:drawableLeft="@mipmap/ic_store_rebate_account"-->
+                    <!--android:drawablePadding="8dp"-->
+                    <!--android:gravity="center_vertical"-->
+                    <!--android:text="@string/store_support10"-->
+                    <!--android:textColor="@color/orangeFF804D"-->
+                    <!--android:textSize="14sp"-->
+                    <!--android:visibility="gone"/>-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/tv_limit"-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginBottom="12dp"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:drawableLeft="@mipmap/ic_store_limit"-->
+                    <!--android:drawablePadding="8dp"-->
+                    <!--android:gravity="center_vertical"-->
+                    <!--android:text="@string/store_support10"-->
+                    <!--android:textColor="@color/orangeFF804D"-->
+                    <!--android:textSize="14sp"-->
+                    <!--android:visibility="gone"/>-->
+            <!--</LinearLayout>-->
+        </LinearLayout>
+
+        <!--返利说明-->
+        <LinearLayout
+            android:id="@+id/llytRebateContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="12dp"
+                android:paddingLeft="16dp"
+                android:paddingTop="12dp"
+                android:text="@string/rebate_desc"
+                android:textColor="@color/grey1D1D1F"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/tvRebateContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lineSpacingExtra="5dp"
+                android:paddingBottom="@dimen/px30"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:textColor="@color/grey29292C"
+                android:textSize="@dimen/text_size_medium"
+                tools:text="美国亚马逊（Amazon)是世界上最大的网上商店，致力于成为全球最以客户为中心的公司，使消费者能够在网上找到并发掘任何他们想购买的商品，并力图提供最低的价格。"/>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

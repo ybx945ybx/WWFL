@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/px150"
+    android:background="@color/bg"
+    android:paddingLeft="@dimen/px2"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px150"
+        android:paddingLeft="@dimen/px15"
+        android:paddingRight="@dimen/px15"
+        android:paddingBottom="@dimen/px15"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/ivImage"
+            android:layout_width="@dimen/px136"
+            android:layout_height="@dimen/px100"
+            android:layout_centerHorizontal="true"
+            android:scaleType="fitCenter"
+            android:padding="@dimen/px15"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/ivImage"
+            android:gravity="bottom">
+            <TextView android:id="@+id/tvOldRebate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/lightGrey"
+                android:textSize="@dimen/text_size_small"
+                android:text="返利10%"/>
+            <TextView android:id="@+id/tvRebate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="@dimen/px10"
+                android:textColor="@color/darkOrange"
+                android:textSize="@dimen/text_size_mediumx"
+                android:text="返利10%"/>
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+
+</LinearLayout>

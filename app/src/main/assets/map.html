@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>Simple markers</title>
+    <style>
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      #map {
+        height: 100%;
+      }
+
+    </style>
+</head>
+<body>
+<div id="map"></div>
+<script>
+var map
+var myLatLng
+function initMap() {
+   myLatLng = {lat: 51.508742, lng: -0.120850};
+
+   map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 16,
+    <!--center: myLatLng,-->
+    mapTypeId: google.maps.MapTypeId.ROADMAP
+  });
+
+
+}
+
+function centerAt(latitude, longitude){
+
+myLatlng = new google.maps.LatLng(latitude,longitude);
+var marker = new google.maps.Marker({
+    position: new google.maps.LatLng(latitude,longitude),
+    map: map,
+    animation:google.maps.Animation.BOUNCE,
+  });
+map.panTo(myLatlng);
+
+}
+
+</script>
+<script async defer
+        src="http://maps.google.cn/maps/api/js?v=3.20&region=cn&language=zh-CN&key=AIzaSyBnMhOF6SxQuM9VgGFc74hu9O5SN02cTE4&callback=initMap"></script>
+</body>
+</html>

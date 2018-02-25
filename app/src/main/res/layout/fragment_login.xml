@@ -1,0 +1,97 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:fresco="http://schemas.android.com/apk/res-auto"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:background="@color/bg"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/px15"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:paddingLeft="@dimen/px15">
+
+            <com.haitao.view.ClearEditText
+                android:id="@+id/etUsername"
+                style="@style/login_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/login_account_hint" />
+
+            <View
+                style="@style/SeparateLine"
+                android:layout_below="@id/etUsername" />
+
+            <com.haitao.view.ClearEditText
+                android:id="@+id/etPassword"
+                style="@style/login_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/etUsername"
+                android:layout_toLeftOf="@+id/ivEye"
+                android:hint="@string/login_pwd_hint"
+                android:inputType="textPassword" />
+
+            <ImageButton
+                android:id="@+id/ivEye"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/etPassword"
+                android:layout_alignParentRight="true"
+                android:background="@null"
+                android:padding="@dimen/px15"
+                android:src="@drawable/sl_eye" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layoutVerify"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:paddingLeft="@dimen/px15"
+            android:visibility="gone">
+
+            <View style="@style/SeparateLine" />
+
+            <com.haitao.view.ClearEditText
+                android:id="@+id/etVerify"
+                style="@style/login_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/ivVerify"
+                android:hint="@string/forget_verify_hint" />
+
+            <com.haitao.view.CustomImageView
+                android:id="@+id/ivVerify"
+                android:layout_width="@dimen/px90"
+                android:layout_height="@dimen/px32"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/px15" />
+        </RelativeLayout>
+
+        <View style="@style/SeparateLine" />
+
+        <TextView
+            android:id="@+id/btnSubmit"
+            style="@style/SubmitButtonRoundCorner"
+            android:text="@string/login" />
+
+        <TextView
+            android:id="@+id/tvForget"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="@dimen/px15"
+            android:text="@string/login_forget"
+            android:textColor="@color/lightGrey"
+            android:textSize="@dimen/text_size_medium" />
+    </LinearLayout>
+
+</LinearLayout>

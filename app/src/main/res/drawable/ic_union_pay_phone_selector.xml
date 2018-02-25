@@ -1,0 +1,5 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_selected="true" android:drawable="@mipmap/ic_union_pay_phone_purple"/>
+    <item android:state_selected="false" android:drawable="@mipmap/ic_union_pay_phone_gray"/>
+    <item android:drawable="@mipmap/ic_union_pay_phone_gray"/>
+</selector>

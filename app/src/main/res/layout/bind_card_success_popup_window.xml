@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBlur40">
+
+    <LinearLayout
+        android:id="@+id/llyt_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:paddingBottom="25dp"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/iv_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/llyt_content"
+            android:padding="12dp"
+            android:src="@mipmap/ic_close"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="23dp"
+            android:text="@string/bind_success"
+            android:textColor="@color/grey29292C"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/bind_success_subtitle"
+            android:textColor="@color/colorGray6D6D72"
+            android:textSize="14sp"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rycv_shops"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="0.25dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_border_graye_6e6e6_0_5dp">
+
+        </android.support.v7.widget.RecyclerView>
+
+        <!--查看全部商家-->
+        <RelativeLayout
+            android:id="@+id/rlyt_view_all_shops"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:background="@color/white"
+            android:padding="8dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_round_corner_purple_gradient_6dp"
+                android:gravity="center"
+                android:paddingBottom="9dp"
+                android:paddingTop="9dp"
+                android:text="@string/view_all_shops"
+                android:textColor="@color/white"
+                android:textSize="16sp"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/iv_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/llyt_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="-51dp"
+        android:src="@mipmap/ic_bind_card_success"/>
+</RelativeLayout>

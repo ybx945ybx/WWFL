@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:fresco="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/id_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/bg">
+
+    <FrameLayout
+        android:id="@+id/flContent_framepage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/layoutTab" />
+
+    <LinearLayout
+        android:id="@+id/layoutTab"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/px6"
+        android:paddingTop="@dimen/px6">
+
+        <!-- 优惠 -->
+        <com.haitao.view.MainTabView
+            android:id="@+id/tab_deal"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:tab_drawable="@drawable/sl_discount"
+            app:tab_name="@string/main_tab_rebate" />
+
+        <!-- 商家 -->
+        <com.haitao.view.MainTabView
+            android:id="@+id/tab_discover"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:tab_drawable="@drawable/sl_store"
+            app:tab_name="@string/main_tab_store" />
+
+        <!-- 社区 -->
+        <com.haitao.view.MainTabView
+            android:id="@+id/tab_forum"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:tab_drawable="@drawable/sl_forum"
+            app:tab_name="@string/main_tab_forum" />
+
+        <!-- 活动 v5.8取消tab活动入口 -->
+        <!--<com.haitao.view.CustomImageView
+            android:id="@+id/tab_activity"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="4dp"
+            android:scaleType="centerInside"
+            android:visibility="gone"
+            fresco:actualImageScaleType="fitCenter" />-->
+
+        <!-- 消息 -->
+        <com.haitao.view.MainTabView
+            android:id="@+id/tab_msgs"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:tab_drawable="@drawable/sl_message"
+            app:tab_name="@string/main_tab_message" />
+
+        <!-- 我的 -->
+        <com.haitao.view.MainTabView
+            android:id="@+id/tab_mine"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:tab_drawable="@drawable/sl_me"
+            app:tab_name="@string/main_tab_me" />
+    </LinearLayout>
+
+    <View
+        style="@style/SeparateLine"
+        android:layout_above="@id/layoutTab" />
+</RelativeLayout>

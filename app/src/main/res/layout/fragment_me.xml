@@ -1,0 +1,17 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <com.haitao.view.refresh.XScrollView
+        android:id="@+id/layoutScroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+        android:scrollbars="none"/>
+
+    <!-- 活动入口 -->
+    <com.haitao.view.CustomImageView
+        android:id="@+id/img_event"
+        style="@style/ImgEvent" />
+
+</RelativeLayout>

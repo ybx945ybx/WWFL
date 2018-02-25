@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@drawable/bg_item_selectable"
+              android:orientation="vertical">
+
+    <!-- 标题 -->
+    <com.haitao.view.HtTitleView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/layoutContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:padding="@dimen/px24">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            style="@style/list_title_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textColor="@color/midGrey2"
+            android:textSize="@dimen/text_size_medium"
+            tools:text="超全2015美国黑五海淘攻略+黑五海淘" />
+
+        <TextView
+            android:id="@+id/tvTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/tvTitle"
+            android:layout_marginTop="@dimen/px15"
+            android:textColor="@color/warmGrey"
+            android:textSize="@dimen/text_size_smalls"
+            tools:text="11-11" />
+
+        <TextView
+            android:id="@+id/tvComment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/tvTime"
+            android:drawableLeft="@mipmap/ic_comment_list"
+            android:drawablePadding="@dimen/px6"
+            android:gravity="center"
+            android:textColor="@color/warmGrey"
+            android:textSize="@dimen/text_size_smalls"
+            tools:text="111" />
+
+        <TextView
+            android:id="@+id/tvView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/tvTime"
+            android:layout_marginLeft="@dimen/px30"
+            android:layout_marginRight="@dimen/px15"
+            android:layout_toRightOf="@id/tvComment"
+            android:drawableLeft="@mipmap/ic_view_list"
+            android:drawablePadding="@dimen/px6"
+            android:gravity="center"
+            android:textColor="@color/warmGrey"
+            android:textSize="@dimen/text_size_smalls"
+            tools:text="111" />
+
+        <ImageView
+            android:id="@+id/tvTop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/tvTime"
+            android:layout_marginLeft="@dimen/px15"
+            android:layout_marginRight="@dimen/px45"
+            android:layout_toRightOf="@id/tvView"
+            android:paddingTop="@dimen/px3"
+            android:src="@drawable/ic_top" />
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/viewSeparate"
+        style="@style/Divider_ECECEC" />
+
+    <LinearLayout
+        android:id="@+id/layoutOpen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/tvOpen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="@dimen/px24"
+            android:text="@string/forum_open_all"
+            android:textColor="@color/grey"
+            android:textSize="@dimen/text_size_small" />
+    </LinearLayout>
+
+
+</LinearLayout>

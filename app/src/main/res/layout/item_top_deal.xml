@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:fresco="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/layoutContent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_item_selectable"
+                tools:ignore="RtlHardcoded">
+
+    <com.haitao.view.CustomImageView
+        android:id="@+id/ivImage"
+        android:layout_width="@dimen/deal_card_size"
+        android:layout_height="@dimen/deal_card_size"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="4dp"
+        fresco:actualImageScaleType="fitCenter"
+        fresco:failureImage="@mipmap/ic_default_240"
+        fresco:placeholderImage="@mipmap/ic_default_240"
+        fresco:placeholderImageScaleType="fitCenter" />
+
+    <!-- 倒计时 -->
+    <TextView
+        android:id="@+id/tvTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/ivImage"
+        android:layout_alignLeft="@id/ivImage"
+        android:layout_alignRight="@id/ivImage"
+        android:background="@drawable/shape_bg_time"
+        android:drawablePadding="@dimen/px6"
+        android:gravity="center"
+        android:paddingBottom="@dimen/px2"
+        android:paddingTop="@dimen/px2"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_small"
+        android:visibility="visible"
+        tools:text="剩余：24小时" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/ivImage"
+        android:layout_alignRight="@id/ivImage"
+        android:layout_below="@id/ivImage"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:lineSpacingExtra="@dimen/px2"
+        android:lines="2"
+        android:textColor="@color/grey1D1D1F"
+        android:textSize="@dimen/text_size_medium"
+        tools:text="Incase DSLR Pro Sling Pack 单肩相机包" />
+
+    <TextView
+        android:id="@+id/tvPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/ivImage"
+        android:layout_alignRight="@id/ivImage"
+        android:layout_below="@id/tvTitle"
+        android:layout_marginTop="8dp"
+        android:ellipsize="end"
+        android:gravity="left"
+        android:maxLines="1"
+        android:textColor="@color/orangeFF804D"
+        android:textSize="@dimen/text_size_medium"
+        tools:text="￥99.00" />
+
+    <TextView
+        android:id="@+id/tvMarketPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/tvPrice"
+        android:layout_marginLeft="@dimen/px10"
+        android:layout_toRightOf="@id/tvPrice"
+        android:maxLines="1"
+        android:textColor="@color/warmGrey"
+        android:textSize="@dimen/text_size_small"
+        android:visibility="gone"
+        tools:text="￥99.00" />
+</RelativeLayout>

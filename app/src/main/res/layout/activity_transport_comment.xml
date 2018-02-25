@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/bg"
+              android:orientation="vertical">
+
+    <include layout="@layout/layout_common_header" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/px15"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:padding="@dimen/px30"
+            android:text="为此转运评分"
+            android:textColor="@color/warmGrey"
+            android:textSize="@dimen/text_size_medium" />
+
+        <RatingBar
+            android:id="@+id/rbStar"
+            style="@style/RatingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/px30"
+            android:isIndicator="false"
+            android:max="5"
+            android:numStars="5"
+            android:rating="0"
+            android:stepSize="1" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/etComment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/px1"
+        android:background="@color/white"
+        android:gravity="top"
+        android:hint="@string/transport_comments_hint"
+        android:minHeight="@dimen/px100"
+        android:padding="@dimen/px15"
+        android:textColor="@color/darkGrey"
+        android:textColorHint="@color/lightGrey"
+        android:textSize="@dimen/text_size_medium" />
+
+    <RelativeLayout
+        android:id="@+id/layoutOrder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/px6"
+        android:background="@color/white"
+        android:padding="@dimen/px15">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableRight="@mipmap/ic_arrow_right"
+            android:text="@string/transport_comment_order"
+            android:textColor="@color/darkGrey"
+            android:textSize="@dimen/text_size_medium" />
+
+        <TextView
+            android:id="@+id/tvOrder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/px30"
+            android:text=""
+            android:textColor="@color/tab_color"
+            android:textSize="@dimen/text_size_medium" />
+    </RelativeLayout>
+</LinearLayout>

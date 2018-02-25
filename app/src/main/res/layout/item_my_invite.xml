@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:fresco="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/white"
+              android:orientation="vertical">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/ll_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
+        android:gravity="center_vertical"
+        android:padding="16dp">
+
+        <!-- 用户头像 -->
+        <com.haitao.view.CustomImageView
+            android:id="@+id/img_avatar"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            fresco:failureImage="@mipmap/ic_default_avator"
+            fresco:failureImageScaleType="centerCrop"
+            fresco:layout_constraintBottom_toBottomOf="parent"
+            fresco:layout_constraintStart_toStartOf="parent"
+            fresco:layout_constraintTop_toTopOf="parent"
+            fresco:placeholderImage="@mipmap/ic_default_avator"
+            fresco:placeholderImageScaleType="centerCrop"
+            fresco:roundAsCircle="true"
+            fresco:roundWithOverlayColor="@color/white"
+            fresco:roundingBorderColor="@color/greyE6E6E6"
+            fresco:roundingBorderWidth="1dp" />
+
+        <!-- 用户名 -->
+        <TextView
+            android:id="@+id/tv_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:maxLines="1"
+            android:textColor="@color/grey4F4F53"
+            android:textSize="@dimen/text_size_medium"
+            fresco:layout_constraintBottom_toTopOf="@+id/ll_sex_group"
+            fresco:layout_constraintStart_toEndOf="@+id/img_avatar"
+            fresco:layout_constraintTop_toTopOf="parent"
+            fresco:layout_constraintVertical_chainStyle="packed"
+            tools:text="我是名字" />
+
+        <LinearLayout
+            android:id="@+id/ll_sex_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/bg_oval_grey_f5f5f5"
+            android:gravity="center_vertical"
+            fresco:layout_constraintBottom_toBottomOf="parent"
+            fresco:layout_constraintStart_toStartOf="@+id/tv_username"
+            fresco:layout_constraintTop_toBottomOf="@+id/tv_username"
+            fresco:layout_constraintVertical_chainStyle="packed">
+
+            <!-- 性别 -->
+            <ImageView
+                android:id="@+id/img_gender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_female" />
+
+            <!-- 分组 -->
+            <TextView
+                android:id="@+id/tv_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:layout_marginRight="6dp"
+                android:textColor="@color/grey4F4F53"
+                android:textSize="@dimen/text_size_smallsmall"
+                android:visibility="visible"
+                tools:ignore="RtlHardcoded"
+                tools:text="用户分组" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/img_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_arrow_right_grey_24"
+            fresco:layout_constraintBottom_toBottomOf="parent"
+            fresco:layout_constraintEnd_toEndOf="parent"
+            fresco:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/tv_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/orangeFF804D"
+            android:textSize="@dimen/text_size_large"
+            fresco:layout_constraintBottom_toBottomOf="parent"
+            fresco:layout_constraintEnd_toStartOf="@+id/img_next"
+            fresco:layout_constraintTop_toTopOf="parent"
+            fresco:layout_constraintVertical_bias="0.517"
+            tools:text="+$1239.2" />
+    </android.support.constraint.ConstraintLayout>
+
+
+    <!--<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_item_selectable"
+        android:gravity="center_vertical"
+        android:padding="@dimen/px24">
+
+        &lt;!&ndash; 用户头像 &ndash;&gt;
+        <com.haitao.view.CustomImageView
+            android:id="@+id/img_avatar"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="@dimen/px24"
+            fresco:failureImage="@mipmap/ic_default_avator"
+            fresco:failureImageScaleType="centerCrop"
+            fresco:placeholderImage="@mipmap/ic_default_avator"
+            fresco:placeholderImageScaleType="centerCrop"
+            fresco:roundAsCircle="true"
+            fresco:roundWithOverlayColor="@color/white" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            &lt;!&ndash; 用户名 &ndash;&gt;
+            <TextView
+                android:id="@+id/tv_username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/grey4F4F53"
+                android:textSize="@dimen/text_size_medium"
+                tools:text="一抹轻雾" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/px12">
+
+                &lt;!&ndash; 分组 &ndash;&gt;
+                <TextView
+                    android:id="@+id/tv_group_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/px12"
+                    android:background="@drawable/border_round_corner_blue"
+                    android:paddingBottom="@dimen/px1"
+                    android:paddingTop="@dimen/px1"
+                    android:textColor="@color/midBlue"
+                    android:textSize="@dimen/text_size_small"
+                    android:visibility="gone"
+                    tools:text="海淘一年级" />
+
+                &lt;!&ndash; 性别 &ndash;&gt;
+                <ImageView
+                    android:id="@+id/img_gender"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/ic_male"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>-->
+
+    <View
+        android:id="@+id/divider"
+        style="@style/Divider_List_E6E6E6" />
+
+</LinearLayout>

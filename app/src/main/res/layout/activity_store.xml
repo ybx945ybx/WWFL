@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- 标题 -->
+    <com.haitao.view.HtHeadView
+        android:id="@+id/ht_headview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:center_text="@string/store"
+        app:divider_visible="false" />
+
+    <!-- 多状态布局容器 -->
+    <com.haitao.view.MultipleStatusView
+        android:id="@+id/msv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/content_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:background="@color/colorGrayF5F5F5" />
+
+            <!-- 筛选标签列表 -->
+            <com.haitao.view.HorizontalListView
+                android:id="@+id/lv_filter"
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:background="@color/white" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/greyE6E6E6" />
+
+            <!-- 商家列表 -->
+            <com.haitao.view.refresh.XListView
+                android:id="@+id/content_listview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="@null" />
+
+        </LinearLayout>
+
+    </com.haitao.view.MultipleStatusView>
+
+</LinearLayout>

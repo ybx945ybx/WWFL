@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.haitao.view.MultipleStatusView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/msv"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:orientation="vertical">
+
+    <!--标题-->
+    <com.haitao.view.HtHeadView
+        android:id="@+id/ht_headview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:divider_visible="false"
+        app:right_img="@mipmap/ic_title_share">
+
+    </com.haitao.view.HtHeadView>
+
+    <RelativeLayout
+        android:id="@+id/content_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/ht_headview">
+
+
+        <!--页面内容-->
+        <com.haitao.view.StickyNavLayout
+            android:id="@+id/layoutContent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/layoutComment"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <!--顶部商家信息-->
+            <LinearLayout
+                android:id="@+id/id_stickynavlayout_topview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <!--商家信息-->
+                <include layout="@layout/store_info_item_middle"/>
+
+                <!--收藏和去购买-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rl_image"
+                    android:orientation="horizontal"
+                    android:paddingBottom="16dp"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp">
+
+                    <TextView
+                        android:id="@+id/tvFav"
+                        style="@style/ButtonSmallBorder"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="3dp"
+                        android:layout_weight="1"
+                        android:text="@string/store_fav"/>
+
+                    <TextView
+                        android:id="@+id/tvBuy"
+                        style="@style/ButtonSmall"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3dp"
+                        android:layout_weight="1"
+                        android:text="@string/store_buy_rebate"/>
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/divider_ad"
+                    android:layout_width="match_parent"
+                    android:layout_height="8dp"
+                    android:background="@color/bg"/>
+
+                <LinearLayout
+                    android:id="@+id/llyt_ad"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <com.haitao.view.HtAdView
+                        android:id="@+id/htav_ad"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="8dp"
+                        android:background="@color/bg"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/id_stickynavlayout_indicator"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/px1"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:visibility="gone">
+                <!-- tab切换 -->
+                <android.support.design.widget.TabLayout
+                    android:id="@+id/tab"
+                    style="@style/CustomTabLayout"/>
+
+            </LinearLayout>
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/id_stickynavlayout_viewpager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            </android.support.v4.view.ViewPager>
+
+        </com.haitao.view.StickyNavLayout>
+
+        <!-- 活动入口 -->
+        <com.haitao.view.CustomImageView
+            android:id="@+id/img_event"
+            style="@style/ImgEvent"
+            android:layout_marginBottom="48dp"/>
+
+    </RelativeLayout>
+    <!--底部评论-->
+    <LinearLayout
+        android:id="@+id/layoutComment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:focusable="false"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/separate"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="12dp">
+
+            <com.haitao.view.CustomImageView
+                android:id="@+id/img_avatar"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignTop="@+id/etContent"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="12dp"
+                fresco:failureImage="@mipmap/ic_default_avator"
+                fresco:failureImageScaleType="centerCrop"
+                fresco:placeholderImage="@mipmap/ic_default_avator"
+                fresco:placeholderImageScaleType="centerCrop"
+                fresco:roundAsCircle="true"
+                fresco:roundWithOverlayColor="@color/white"
+                fresco:roundingBorderColor="@color/greyE6E6E6"
+                fresco:roundingBorderWidth="2dp"/>
+
+            <com.haitao.view.ClearEditText
+                android:id="@+id/etContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="12dp"
+                android:layout_toLeftOf="@+id/iv_send"
+                android:layout_toRightOf="@id/img_avatar"
+                android:background="@null"
+                android:focusable="false"
+                android:hint="@string/discount_comment_hint"
+                android:imeOptions="actionSend"
+                android:inputType="textMultiLine"
+                android:textColor="@color/grey1D1D1F"
+                android:textColorHint="@color/greyA5A5A8"
+                android:textSize="@dimen/text_size_medium"/>
+
+            <ImageView
+                android:id="@+id/iv_send"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/etContent"
+                android:layout_alignParentRight="true"
+                android:src="@mipmap/ic_comment_send"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+</com.haitao.view.MultipleStatusView>

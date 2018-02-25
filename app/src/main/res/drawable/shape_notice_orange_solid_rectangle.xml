@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <solid android:color="@color/brightOrange"/> <!-- 背景颜色 -->
+
+    <!-- padding 表示内部空间距离背景图片内部边距 的距离 -->
+    <padding
+        android:bottom="0dp"
+        android:left="0dp"
+        android:right="0dp"
+        android:top="0dp"/>
+
+    <stroke
+        android:width="1.0dp"
+        android:color="@color/brightOrange"/> <!-- 图片边框属性 -->
+
+    <corners
+        android:bottomLeftRadius="@dimen/px15"
+        android:bottomRightRadius="@dimen/px15"
+        android:topLeftRadius="@dimen/px15"
+        android:topRightRadius="@dimen/px15"/>
+</shape>

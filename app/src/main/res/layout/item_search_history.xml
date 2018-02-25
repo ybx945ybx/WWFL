@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              tools:ignore="RtlHardcoded">
+
+    <View
+        android:id="@+id/viewSeparate"
+        style="@style/Divider_List_E6E6E6" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_item_selectable"
+        android:orientation="horizontal"
+        android:paddingBottom="12dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="12dp">
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:maxLines="1"
+            android:textColor="@color/grey4F4F53"
+            android:textSize="@dimen/text_size_medium"
+            tools:text="搜索历史条目" />
+
+        <!-- 返利比例 -->
+        <LinearLayout
+            android:id="@+id/llyt_rebate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv_rebate_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="2dp"
+                android:textColor="@color/grey78787D"
+                android:textSize="12sp"
+                tools:text="最高返利" />
+
+            <TextView
+                android:id="@+id/tv_rebate_rate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/orangeFF804D"
+                android:textSize="18sp"
+                tools:text="40" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="%"
+                android:textColor="@color/orangeFF804D"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <!--<TextView-->
+        <!--android:id="@+id/tv_rebate"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="center_vertical"-->
+        <!--android:maxLines="1"-->
+        <!--android:textColor="@color/orangeFF804D"-->
+        <!--android:textSize="@dimen/text_size_medium"-->
+        <!--tools:text="返利信息"/>-->
+    </LinearLayout>
+</LinearLayout>

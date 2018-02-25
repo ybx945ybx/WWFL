@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_item_selectable"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <com.haitao.view.CustomImageView
+            android:id="@+id/iv_store"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            fresco:actualImageScaleType="centerInside"
+            fresco:failureImage="@mipmap/ic_default_240"
+            fresco:failureImageScaleType="centerInside"
+            fresco:placeholderImage="@mipmap/ic_default_240"
+            fresco:placeholderImageScaleType="centerCrop"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="16dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.haitao.view.CustomImageView
+                    android:id="@+id/ivCountry"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="4dp"
+                    fresco:failureImage="@mipmap/ic_default_60"
+                    fresco:placeholderImage="@mipmap/ic_default_60"
+                    fresco:placeholderImageScaleType="centerCrop"/>
+
+                <TextView
+                    android:id="@+id/tv_store_group"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:textColor="@color/colorGray6D6D72"
+                    android:textSize="12sp"
+                    tools:text="综合商家"/>
+
+                <TextView
+                    android:id="@+id/tv_rebate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/bg_oval_corner_779cfc"
+                    android:paddingBottom="2dp"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:paddingTop="2dp"
+                    android:textColor="@color/white"
+                    android:textSize="10sp"
+                    tools:text="线下返利40%"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_store_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/grey29292C"
+                android:textSize="16sp"
+                tools:text="Amazon"/>
+
+            <TextView
+                android:id="@+id/tv_store_fav"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/greyA5A5A8"
+                android:textSize="12sp"
+                tools:text="23.9万人获得返利 · 1.2万人收藏"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="12dp"
+        android:background="@color/bg"/>
+</LinearLayout>

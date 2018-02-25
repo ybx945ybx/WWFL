@@ -1,0 +1,34 @@
+<com.haitao.view.MultipleStatusView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/msv"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/content_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="bottom">
+
+        <!-- 顶部 -->
+        <include
+            android:id="@+id/ll_search"
+            layout="@layout/top_search_layout" />
+
+        <!-- 商家列表 -->
+        <com.haitao.view.refresh.XListView
+            android:id="@+id/lv_store"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/ll_search"
+            android:divider="@null"
+            android:scrollbars="none" />
+
+        <!-- 活动入口 -->
+        <com.haitao.view.CustomImageView
+            android:id="@+id/img_event"
+            style="@style/ImgEvent" />
+
+    </RelativeLayout>
+
+</com.haitao.view.MultipleStatusView>

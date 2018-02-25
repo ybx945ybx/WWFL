@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/bg"
+              android:orientation="vertical"
+              tools:ignore="RtlHardcoded">
+    <!-- 顶部 -->
+    <include
+        android:id="@+id/layoutTop"
+        layout="@layout/layout_common_header" />
+
+    <TextView
+        android:id="@+id/tvTips"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/px30"
+        android:paddingLeft="@dimen/px55"
+        android:paddingRight="@dimen/px55"
+        android:paddingTop="@dimen/px30"
+        android:text="@string/bind_no_phone"
+        android:textColor="@color/lightGrey"
+        android:textSize="@dimen/text_size_medium" />
+
+    <LinearLayout
+        android:id="@+id/layoutBindGuide"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/px15"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/px15"
+            android:paddingTop="@dimen/px15">
+
+            <TextView
+                android:id="@+id/tvGuideNum1"
+                android:layout_width="@dimen/px24"
+                android:layout_height="@dimen/px24"
+                android:background="@drawable/sl_guide"
+                android:gravity="center"
+                android:text="@string/one"
+                android:textColor="@color/sl_guide"
+                android:textSize="@dimen/text_size_smalls" />
+
+            <TextView
+                android:id="@+id/tvGuide1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/px10"
+                android:text="@string/verify_current_phone"
+                android:textColor="@color/sl_tab_color_new"
+                android:textSize="@dimen/text_size_medium" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/px15"
+            android:paddingTop="@dimen/px15">
+
+            <TextView
+                android:id="@+id/tvGuideNum2"
+                android:layout_width="@dimen/px24"
+                android:layout_height="@dimen/px24"
+                android:background="@drawable/sl_guide"
+                android:gravity="center"
+                android:text="@string/two"
+                android:textColor="@color/sl_guide"
+                android:textSize="@dimen/text_size_smalls" />
+
+            <TextView
+                android:id="@+id/tvGuide2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/px10"
+                android:text="@string/bind_new_phone"
+                android:textColor="@color/sl_tab_color"
+                android:textSize="@dimen/text_size_medium" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingLeft="@dimen/px15">
+
+        <!--<com.haitao.view.ClearEditText
+            android:id="@+id/et_area"
+            style="@style/login_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="phone"
+            android:text="@string/area_code_china" />-->
+
+        <TextView
+            android:id="@+id/tv_area"
+            style="@style/login_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableRight="@mipmap/ic_down_triangle"
+            android:text="@string/area_code_china" />
+
+        <View
+            android:id="@+id/divider_area"
+            style="@style/SeparateLine"
+            android:layout_below="@id/tv_area" />
+
+        <com.haitao.view.ClearEditText
+            android:id="@+id/etPhone"
+            style="@style/login_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_area"
+            android:hint="@string/login_phone_hint"
+            android:inputType="phone" />
+
+        <View
+            style="@style/SeparateLine"
+            android:layout_below="@id/etPhone" />
+
+        <com.haitao.view.ClearEditText
+            android:id="@+id/etVerify"
+            style="@style/login_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/etPhone"
+            android:layout_toLeftOf="@+id/tvGetVerify"
+            android:hint="@string/forget_verify_hint"
+            android:inputType="number" />
+
+        <TextView
+            android:id="@+id/tvGetVerify"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/etVerify"
+            android:layout_alignParentRight="true"
+            android:enabled="true"
+            android:padding="@dimen/px15"
+            android:text="@string/get_verify_code"
+            android:textColor="@color/sl_submit_color_new"
+            android:textSize="@dimen/text_size_small" />
+    </RelativeLayout>
+
+    <View style="@style/SeparateLine" />
+
+    <!-- 下一步 or 确定-->
+    <TextView
+        android:id="@+id/btnSubmit"
+        style="@style/SubmitButtonOrange"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/px15"
+        android:layout_marginRight="@dimen/px15"
+        android:layout_marginTop="@dimen/px30"
+        android:enabled="false"
+        android:text="@string/bind_confirm" />
+
+</LinearLayout>

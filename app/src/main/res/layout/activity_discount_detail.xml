@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/bg"
+                android:clipChildren="false">
+
+    <!-- 顶部 -->
+    <RelativeLayout
+        android:id="@+id/layoutTop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border_bottom_e6e6e6_0_5dp"
+        android:minHeight="48dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp">
+
+        <ImageButton
+            android:id="@+id/btnLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:padding="8dp"
+            android:src="@mipmap/ic_title_back"
+            android:visibility="visible" />
+
+        <ImageButton
+            android:id="@+id/btnShare"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:padding="8dp"
+            android:src="@mipmap/ic_share"
+            android:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/iv_share_gain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="1dp"
+            android:layout_marginTop="6dp"
+            android:src="@mipmap/ic_share_gain"
+            android:visibility="visible" />
+
+        <ImageButton
+            android:id="@+id/btnService"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/btnShare"
+            android:background="@null"
+            android:padding="8dp"
+            android:src="@mipmap/ic_service"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/tvStBuy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/btnShare"
+            android:background="@drawable/shape_grey_empty_rectangle"
+            android:paddingBottom="@dimen/px6"
+            android:paddingLeft="@dimen/px15"
+            android:paddingRight="@dimen/px15"
+            android:paddingTop="@dimen/px6"
+            android:text="@string/discount_55_buy"
+            android:textColor="@color/grey"
+            android:textSize="@dimen/text_size_medium"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/px136"
+            android:layout_marginRight="@dimen/px136"
+            android:gravity="center"
+            android:maxLines="1"
+            android:textColor="@color/darkGrey"
+            android:textSize="@dimen/text_size_mediumx" />
+
+
+    </RelativeLayout>
+
+    <!-- 内容 -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/llyt_bottom"
+        android:layout_below="@+id/layoutTop">
+
+        <com.haitao.view.ObservableWebView
+            android:id="@+id/wvBody"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="0.5dp"
+            android:scrollbars="none"
+            android:visibility="visible" />
+
+        <!-- 活动入口 -->
+        <com.haitao.view.CustomImageView
+            android:id="@+id/img_event"
+            style="@style/ImgEvent" />
+
+    </RelativeLayout>
+
+    <!--底部-->
+    <LinearLayout
+        android:id="@+id/llyt_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:clipChildren="false"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/greyE6E6E6" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:clipChildren="false"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/llyt_praise"
+                android:layout_width="0dp"
+                android:layout_height="125dp"
+                android:layout_gravity="bottom"
+                android:layout_weight="1"
+                android:clipChildren="false"
+                android:gravity="center_horizontal|bottom"
+                android:orientation="vertical">
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/lv_praise"
+                    android:layout_width="56dp"
+                    android:layout_height="90dp"
+                    android:layout_marginBottom="-16dp" />
+
+                <TextView
+                    android:id="@+id/tv_praise"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="3dp"
+                    android:text="赞1.2万"
+                    android:textColor="@color/grey1D1D1F"
+                    android:textSize="@dimen/text_size_small" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llyt_collect"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_gravity="bottom"
+                android:layout_weight="1"
+                android:clipChildren="false"
+                android:gravity="center_horizontal|bottom"
+                android:orientation="vertical">
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/lv_collect"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_marginBottom="-10dp" />
+
+                <TextView
+                    android:id="@+id/tv_collect"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="3dp"
+                    android:text="赞1.2万"
+                    android:textColor="@color/grey1D1D1F"
+                    android:textSize="@dimen/text_size_small" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_comment"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawablePadding="4dp"
+                android:drawableTop="@mipmap/ic_discount_bottom_comment_gray"
+                android:gravity="center"
+                android:textColor="@color/grey1D1D1F"
+                android:textSize="@dimen/text_size_small"
+                tools:text="赞1.2万" />
+
+            <TextView
+                android:id="@+id/tv_gobuy"
+                android:layout_width="0dp"
+                android:layout_height="86dp"
+                android:layout_weight="1"
+                android:drawablePadding="4dp"
+                android:drawableTop="@mipmap/ic_discount_bottom_gobuy_orange"
+                android:gravity="center_horizontal"
+                android:textColor="@color/gray_1d1d1f_orange_ff804d_selector"
+                android:textSize="@dimen/text_size_small"
+                tools:text="赞1.2万" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <include layout="@layout/common_progress" />
+
+</RelativeLayout>

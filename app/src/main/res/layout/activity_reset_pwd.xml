@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white">
+    <!-- 标题 -->
+    <com.haitao.view.HtHeadView
+        android:id="@+id/head_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:center_text="@string/reset_pwd"
+        app:divider_visible="false"/>
+
+    <!-- 内容 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/head_view"
+        android:orientation="vertical">
+
+        <!-- 手机号 -->
+        <com.haitao.view.HtEditTextView
+            android:id="@+id/et_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="32dp"
+            android:layout_marginTop="24dp"
+            android:inputType="phone"
+            android:maxLines="1"
+            app:edit_hit_text="@string/please_input_telephone"
+            app:left_right_image="@mipmap/ic_down_black_triangle"
+            app:left_txt="+86"/>
+
+        <!-- 验证码 -->
+        <com.haitao.view.HtEditTextView
+            android:id="@+id/et_code"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="32dp"
+            android:layout_marginTop="16dp"
+            android:inputType="number"
+            android:maxLines="1"
+            app:edit_hit_text="@string/please_input_verify_code"
+            app:left_txt="@string/verify_code"
+            app:right_txt="@string/get_verify_code"
+            app:right_txt_color="@color/gray_orange_selector"
+            app:right_txt_enabled="false"/>
+
+        <!-- 密码 -->
+        <com.haitao.view.HtEditTextView
+            android:id="@+id/et_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="32dp"
+            android:layout_marginTop="16dp"
+            android:inputType="textPassword"
+            android:maxLines="1"
+            app:edit_hit_text="@string/pwd_rules"
+            app:left_txt="@string/login_pwd"
+            app:right_image="@drawable/ic_password_hide_show_selector"/>
+
+        <!-- 重置密码 -->
+        <TextView
+            android:id="@+id/tv_reset_pwd"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="32dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/sl_bg_submit_button_orange"
+            android:enabled="false"
+            android:gravity="center"
+            android:text="@string/reset_pwd"
+            android:textColor="@color/white"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

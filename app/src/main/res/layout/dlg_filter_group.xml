@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/white"
+              android:orientation="vertical">
+
+    <com.haitao.view.HtHeadView
+        android:id="@+id/hv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:center_text="@string/filter"
+        app:left_img="@mipmap/ic_close_20"
+        app:level_1_title="true"
+        app:right_text="@string/confirm"
+        app:right_text_color="@color/orangeFF804D" />
+
+    <ListView
+        android:id="@+id/lv_filter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:divider="@color/transparent"
+        android:scrollbars="none"
+        android:visibility="visible" />
+
+</LinearLayout>

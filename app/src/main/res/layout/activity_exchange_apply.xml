@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white"
+              android:orientation="vertical">
+    <!-- 顶部 -->
+    <include
+        android:id="@+id/layoutTop"
+        layout="@layout/layout_common_header" />
+
+    <TextView
+        android:id="@+id/tvPrice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/px15"
+        android:paddingTop="@dimen/px15"
+        android:text="您当前还有 9381 金币，本次出价 1000 金币，确定出价嘛？"
+        android:textColor="@color/midGrey"
+        android:textSize="@dimen/text_size_medium" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/px15"
+        android:text="请填写物品收货信息，55海淘网承诺对您的个人信息保密。"
+        android:textColor="@color/darkOrange"
+        android:textSize="@dimen/text_size_small" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/px15"
+        android:background="@color/white"
+        android:padding="@dimen/px15">
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="@dimen/px110"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="收货人姓名"
+            android:textColor="@color/darkGrey"
+            android:textSize="@dimen/text_size_medium" />
+
+        <EditText
+            android:id="@+id/etName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/px15"
+            android:layout_toRightOf="@+id/tvName"
+            android:background="@null"
+            android:gravity="left"
+            android:hint="输入真实姓名"
+            android:maxLines="1"
+            android:textColorHint="@color/lightGrey"
+            android:textSize="@dimen/text_size_medium" />
+    </RelativeLayout>
+
+    <View style="@style/SeparateLine" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="@dimen/px15">
+
+        <TextView
+            android:id="@+id/tvPhone"
+            android:layout_width="@dimen/px110"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="手机号码"
+            android:textColor="@color/darkGrey"
+            android:textSize="@dimen/text_size_medium" />
+
+        <EditText
+            android:id="@+id/etPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/px15"
+            android:layout_toRightOf="@+id/tvPhone"
+            android:background="@null"
+            android:gravity="left"
+            android:hint="输入手机号码"
+            android:inputType="phone"
+            android:maxLines="1"
+            android:textColorHint="@color/lightGrey"
+            android:textSize="@dimen/text_size_medium" />
+    </RelativeLayout>
+
+    <View style="@style/SeparateLine" />
+
+    <RelativeLayout
+        android:id="@+id/layoutAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="@dimen/px15">
+
+        <TextView
+            android:id="@+id/tvAddressTips"
+            android:layout_width="@dimen/px110"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="省/市"
+            android:textColor="@color/darkGrey"
+            android:textSize="@dimen/text_size_medium" />
+
+        <EditText
+            android:id="@+id/etAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/px15"
+            android:layout_toRightOf="@+id/tvAddressTips"
+            android:background="@null"
+            android:drawablePadding="@dimen/px6"
+            android:drawableRight="@mipmap/ic_next"
+            android:focusable="false"
+            android:gravity="left"
+            android:hint="请选择省/市"
+            android:maxLines="1"
+            android:textColorHint="@color/lightGrey"
+            android:textSize="@dimen/text_size_medium" />
+    </RelativeLayout>
+
+    <View style="@style/SeparateLine" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="@dimen/px15">
+
+        <TextView
+            android:id="@+id/tvDetailAddress"
+            android:layout_width="@dimen/px110"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="详细地址"
+            android:textColor="@color/darkGrey"
+            android:textSize="@dimen/text_size_medium" />
+
+        <EditText
+            android:id="@+id/etDetailAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/px15"
+            android:layout_toRightOf="@+id/tvDetailAddress"
+            android:background="@null"
+            android:gravity="left"
+            android:hint="请输入详细地址"
+            android:maxLines="1"
+            android:textColorHint="@color/lightGrey"
+            android:textSize="@dimen/text_size_medium" />
+    </RelativeLayout>
+
+    <View style="@style/SeparateLine" />
+
+    <TextView
+        android:id="@+id/tvSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/px15"
+        android:layout_marginRight="@dimen/px15"
+        android:layout_marginTop="@dimen/px55"
+        android:background="@drawable/sl_submit"
+        android:gravity="center"
+        android:padding="@dimen/px22"
+        android:text="确定"
+        android:textColor="@color/sl_button_color"
+        android:textSize="@dimen/text_size_mediumx" />
+</LinearLayout>

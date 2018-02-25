@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@drawable/bg_item_selectable"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/px24">
+
+        <TextView
+            android:id="@+id/tvContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/tvAdd"
+            android:textColor="@color/midGrey2"
+            android:textSize="@dimen/text_size_medium"
+            tools:text="dkdkdkd" />
+
+        <TextView
+            android:id="@+id/tvTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvContent"
+            android:layout_marginTop="@dimen/px15"
+            android:textColor="@color/grey"
+            android:textSize="@dimen/text_size_small"
+            tools:text="11-22" />
+
+        <TextView
+            android:id="@+id/tvAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/px15"
+            android:background="@drawable/shape_grey_empty_rectangle"
+            android:paddingLeft="@dimen/px15"
+            android:paddingRight="@dimen/px15"
+            android:textColor="@color/grey"
+            android:textSize="@dimen/text_size_small"
+            android:visibility="visible"
+            tools:text="同意" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/viewSeparate"
+        style="@style/Divider_ECECEC" />
+</LinearLayout>

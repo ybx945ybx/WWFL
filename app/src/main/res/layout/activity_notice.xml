@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <include layout="@layout/layout_common_header" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.haitao.view.refresh.XListView
+            android:id="@+id/lvList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@color/transparent"
+            android:dividerHeight="0dp"
+            android:scrollbars="none">
+
+        </com.haitao.view.refresh.XListView>
+
+        <include layout="@layout/layout_common_error" />
+    </RelativeLayout>
+
+
+    <!--<LinearLayout-->
+    <!--android:id="@+id/layoutContent"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:background="@color/white"-->
+    <!--android:orientation="vertical">-->
+
+    <!--<LinearLayout-->
+    <!--android:id="@+id/layoutTab"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_below="@id/layoutTop"-->
+    <!--android:background="@color/white"-->
+    <!--android:orientation="horizontal">-->
+
+    <!--<RelativeLayout-->
+    <!--android:id="@+id/layoutMessage"-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_weight="1">-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/tvMessage"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_centerInParent="true"-->
+    <!--android:padding="@dimen/px15"-->
+    <!--android:text="@string/notice_message"-->
+    <!--android:textColor="@color/selector_tab_color"-->
+    <!--android:textSize="@dimen/text_size_mediumx" />-->
+
+    <!--<ImageView-->
+    <!--android:id="@+id/ivMessage"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_alignRight="@id/tvMessage"-->
+    <!--android:layout_alignTop="@id/tvMessage"-->
+    <!--android:paddingRight="@dimen/px6"-->
+    <!--android:paddingTop="@dimen/px10"-->
+    <!--android:src="@mipmap/ic_unread"-->
+    <!--android:visibility="gone" />-->
+    <!--</RelativeLayout>-->
+
+    <!--<RelativeLayout-->
+    <!--android:id="@+id/layoutNotice"-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_weight="1">-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/tvNotice"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_centerInParent="true"-->
+    <!--android:padding="@dimen/px15"-->
+    <!--android:text="@string/notice_notice"-->
+    <!--android:textColor="@color/selector_tab_color"-->
+    <!--android:textSize="@dimen/text_size_mediumx" />-->
+
+    <!--<ImageView-->
+    <!--android:id="@+id/ivNotice"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_alignRight="@id/tvNotice"-->
+    <!--android:layout_alignTop="@id/tvNotice"-->
+    <!--android:paddingRight="@dimen/px6"-->
+    <!--android:paddingTop="@dimen/px10"-->
+    <!--android:src="@mipmap/ic_unread"-->
+    <!--android:visibility="gone" />-->
+    <!--</RelativeLayout>-->
+    <!--</LinearLayout>-->
+
+    <!--<com.viewpagerindicator.UnderlinePageIndicator-->
+    <!--android:id="@+id/indicator"-->
+    <!--android:layout_width="fill_parent"-->
+    <!--android:layout_height="@dimen/px2"-->
+    <!--android:layout_below="@id/layoutTab" />-->
+
+    <!--<View style="@style/separateLineStyle" />-->
+    <!--</LinearLayout>-->
+
+    <!--<android.support.v4.view.ViewPager-->
+    <!--android:id="@+id/vpSwitch"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_below="@+id/indicator" />-->
+
+</LinearLayout>

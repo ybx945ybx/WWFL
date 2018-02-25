@@ -1,0 +1,27 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/bg">
+    <!-- 顶部 -->
+    <include
+        android:id="@+id/layoutSearch"
+        layout="@layout/top_search_layout" />
+
+    <!-- tab切换 -->
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tab"
+        style="@style/DealTabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/layoutSearch"
+        android:layout_gravity="bottom"
+        android:background="@color/white"
+        android:fillViewport="false" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_order_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tab"
+        android:layout_marginTop="@dimen/px1" />
+</RelativeLayout>

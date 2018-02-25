@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical">
+
+    <include
+        android:id="@+id/layoutTop"
+        layout="@layout/layout_common_header" />
+
+    <!-- 搜索框 -->
+    <LinearLayout
+        android:id="@+id/layoutSearch01"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px75"
+        android:layout_below="@+id/layoutTop"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/layoutSearch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
+
+            <TextView
+                android:id="@+id/tvCancle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@null"
+                android:paddingBottom="@dimen/px15"
+                android:paddingRight="@dimen/px15"
+                android:paddingTop="@dimen/px15"
+                android:src="@mipmap/ic_post"
+                android:text="@string/cancel"
+                android:visibility="gone" />
+
+            <!--<com.haitao.view.ClearEditText
+                android:id="@+id/etSearch"
+                style="@style/edit_search_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/px15"
+                android:layout_toLeftOf="@id/tvCancle"
+                android:focusable="true"
+                android:hint="@string/search_store_hint"
+                android:imeOptions="actionSearch"
+                android:maxLines="1" />-->
+
+            <com.haitao.view.ClearEditText
+                android:id="@+id/etSearch"
+                style="@style/edit_search_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:hint="@string/search_store_hint" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <ExpandableListView
+        android:id="@+id/lvList"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/layoutSearch01"
+        android:layout_gravity="center"
+        android:layout_marginTop="0.5dp"
+        android:divider="@color/transparent"
+        android:dividerHeight="0dp"
+        android:groupIndicator="@null"
+        android:scrollbars="none" />
+
+    <!-- 活动入口 -->
+    <com.haitao.view.CustomImageView
+        android:id="@+id/img_event"
+        style="@style/ImgEvent" />
+
+    <TextView
+        android:id="@+id/tvError"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="没有信息"
+        android:textColor="@color/warmGrey"
+        android:textSize="@dimen/text_size_mediumx"
+        android:visibility="gone" />
+
+    <include layout="@layout/common_progress" />
+
+</RelativeLayout>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
+        android:paddingBottom="16dp"
+        android:paddingLeft="4dp"
+        android:paddingRight="16dp"
+        android:paddingTop="16dp"
+        tools:ignore="RtlHardcoded,RtlSymmetry">
+
+        <com.haitao.view.CustomImageView
+            android:id="@+id/img_rebate"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="12dp"
+            fresco:failureImage="@mipmap/ic_default_60"
+            fresco:layout_constraintBottom_toBottomOf="parent"
+            fresco:layout_constraintStart_toStartOf="parent"
+            fresco:layout_constraintTop_toTopOf="parent"
+            fresco:layout_goneMarginLeft="0dp"
+            fresco:placeholderImage="@mipmap/ic_default_60"
+            tools:ignore="RtlHardcoded" />
+
+        <TextView
+            android:id="@+id/tv_rebate_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:textColor="@color/grey1D1D1F"
+            android:textSize="@dimen/text_size_mediumx"
+            fresco:layout_constraintBottom_toTopOf="@+id/tv_rebate_time"
+            fresco:layout_constraintStart_toEndOf="@+id/img_rebate"
+            fresco:layout_constraintTop_toTopOf="parent"
+            tools:ignore="RtlHardcoded"
+            tools:text="返利" />
+
+        <TextView
+            android:id="@+id/tv_rebate_status"
+            style="@style/TagSmallMuted"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:enabled="false"
+            android:textSize="@dimen/text_size_smallsmall"
+            fresco:layout_constraintBottom_toBottomOf="@+id/tv_rebate_time"
+            fresco:layout_constraintStart_toEndOf="@+id/tv_rebate_time"
+            fresco:layout_constraintTop_toTopOf="@+id/tv_rebate_time"
+            tools:ignore="RtlHardcoded"
+            tools:text="已生效" />
+
+        <TextView
+            android:id="@+id/tv_rebate_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:textColor="@color/grey78787D"
+            android:textSize="@dimen/text_size_small"
+            fresco:layout_constraintBottom_toBottomOf="parent"
+            fresco:layout_constraintStart_toStartOf="@+id/tv_rebate_type"
+            fresco:layout_constraintTop_toBottomOf="@+id/tv_rebate_type"
+            tools:text="2017-01-01" />
+
+        <!-- 金额 -->
+        <TextView
+            android:id="@+id/tv_rebate_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/orangeFF804D"
+            android:textSize="@dimen/text_size_large"
+            fresco:layout_constraintBottom_toBottomOf="parent"
+            fresco:layout_constraintEnd_toStartOf="@+id/img_next"
+            fresco:layout_constraintTop_toTopOf="parent"
+            tools:text="+$1.25" />
+
+        <ImageView
+            android:id="@+id/img_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_arrow_right_grey_24"
+            fresco:layout_constraintBottom_toBottomOf="parent"
+            fresco:layout_constraintEnd_toEndOf="parent"
+            fresco:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <View
+        android:id="@+id/viewSeparate"
+        style="@style/Divider_List_E6E6E6" />
+</LinearLayout>

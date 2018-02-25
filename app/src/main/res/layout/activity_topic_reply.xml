@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:expandableTextView = "http://schemas.android.com/apk/res-auto"
+    xmlns:RichTextEditor = "http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg">
+    <include android:id="@+id/layoutTop"
+        layout="@layout/layout_common_header"/>
+    <RelativeLayout android:id="@+id/layoutBottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_alignParentBottom="true">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_photo"
+            android:drawablePadding="@dimen/px10"
+            android:gravity="center"
+            android:text="图片"
+            android:textColor="@color/midGrey"
+            android:textSize="@dimen/text_size_medium"
+            android:layout_centerInParent="true"
+            android:padding="@dimen/px20"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/separate"/>
+    </RelativeLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/layoutTop"
+        android:layout_above="@+id/layoutBottom">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:layout_marginTop="@dimen/px15"
+            android:padding="@dimen/px15"
+            android:orientation="vertical">
+            <RelativeLayout android:id="@+id/layoutQuote"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/px15"
+                android:background="@drawable/shape_bg_solid_rectangle"
+                android:visibility="gone"
+                android:padding="@dimen/px15">
+                <TextView android:id="@+id/tvQuoteName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_size_medium"
+                    android:textColor="@color/darkGrey"
+                    android:text="“发烧的哆咪”"/>
+                <com.haitao.view.ExpandableTextView
+                    android:id="@+id/layoutReplyContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvQuoteName"
+                    android:orientation="vertical"
+                    android:layout_marginTop="@dimen/px15"
+                    expandableTextView:maxCollapsedLines="1"
+                    expandableTextView:animAlphaStart="1">
+
+                    <TextView
+                        android:id="@id/expandable_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-light"
+                        android:textSize="@dimen/text_size_medium"
+                        android:textColor="@color/midGrey" />
+
+                    <TextView
+                        android:id="@id/expand_collapse"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right|bottom"
+                        android:layout_marginTop="@dimen/px10"
+                        android:drawablePadding="@dimen/px6"
+                        android:drawableRight="@drawable/sl_expand"
+                        android:text="展开"
+                        android:textColor="@color/warmGrey"
+                        android:textSize="@dimen/text_size_small"
+                        android:background="@android:color/transparent"/>
+                </com.haitao.view.ExpandableTextView>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+                <com.haitao.view.richEdit.RichTextEditor android:id="@+id/etContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    RichTextEditor:hint="输入回复内容"
+                    android:minHeight="@dimen/px200"
+                    android:background="@color/white"/>
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

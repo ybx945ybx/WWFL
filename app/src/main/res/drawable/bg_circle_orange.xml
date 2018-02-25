@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval">
+
+    <solid android:color="@color/orangeFF804D" /> <!-- 背景颜色 -->
+
+    <!-- padding 表示内部空间距离背景图片内部边距 的距离 -->
+    <!--<padding
+        android:bottom="0dp"
+        android:left="0dp"
+        android:right="0dp"
+        android:top="0dp" />-->
+
+
+    <!--<corners
+        android:radius="99dp" />-->
+    <size
+        android:width="20dp"
+        android:height="20dp" />
+</shape>

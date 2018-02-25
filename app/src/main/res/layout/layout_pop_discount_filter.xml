@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView android:id="@+id/layoutScroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView android:id="@+id/tvExpire"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/discount_filter_expire"
+                    android:textColor="@color/sl_filter_color"
+                    android:textSize="@dimen/text_size_medium"
+                    android:padding="@dimen/px15"
+                    android:background="@color/white"/>
+                <ImageView android:id="@+id/ivExpire"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/px15"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/sl_switch"/>
+            </RelativeLayout>
+
+
+            <View style="@style/SeparateLine" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView android:id="@+id/tvTransport"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/discount_filter_transports"
+                    android:textColor="@color/sl_filter_color"
+                    android:textSize="@dimen/text_size_medium"
+                    android:padding="@dimen/px15"
+                    android:background="@color/white"/>
+                <ImageView android:id="@+id/ivTransport"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/px15"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/sl_switch"/>
+            </RelativeLayout>
+
+
+            <View style="@style/SeparateLine" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/tvAlipay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:padding="@dimen/px15"
+                    android:text="@string/discount_filter_alipay"
+                    android:textColor="@color/sl_filter_color"
+                    android:textSize="@dimen/text_size_medium" />
+                <ImageView android:id="@+id/ivAlipay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/px15"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/sl_switch"/>
+            </RelativeLayout>
+
+
+            <View style="@style/SeparateLine" />
+            <!-- 分类 -->
+            <LinearLayout
+                android:id="@+id/layoutCategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/px15"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/discount_category"
+                    android:textColor="@color/darkGrey"
+                    android:textSize="@dimen/text_size_mediumx" />
+
+                <com.haitao.view.FullGirdView
+                    android:id="@+id/gvCategory"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/px15"
+                    android:horizontalSpacing="@dimen/px15"
+                    android:numColumns="3"
+                    android:verticalSpacing="@dimen/px15"></com.haitao.view.FullGirdView>
+            </LinearLayout>
+            <!-- 商家 -->
+            <LinearLayout
+                android:id="@+id/layoutStore"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/px15"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/search_store"
+                    android:textColor="@color/darkGrey"
+                    android:textSize="@dimen/text_size_mediumx" />
+
+                <com.haitao.view.tag.TagCloudLayout
+                    android:id="@+id/tagStore"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/px15"
+                    android:background="@color/white"
+                    app:lineSpacing="@dimen/px20"
+                    app:tagSpacing="@dimen/px15"></com.haitao.view.tag.TagCloudLayout>
+            </LinearLayout>
+
+            <View style="@style/SeparateLine" />
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/layoutBottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvReset"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/px15"
+            android:layout_marginLeft="@dimen/px30"
+            android:layout_marginRight="@dimen/px30"
+            android:layout_marginTop="@dimen/px15"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="@dimen/px15"
+            android:textSize="@dimen/text_size_mediumx"
+            android:text="@string/reset"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/tvConfirm"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/px15"
+            android:layout_marginLeft="@dimen/px30"
+            android:layout_marginRight="@dimen/px30"
+            android:layout_marginTop="@dimen/px15"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="@dimen/px15"
+            android:textSize="@dimen/text_size_mediumx"
+            android:text="@string/confirm"
+            android:textColor="@color/black" />
+    </LinearLayout>
+</LinearLayout>

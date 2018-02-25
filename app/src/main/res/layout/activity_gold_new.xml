@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/bg"
+              android:orientation="vertical">
+
+    <!-- 标题 -->
+    <com.haitao.view.HtHeadView
+        android:id="@+id/hv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:center_text="@string/my_gold_title" />
+
+    <com.haitao.view.MultipleStatusView
+        android:id="@+id/msv"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <com.haitao.view.refresh.XListView
+            android:id="@+id/content_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@null"
+            android:dividerHeight="0dp"
+            android:scrollbars="none" />
+
+    </com.haitao.view.MultipleStatusView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/greyE6E6E6" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- 金币兑换规则 -->
+        <TextView
+            android:id="@+id/tv_gold_exchange_rule"
+            style="@style/BottomNavItem"
+            android:drawableTop="@mipmap/ic_gold_exchange_rule"
+            android:text="@string/gold_exchange_rule" />
+
+        <!-- 如何赚金币 -->
+        <TextView
+            android:id="@+id/tv_how_to_earn_gold"
+            style="@style/BottomNavItem"
+            android:drawableTop="@mipmap/ic_how_to_earn_gold"
+            android:text="@string/how_to_earn_gold" />
+
+        <!-- 金币兑换规则 -->
+        <TextView
+            android:id="@+id/tv_exchange_award"
+            style="@style/BottomNavItem"
+            android:drawableTop="@mipmap/ic_exchange_award"
+            android:text="@string/exchange_award" />
+    </LinearLayout>
+
+    <!--<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border_top_orange"
+        android:paddingBottom="@dimen/px18"
+        android:paddingTop="@dimen/px18">
+
+        <TextView
+            android:id="@+id/tv_how_to_earn_gold"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/how_to_earn_gold"
+            android:textColor="@color/orangeFF804D"
+            android:textSize="@dimen/text_size_mediumx" />
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="@dimen/px33"
+            android:background="@color/greyE6E6E6" />
+
+        <TextView
+            android:id="@+id/tv_gold_exchange_rule"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/gold_exchange_rule"
+            android:textColor="@color/orangeFF804D"
+            android:textSize="@dimen/text_size_mediumx" />
+    </LinearLayout>-->
+
+</LinearLayout>

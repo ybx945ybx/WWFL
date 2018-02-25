@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/bg"
+              android:orientation="vertical">
+
+    <com.haitao.view.SlideCycleView
+        android:id="@+id/layoutCircle"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px270" />
+
+    <!-- 快速导航 -->
+    <com.haitao.view.FullGirdView
+        android:id="@+id/gvSection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/px6"
+        android:background="@color/white"
+        android:listSelector="@color/transparent"
+        android:numColumns="5"
+        android:paddingBottom="@dimen/px15"
+        android:paddingTop="@dimen/px15">
+
+    </com.haitao.view.FullGirdView>
+    <!-- 置顶帖 -->
+    <com.haitao.view.FullListView
+        android:id="@+id/lvTopList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/px10"
+        android:divider="@null"
+        android:dividerHeight="0dp" />
+
+    <!-- 话题 -->
+    <com.haitao.view.FullListView
+        android:id="@+id/lvTopicList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/px10"
+        android:divider="@color/transparent"
+        android:dividerHeight="0dp" />
+
+</LinearLayout>

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="@dimen/px15">
+        <TextView
+            android:id="@+id/tvPostTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="[攻略分享]上海空港六路海关个人申报完整版流程与攻略，多文多图，各位看官耐心观"
+            android:textColor="@color/darkGrey"
+            android:textSize="@dimen/text_size_large"/>
+
+        <TextView
+            android:id="@+id/tvComment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/tvView"
+            android:layout_below="@+id/tvPostTitle"
+            android:drawableLeft="@mipmap/ic_comment"
+            android:layout_marginTop="@dimen/px20"
+            android:drawablePadding="@dimen/px6"
+            android:text="111"
+            android:textColor="@color/lightGrey"
+            android:textSize="@dimen/text_size_medium" />
+
+        <TextView
+            android:id="@+id/tvView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/tvComment"
+            android:layout_marginRight="@dimen/px20"
+            android:drawableLeft="@mipmap/ic_brower"
+            android:drawablePadding="@dimen/px6"
+            android:text="111"
+            android:textColor="@color/lightGrey"
+            android:textSize="@dimen/text_size_medium" />
+        <TextView android:id="@+id/tvSection"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="海淘攻略"
+            android:textColor="@color/midBlue"
+            android:textSize="@dimen/text_size_medium"
+            android:layout_alignParentRight="true"
+            android:layout_alignBottom="@id/tvView"
+            android:drawablePadding="@dimen/px6"
+            android:drawableRight="@mipmap/ic_arrow_right_blue"/>
+    </RelativeLayout>
+    <!-- 版主信息 -->
+    <RelativeLayout android:id="@+id/layoutTalent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_marginTop="@dimen/px15"
+        android:padding="@dimen/px15">
+
+        <com.haitao.view.CustomImageView
+            android:id="@+id/img_avatar"
+            android:layout_width="@dimen/px80"
+            android:layout_height="@dimen/px80"
+            android:layout_below="@id/btnLeft"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/px15"
+            android:layout_marginBottom="@dimen/px15"
+            fresco:placeholderImage="@mipmap/ic_default_avator"
+            fresco:roundAsCircle="true"
+            fresco:roundWithOverlayColor="@color/white"/>
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/px10"
+            android:layout_toRightOf="@id/img_avatar"
+            android:text="版主姓名"
+            android:textColor="@color/darkGrey"
+            android:textSize="@dimen/text_size_medium" />
+
+
+        <TextView android:id="@+id/tvLevel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/tvName"
+            android:layout_alignTop="@id/tvName"
+            android:layout_marginLeft="@dimen/px15"
+            android:text="海淘专科生"
+            android:textColor="@color/lightGrey"
+            android:textSize="@dimen/text_size_medium" />
+
+        <TextView
+            android:id="@+id/tvTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2015-11-12"
+            android:layout_below="@id/tvName"
+            android:layout_marginTop="@dimen/px10"
+            android:layout_alignLeft="@id/tvName"
+            android:textColor="@color/lightGrey"
+            android:textSize="@dimen/text_size_medium" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/px15"
+            android:layout_alignParentRight="true"
+            android:layout_alignBottom="@id/tvTime"
+            android:text="楼主"
+            android:textColor="@color/lightGrey"
+            android:textSize="@dimen/text_size_medium" />
+
+    </RelativeLayout>
+
+
+    <WebView
+        android:id="@+id/webView_webpage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/px15"/>
+    <!-- 评论 -->
+    <TextView
+        android:id="@+id/tvCommentTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:text="@string/post_comment_title"
+        android:padding="@dimen/px15"
+        style="@style/main_title_style" />
+    <TextView android:id="@+id/tvCommentEmpty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableTop="@mipmap/ic_no_comment"
+        android:drawablePadding="@dimen/px20"
+        android:text="@string/post_no_comment_tips"
+        android:gravity="center"
+        android:padding="@dimen/px30"
+        android:visibility="gone"/>
+
+</LinearLayout>

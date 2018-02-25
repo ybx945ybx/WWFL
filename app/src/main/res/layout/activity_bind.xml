@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:fresco="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white"
+              android:orientation="vertical">
+    <!-- 顶部 -->
+    <com.haitao.view.HtHeadView
+        android:id="@+id/head_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:divider_visible="false">
+
+    </com.haitao.view.HtHeadView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:paddingTop="32dp">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="32dp"
+            android:elevation="3dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <View
+                    android:id="@+id/iv_avator"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginTop="-32dp"/>
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/iv_avator"
+                    android:layout_marginLeft="16dp"
+                    android:layout_toRightOf="@+id/iv_avator"
+                    android:textColor="@color/darkGrey"
+                    android:textSize="18sp"
+                    tools:text="你好，90.饭桶！"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/iv_avator"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginRight="32dp"
+                    android:layout_marginTop="16dp"
+                    android:text="首次登录55海淘，可以绑定已有的55海淘账号，下次直接登录无需再次绑定。"
+                    android:textColor="@color/warmGrey"
+                    android:textSize="14sp"/>
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <com.haitao.view.CustomImageView
+            android:id="@+id/iv_my_avator"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginLeft="64dp"
+            android:layout_marginTop="-32dp"
+            android:elevation="4dp"
+            fresco:failureImage="@mipmap/ic_default_avator"
+            fresco:failureImageScaleType="centerCrop"
+            fresco:placeholderImage="@mipmap/ic_default_avator"
+            fresco:placeholderImageScaleType="centerCrop"
+            fresco:roundAsCircle="true"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_bind"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="16dp"
+        android:textSize="14sp"
+        android:textColor="@color/darkGrey"
+        android:text="将我的QQ账号绑定55海淘账号"
+        android:drawableLeft="@drawable/ic_radio_button"
+        android:drawablePadding="12dp"/>
+
+    <TextView
+        android:id="@+id/tv_register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="16dp"
+        android:textSize="14sp"
+        android:textColor="@color/darkGrey"
+        android:text="直接用QQ账号注册"
+        android:drawableLeft="@drawable/ic_radio_button"
+        android:drawablePadding="12dp"/>
+
+    <TextView
+        android:id="@+id/tv_next"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_margin="32dp"
+        android:background="@drawable/bg_round_corner_orange_2dp"
+        android:gravity="center"
+        android:text="@string/forget_next"
+        android:textColor="@color/white"/>
+</LinearLayout>

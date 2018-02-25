@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tag_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/sl_board_filter"
+        android:gravity="center"
+        android:maxLines="1"
+        android:paddingBottom="@dimen/px15"
+        android:paddingLeft="@dimen/px20"
+        android:paddingRight="@dimen/px20"
+        android:paddingTop="@dimen/px15"
+        android:textColor="@color/sl_board_color"
+        android:textSize="@dimen/text_size_medium"
+        tools:text="amazon">
+    </TextView>
+
+    <ImageView
+        android:id="@+id/ivGou"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tag_btn"
+        android:layout_alignRight="@+id/tag_btn"
+        android:layout_marginBottom="@dimen/px1"
+        android:layout_marginRight="@dimen/px1"
+        android:src="@mipmap/ic_discount_filter_gou"
+        android:visibility="gone" />
+</RelativeLayout>

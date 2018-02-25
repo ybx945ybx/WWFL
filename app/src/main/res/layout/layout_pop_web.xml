@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:gravity="center"
+              android:orientation="vertical">
+
+    <!-- 刷新 -->
+    <TextView
+        android:id="@+id/tv_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg"
+        android:drawableLeft="@mipmap/ic_refresh"
+        android:drawablePadding="18dp"
+        android:padding="16dp"
+        android:text="@string/refresh"
+        android:textColor="@color/grey4F4F53"
+        android:textSize="@dimen/text_size_mediumx" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.25dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@color/greyE6E6E6" />
+
+    <!-- 汇率换算 -->
+    <TextView
+        android:id="@+id/tv_exchange_rate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg"
+        android:drawableLeft="@mipmap/ic_exchange_rate"
+        android:drawablePadding="18dp"
+        android:padding="16dp"
+        android:text="@string/exchange_rate"
+        android:textColor="@color/grey4F4F53"
+        android:textSize="@dimen/text_size_mediumx" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.25dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@color/greyE6E6E6" />
+
+    <!-- 通过浏览器打开 -->
+    <TextView
+        android:id="@+id/tv_browser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg"
+        android:drawableLeft="@mipmap/ic_browser_gray"
+        android:drawablePadding="18dp"
+        android:padding="16dp"
+        android:text="@string/open_through_browser"
+        android:textColor="@color/grey4F4F53"
+        android:textSize="@dimen/text_size_mediumx" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.25dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@color/greyE6E6E6" />
+    <!-- 查看商家 -->
+    <TextView
+        android:id="@+id/tv_goto_store"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg"
+        android:drawableLeft="@mipmap/ic_go_store"
+        android:drawablePadding="18dp"
+        android:padding="16dp"
+        android:text="@string/go_to_store"
+        android:textColor="@color/grey4F4F53"
+        android:textSize="@dimen/text_size_mediumx" />
+
+</LinearLayout>

@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:fresco="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@drawable/bg_item_selectable"
+              android:descendantFocusability="blocksDescendants"
+              android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvSubTitle"
+        style="@style/sub_title_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:paddingBottom="@dimen/px10"
+        android:text="热门标签"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/px24">
+
+        <ImageButton
+            android:id="@+id/btnChoose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@color/transparent"
+            android:paddingBottom="@dimen/px15"
+            android:paddingRight="@dimen/px15"
+            android:paddingTop="@dimen/px15"
+            android:src="@drawable/sl_filter_gou" />
+
+        <RelativeLayout
+            android:id="@+id/rl_avatar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/btnChoose">
+
+            <com.haitao.view.CustomImageView
+                android:id="@+id/img_avatar"
+                android:layout_width="@dimen/px54"
+                android:layout_height="@dimen/px54"
+                fresco:failureImage="@mipmap/ic_default_avator"
+                fresco:failureImageScaleType="centerCrop"
+                fresco:placeholderImage="@mipmap/ic_default_avator"
+                fresco:placeholderImageScaleType="centerCrop"
+                fresco:roundAsCircle="true"
+                fresco:roundWithOverlayColor="@color/white" />
+
+            <TextView
+                android:id="@+id/tvAuthor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/px21"
+                android:layout_toRightOf="@id/img_avatar"
+                android:textColor="@color/sub_title_color"
+                android:textSize="@dimen/text_size_mediums"
+                tools:text="1111" />
+
+            <TextView
+                android:id="@+id/tvTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:textColor="@color/grey"
+                android:textSize="@dimen/text_size_small"
+                tools:text="11-22" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layoutContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/rl_avatar"
+            android:layout_below="@id/rl_avatar"
+            android:layout_marginTop="@dimen/px24"
+            android:descendantFocusability="blocksDescendants">
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/ivImage"
+                android:layout_toLeftOf="@id/ivImage"
+                android:lineSpacingExtra="@dimen/px10"
+                android:maxLines="2"
+                android:textColor="@color/midGrey2"
+                android:textSize="@dimen/text_size_medium"
+                tools:text="[攻略分享]上海空港六路海关个人申报完整版流程与攻略，多文多图，各位看官耐心观" />
+
+            <RelativeLayout
+                android:id="@+id/layoutRecommend"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvTitle"
+                android:layout_marginTop="@dimen/px14">
+
+                <com.haitao.view.CustomImageView
+                    android:id="@+id/ivPic"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/px120"
+                    android:background="@color/bg"
+                    app:placeholderImage="@mipmap/ic_default_750"
+                    fresco:failureImage="@mipmap/ic_default_750"
+                    fresco:failureImageScaleType="centerInside"
+                    fresco:roundedCornerRadius="@dimen/px2" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/ivPic"
+                    android:layout_marginTop="@dimen/px20"
+                    android:background="@drawable/bg_recommend"
+                    android:gravity="center"
+                    android:text="@string/recommend"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_small" />
+            </RelativeLayout>
+
+            <com.haitao.view.CanDoBlankGridView
+                android:id="@+id/gv_order_pics"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layoutRecommend"
+                android:layout_marginTop="@dimen/px14"
+                android:horizontalSpacing="@dimen/px15"
+                android:listSelector="@color/transparent"
+                android:numColumns="3"
+                android:verticalSpacing="@dimen/px16" />
+
+            <com.haitao.view.tag.TagCloudLayout
+                android:id="@+id/tagLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/gv_order_pics"
+                android:layout_marginTop="@dimen/px15"
+                app:tagSpacing="@dimen/px15" />
+
+            <TextView
+                android:id="@+id/tvAgree"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/tvTitle"
+                android:layout_below="@+id/tagLayout"
+                android:layout_marginRight="@dimen/px15"
+                android:layout_marginTop="@dimen/px20"
+                android:drawableLeft="@drawable/agree_gray_orange_selector"
+                android:drawablePadding="@dimen/px6"
+                android:gravity="center"
+                android:textColor="@color/grey"
+                android:textSize="@dimen/text_size_smalls"
+                tools:text="111" />
+
+            <TextView
+                android:id="@+id/tvComment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/tvAgree"
+                android:layout_marginLeft="@dimen/px39"
+                android:layout_marginRight="@dimen/px39"
+                android:layout_toRightOf="@id/tvAgree"
+                android:drawableLeft="@mipmap/ic_comment_list"
+                android:drawablePadding="@dimen/px6"
+                android:gravity="center"
+                android:textColor="@color/grey"
+                android:textSize="@dimen/text_size_smalls"
+                tools:text="111" />
+
+            <ImageView
+                android:id="@+id/tvBest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/tvComment"
+                android:layout_marginRight="@dimen/px30"
+                android:layout_toRightOf="@+id/tvComment"
+                android:src="@drawable/ic_digest" />
+
+            <ImageView
+                android:id="@+id/tvHot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/tvComment"
+                android:layout_toRightOf="@+id/tvBest"
+                android:src="@drawable/ic_hot" />
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/ivShare"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/ic_share_post" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/viewSeparate"
+        style="@style/Divider_BG" />
+
+
+</LinearLayout>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/px15"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <TextView android:id="@+id/tvInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/darkGrey"
+        android:textSize="@dimen/text_size_medium"
+        android:text="【成都市】投递并签收，签收人：他人收 前台代"/>
+    <TextView android:id="@+id/tvTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/px10"
+        android:textColor="@color/lightGrey"
+        android:textSize="@dimen/text_size_medium"
+        android:text="2016-08-12 12:00:00"/>
+
+
+</LinearLayout>

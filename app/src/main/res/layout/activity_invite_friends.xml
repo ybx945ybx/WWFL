@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/bg"
+              android:orientation="vertical">
+
+    <!--<include layout="@layout/layout_common_header" />-->
+
+    <com.haitao.view.HtHeadView
+        android:id="@+id/hv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:center_text="@string/invite_friends"
+        app:divider_visible="false"
+        app:right_text="@string/reward_rules"
+        app:right_text_color="@color/orangeFF804D" />
+
+    <com.haitao.view.StickyNavLayout
+        android:id="@+id/layoutContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:id="@+id/id_stickynavlayout_topview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <!-- 推广奖励 & 下级奖励 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/px75"
+                android:paddingRight="@dimen/px75">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/px30"
+                    android:paddingTop="@dimen/px30">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/promotion_reward"
+                        android:textColor="@color/warmGrey"
+                        android:textSize="@dimen/text_size_medium" />
+
+                    <TextView
+                        android:id="@+id/tv_promotion_reward"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/px15"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:textColor="@color/midGrey2"
+                        android:textSize="24sp"
+                        tools:text="$5.5" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/px30"
+                    android:paddingTop="@dimen/px30">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/lower_class_rebate"
+                        android:textColor="@color/warmGrey"
+                        android:textSize="@dimen/text_size_medium" />
+
+                    <TextView
+                        android:id="@+id/tv_lower_class_rebate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/px15"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:textColor="@color/midGrey2"
+                        android:textSize="24sp"
+                        tools:text="$5.5" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/copy_your_invite_code"
+                android:visibility="visible" />
+
+            <!-- 邀请码 -->
+            <TextView
+                android:id="@+id/tv_copy_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/px21"
+                android:background="@drawable/border_oval_orange"
+                android:gravity="center"
+                android:paddingBottom="@dimen/px2"
+                android:paddingLeft="@dimen/px52"
+                android:paddingRight="@dimen/px52"
+                android:paddingTop="@dimen/px2"
+                android:textColor="@color/brightOrange"
+                android:textSize="26sp"
+                android:visibility="visible"
+                tools:text="B5716" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/px21"
+                android:visibility="visible">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/ic_invite_reward" />
+
+                <TextView
+                    android:id="@+id/tv_reward_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:textColor="#F67373"
+                    android:textSize="21sp"
+                    tools:text="$5美元" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_invite_desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/px81"
+                android:layout_marginRight="@dimen/px81"
+                android:layout_marginTop="@dimen/px21"
+                android:gravity="center"
+                android:lineSpacingExtra="8sp"
+                android:text="@string/invite_friends_reward_info"
+                android:textColor="@color/warmGrey"
+                android:textSize="@dimen/text_size_medium"
+                android:visibility="visible" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/px42"
+                android:layout_marginRight="@dimen/px42"
+                android:layout_marginTop="@dimen/px27"
+                android:visibility="visible">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/px1"
+                    android:layout_centerInParent="true"
+                    android:background="@color/divider" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="@color/white"
+                    android:paddingLeft="@dimen/px33"
+                    android:paddingRight="@dimen/px33"
+                    android:text="@string/share"
+                    android:textColor="#0C0C0C"
+                    android:textSize="@dimen/text_size_smalls" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px81"
+                android:layout_marginLeft="@dimen/px18"
+                android:layout_marginRight="@dimen/px18"
+                android:gravity="center"
+                android:visibility="visible">
+
+                <ImageButton
+                    android:id="@+id/ib_wechat"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:src="@mipmap/ic_pop_wechat" />
+
+                <ImageButton
+                    android:id="@+id/ib_wechat_moments"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:src="@mipmap/ic_wechat_moments" />
+
+                <ImageButton
+                    android:id="@+id/ib_weibo"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:src="@mipmap/ic_pop_weibo" />
+
+                <ImageButton
+                    android:id="@+id/ib_qq"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:src="@mipmap/ic_pop_qq" />
+
+                <ImageButton
+                    android:id="@+id/ib_more"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:src="@mipmap/ic_more_grey" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px8"
+                android:background="@color/bg" />
+
+        </LinearLayout>
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/id_stickynavlayout_indicator"
+            style="@style/CustomTabLayout"
+            android:background="@drawable/border_bottom_e6e6e6_0_5dp"
+            android:fillViewport="false" />
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/id_stickynavlayout_viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </android.support.v4.view.ViewPager>
+
+    </com.haitao.view.StickyNavLayout>
+
+</LinearLayout>

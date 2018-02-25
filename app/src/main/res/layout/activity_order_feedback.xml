@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/bg"
+              android:orientation="vertical">
+
+    <com.haitao.view.HtHeadView
+        android:id="@+id/hv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:center_text="@string/order_lost_feedback"
+        app:right_text="@string/submit"
+        app:right_text_color="@color/brightOrange" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- 选择商家 & 日期 -->
+            <com.haitao.view.HtItemView
+                android:id="@+id/item_choose_store_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_item_selectable"
+                app:content="@string/unselected"
+                app:divider_enabled="false"
+                app:next_enabled="true"
+                app:title="@string/choose_store_time" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/px8"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <!-- 订单号 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/px24"
+                    android:paddingRight="@dimen/px24"
+                    android:paddingTop="@dimen/px24">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/order_number"
+                        android:textColor="@color/middle_grey2"
+                        android:textSize="@dimen/text_size_medium" />
+
+                    <com.haitao.view.ClearEditText
+                        android:id="@+id/et_order_number"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/midGrey2"
+                        android:textSize="@dimen/text_size_medium" />
+                </LinearLayout>
+
+                <!-- 商家注册邮箱 -->
+                <LinearLayout
+                    android:id="@+id/ll_store_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/px24"
+                    android:paddingRight="@dimen/px24"
+                    android:paddingTop="@dimen/px24"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/order_feedback_email"
+                        android:textColor="@color/middle_grey2"
+                        android:textSize="@dimen/text_size_medium" />
+
+                    <com.haitao.view.ClearEditText
+                        android:id="@+id/et_store_email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/midGrey2"
+                        android:textSize="@dimen/text_size_medium" />
+                </LinearLayout>
+
+                <!-- 消费金额 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/px24"
+                    android:paddingRight="@dimen/px24"
+                    android:paddingTop="@dimen/px24">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/order_money"
+                        android:textColor="@color/middle_grey2"
+                        android:textSize="@dimen/text_size_medium" />
+
+                    <com.haitao.view.ClearEditText
+                        android:id="@+id/et_amount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberDecimal"
+                        android:textColor="@color/midGrey2"
+                        android:textSize="@dimen/text_size_medium" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- 订单 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/px8"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:padding="@dimen/px24">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/order_image_up_to_3_pics"
+                    android:textColor="@color/midGrey2"
+                    android:textSize="@dimen/text_size_medium" />
+
+                <com.haitao.view.FullGirdView
+                    android:id="@+id/gv_order_pics"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/px24"
+                    android:horizontalSpacing="@dimen/px24"
+                    android:numColumns="3" />
+
+            </LinearLayout>
+
+            <!--<Button
+                android:id="@+id/btnSubmit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/px15"
+                android:layout_marginRight="@dimen/px15"
+                android:layout_marginTop="@dimen/px30"
+                android:background="@drawable/sl_submit"
+                android:enabled="false"
+                android:text="@string/order_submit"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_medium" />-->
+
+            <!--<Button
+                android:id="@+id/btnSubmit"
+                style="@style/SubmitButtonSolid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/confirm" />-->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lineSpacingExtra="@dimen/px6"
+                android:padding="@dimen/px24"
+                android:text="@string/order_feedback_tips"
+                android:textColor="@color/middle_grey2"
+                android:textSize="@dimen/text_size_small" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

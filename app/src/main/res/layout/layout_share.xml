@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/white"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="12dp"
+        android:paddingTop="12dp">
+
+        <ImageView
+            android:id="@+id/iv_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="16dp"
+            android:src="@mipmap/ic_close"/>
+
+        <!-- 分享标题 -->
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/share"
+            android:textColor="@color/grey29292C"
+            android:textSize="16sp"/>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/greyE6E6E6"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/llyt_share"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- 分享文本 -->
+            <TextView
+                android:id="@+id/tv_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:gravity="center"
+                android:maxLines="1"
+                android:textColor="@color/middle_grey2"
+                android:visibility="gone"
+                tools:text="内容文本"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/btnWeChat"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawablePadding="@dimen/px15"
+                    android:drawableTop="@mipmap/ic_wx"
+                    android:gravity="center"
+                    android:text="@string/wechat"
+                    android:textColor="@color/grey6D6D72"
+                    android:textSize="12sp"/>
+
+                <TextView
+                    android:id="@+id/btnWeChatMoments"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawablePadding="@dimen/px15"
+                    android:drawableTop="@mipmap/ic_wechatmoments"
+                    android:gravity="center"
+                    android:text="@string/wechatmoments"
+                    android:textColor="@color/grey6D6D72"
+                    android:textSize="12sp"/>
+
+                <TextView
+                    android:id="@+id/btnQQ"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawablePadding="@dimen/px15"
+                    android:drawableTop="@mipmap/ic_qq"
+                    android:gravity="center"
+                    android:text="@string/qq_friends"
+                    android:textColor="@color/grey6D6D72"
+                    android:textSize="12sp"/>
+
+                <TextView
+                    android:id="@+id/btnQzone"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawablePadding="@dimen/px15"
+                    android:drawableTop="@mipmap/ic_qq_room"
+                    android:gravity="center"
+                    android:text="@string/qzone"
+                    android:textColor="@color/grey6D6D72"
+                    android:textSize="12sp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    android:id="@+id/btnSinaWeiBo"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawablePadding="@dimen/px15"
+                    android:drawableTop="@mipmap/ic_sina"
+                    android:gravity="center"
+                    android:text="@string/sinaweibo"
+                    android:textColor="@color/grey6D6D72"
+                    android:textSize="12sp"/>
+
+                <TextView
+                    android:id="@+id/btnBrowserOpen"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawablePadding="@dimen/px15"
+                    android:drawableTop="@mipmap/ic_browser"
+                    android:gravity="center"
+                    android:text="@string/browser"
+                    android:textColor="@color/grey6D6D72"
+                    android:textSize="12sp"/>
+
+                <TextView
+                    android:id="@+id/btnLinks"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawablePadding="@dimen/px15"
+                    android:drawableTop="@mipmap/ic_links"
+                    android:gravity="center"
+                    android:text="@string/links"
+                    android:textColor="@color/grey6D6D72"
+                    android:textSize="12sp"/>
+
+                <TextView
+                    android:id="@+id/btnShareMore"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawablePadding="@dimen/px15"
+                    android:drawableTop="@mipmap/ic_more_circle"
+                    android:gravity="center"
+                    android:text="@string/more_share_type"
+                    android:textColor="@color/grey6D6D72"
+                    android:textSize="12sp"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_promotion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/llyt_share"
+            android:background="@drawable/border_top_e6e6e6_0_5dp"
+            android:orientation="horizontal"
+            android:paddingTop="0.5dp">
+
+            <!-- 生成图片分享 -->
+            <LinearLayout
+                android:id="@+id/ll_generate_img_share"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/bg_item_selectable"
+                android:gravity="center"
+                android:paddingBottom="12dp"
+                android:paddingTop="12dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/ic_generate_share_img"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:text="@string/generate_img_share"
+                    android:textColor="@color/grey4F4F53"
+                    android:textSize="14sp"/>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/view_line"
+                android:layout_width="0.5dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center"
+                android:background="@color/greyE6E6E6"/>
+
+            <!-- 推广赚返利 -->
+            <LinearLayout
+                android:id="@+id/ll_promotion_for_rebate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/bg_item_selectable"
+                android:gravity="center"
+                android:paddingBottom="12dp"
+                android:paddingTop="12dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/ic_promotion_for_rebate_orange"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:text="@string/promotion_for_rebate"
+                    android:textColor="@color/orangeFF804D"
+                    android:textSize="14sp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llyt_tips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/ll_promotion"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="-13dp"
+            android:background="@mipmap/ic_tips_orange"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="6dp"
+                android:text="@string/promotion_for_rebate_tips"
+                android:textColor="@color/white"
+                android:textSize="14sp"/>
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_border_graye_6e6e6_0_5dp"
+    android:orientation="vertical"
+    android:gravity="center">
+    <!--android:paddingBottom="14dp"-->
+    <!--android:paddingTop="12dp">-->
+
+    <com.haitao.view.CustomImageView
+        android:id="@+id/iv_shop"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_height="32dp"
+        android:layout_gravity="center_horizontal"
+        android:scaleType="centerInside"
+        fresco:actualImageScaleType="centerInside"
+        fresco:failureImage="@mipmap/ic_default_60"
+        fresco:placeholderImage="@mipmap/ic_default_60"/>
+
+    <LinearLayout
+        android:id="@+id/llyt_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="14dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/union_pay_cash_back"
+            android:textColor="@color/grey848588"
+            android:textSize="10sp"/>
+
+        <TextView
+            android:id="@+id/tv_back_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="12"
+            android:textColor="@color/colorRed6FF5647"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="%"
+            android:textColor="@color/colorRed6FF5647"
+            android:textSize="12sp"
+            android:visibility="gone"/>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <com.haitao.view.HtHeadView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:center_text="@string/my_setting">
+
+    </com.haitao.view.HtHeadView>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <!-- 账户 -->
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_item_selectable"
+                android:gravity="center_vertical"
+                android:minHeight="48dp"
+                android:paddingLeft="16dp"
+                android:text="@string/account"
+                android:textColor="@color/orangeFF804D"
+                android:textSize="@dimen/text_size_medium"/>
+
+            <View
+                style="@style/Divider_List_E6E6E6"/>
+
+            <RelativeLayout
+                android:id="@+id/rl_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_item_selectable"
+                android:orientation="vertical"
+                android:padding="@dimen/px24">
+
+                <TextView
+                    android:id="@+id/tv_bind_phone_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/phone_number_bind"
+                    android:textColor="@color/midGrey2"/>
+
+                <TextView
+                    android:id="@+id/tv_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/px36"
+                    android:layout_marginTop="@dimen/px6"
+                    android:layout_toRightOf="@id/tv_bind_phone_title"
+                    android:textColor="@color/middle_grey2"
+                    android:textSize="@dimen/text_size_small"
+                    tools:text="18000000001"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/ic_next"/>
+
+            </RelativeLayout>
+
+            <View
+                style="@style/Divider_List_E6E6E6"/>
+
+            <!-- 社交账号绑定 -->
+            <TextView
+                android:id="@+id/tv_bind_third"
+                style="@style/me_list_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_item_selectable"
+                android:text="@string/bind_third"/>
+
+            <View
+                style="@style/Divider_List_E6E6E6"/>
+
+            <!-- 更改登录密码 -->
+            <TextView
+                android:id="@+id/tv_change_login_pwd"
+                style="@style/me_list_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_item_selectable"
+                android:text="@string/change_login_pwd"/>
+
+            <View
+                style="@style/Divider_List_E6E6E6"/>
+
+            <!-- 更改提现密码 -->
+            <TextView
+                android:id="@+id/tv_change_withdraw_pwd"
+                style="@style/me_list_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_item_selectable"
+                android:text="@string/change_withdraw_pwd"/>
+
+            <View style="@style/Divider_BG"/>
+
+            <!-- 信息 -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_item_selectable"
+                android:gravity="center_vertical"
+                android:minHeight="48dp"
+                android:paddingLeft="16dp"
+                android:text="@string/info"
+                android:textColor="@color/orangeFF804D"/>
+
+            <View
+                style="@style/Divider_List_E6E6E6"/>
+
+            <!-- 收货地址管理 -->
+            <!--<TextView
+                android:id="@+id/tv_address_management"
+                style="@style/me_list_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:background="@drawable/bg_item_selectable"
+                android:text="@string/address_management" />-->
+
+            <!-- 自动填充表单 -->
+            <!--<TextView
+                android:id="@+id/tv_autofill_form"
+                style="@style/me_list_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:background="@drawable/bg_item_selectable"
+                android:text="@string/auto_fill_form" />-->
+
+            <!-- 提现账户 -->
+            <TextView
+                android:id="@+id/tv_withdraw_account"
+                style="@style/me_list_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_item_selectable"
+                android:text="@string/withdraw_account"/>
+
+            <View style="@style/Divider_BG"/>
+            <!-- 其他 -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_item_selectable"
+                android:gravity="center_vertical"
+                android:minHeight="48dp"
+                android:paddingLeft="16dp"
+                android:text="@string/other"
+                android:textColor="@color/orangeFF804D"/>
+
+            <View
+                style="@style/Divider_List_E6E6E6"/>
+
+            <!-- 清除缓存 -->
+            <TextView
+                android:id="@+id/tv_clear_cache"
+                style="@style/me_list_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_item_selectable"
+                android:text="@string/clear_cache"/>
+
+            <View
+                style="@style/Divider_List_E6E6E6"/>
+
+            <!-- 给与好评 -->
+            <TextView
+                android:id="@+id/tv_rate_us"
+                style="@style/me_list_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_item_selectable"
+                android:text="@string/rate_us"/>
+
+            <View
+                style="@style/Divider_List_E6E6E6"/>
+
+            <!-- 服务条款 -->
+            <TextView
+                android:id="@+id/tv_service_rules"
+                style="@style/me_list_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_item_selectable"
+                android:text="@string/about_service"/>
+
+            <View
+                style="@style/Divider_List_E6E6E6"/>
+
+            <!-- 意见反馈 -->
+            <TextView
+                android:id="@+id/tv_feedback"
+                style="@style/me_list_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_item_selectable"
+                android:text="@string/feedback"/>
+
+            <View
+                style="@style/Divider_List_E6E6E6"/>
+
+            <!-- 检查更新 -->
+            <TextView
+                android:id="@+id/tv_check_update"
+                style="@style/me_list_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_item_selectable"
+                android:text="@string/check_update"/>
+
+            <View
+                style="@style/Divider_List_E6E6E6"/>
+
+            <!-- 关于55海淘 -->
+            <TextView
+                android:id="@+id/tv_about"
+                style="@style/me_list_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_item_selectable"
+                android:text="@string/about_55"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white">
+
+                <TextView
+                    android:id="@+id/btn_logout"
+                    style="@style/SubmitButtonOrange"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/px30"
+                    android:layout_marginLeft="@dimen/px24"
+                    android:layout_marginRight="@dimen/px24"
+                    android:layout_marginTop="@dimen/px30"
+                    android:enabled="true"
+                    android:text="@string/setting_logout"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

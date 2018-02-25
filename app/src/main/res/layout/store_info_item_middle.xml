@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="16dp">
+
+    <!--商家logo-->
+    <RelativeLayout
+        android:id="@+id/rl_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical">
+
+        <com.haitao.view.CustomImageView
+            android:id="@+id/ivImage"
+            android:layout_width="@dimen/px120"
+            android:layout_height="@dimen/px120"
+            android:background="@drawable/shape_bg_image"
+            android:scaleType="centerInside"
+            fresco:actualImageScaleType="fitCenter"
+            fresco:failureImage="@mipmap/ic_default_240"
+            fresco:failureImageScaleType="centerInside"
+            fresco:placeholderImage="@mipmap/ic_default_240" />
+
+        <com.haitao.view.CustomImageView
+            android:id="@+id/img_store_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <!--商家信息-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="16dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.haitao.view.CustomImageView
+                android:id="@+id/ivCountry"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="4dp"
+                fresco:failureImage="@mipmap/ic_default_60"
+                fresco:placeholderImage="@mipmap/ic_default_60"
+                fresco:placeholderImageScaleType="centerCrop" />
+
+            <TextView
+                android:id="@+id/tvCategory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/ivCountry"
+                android:maxLines="1"
+                android:textColor="@color/grey4F4F53"
+                android:textSize="12sp"
+                tools:text="综合商家" />
+
+            <TextView
+                android:id="@+id/tvRebate"
+                style="@style/TagSmallBorder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:maxLines="1"
+                android:visibility="gone"
+                tools:text="最高返利10%" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tvStoreName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/px15"
+            android:maxLines="1"
+            android:textColor="@color/grey1D1D1F"
+            android:textSize="18sp"
+            tools:text="Amazon" />
+
+        <TextView
+            android:id="@+id/tvOrderNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/px15"
+            android:maxLines="1"
+            android:textColor="@color/grey78787D"
+            android:textSize="12sp"
+            tools:text="成功下单222次 | 9人收藏" />
+
+    </LinearLayout>
+</LinearLayout>

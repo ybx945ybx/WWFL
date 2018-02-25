@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/layoutRoot"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/bg">
+
+    <!--<include
+        android:id="@+id/layoutTop"
+        layout="@layout/layout_common_header" />-->
+
+    <com.haitao.view.HtHeadView
+        android:id="@+id/ht_headview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <LinearLayout
+        android:id="@+id/layoutBottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2">
+
+            <TextView
+                android:id="@+id/tvComment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/px10"
+                android:padding="@dimen/px10"
+                android:text="@string/input_comment"
+                android:textColor="@color/midGrey"
+                android:textSize="@dimen/text_size_small" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutCommentCount"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tvCommentCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_comment"
+                android:drawablePadding="@dimen/px6"
+                android:gravity="center"
+                android:textColor="@color/midGrey"
+                android:textSize="@dimen/text_size_small"
+                tools:text="133" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutFav"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tvFav"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/sl_topic_fav"
+                android:drawablePadding="@dimen/px6"
+                android:gravity="center"
+                android:textColor="@color/midGrey"
+                android:textSize="@dimen/text_size_small"
+                tools:text="133" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutAgree"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tvAgree"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/sl_agree"
+                android:drawablePadding="@dimen/px6"
+                android:gravity="center"
+                android:textColor="@color/midGrey"
+                android:textSize="@dimen/text_size_small"
+                tools:text="133" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/layoutBottom"
+        android:layout_below="@+id/ht_headview">
+
+        <WebView
+            android:id="@+id/wvBody"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="0.5dp"
+            android:scrollbars="none"
+            android:visibility="visible" />
+
+        <!-- 活动入口 -->
+        <com.haitao.view.CustomImageView
+            android:id="@+id/img_event"
+            style="@style/ImgEvent" />
+
+    </RelativeLayout>
+
+    <include layout="@layout/layout_common_progress" />
+
+</RelativeLayout>

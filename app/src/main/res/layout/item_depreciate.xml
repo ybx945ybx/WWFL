@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:fresco="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:id="@+id/item_view"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/white"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
+        android:orientation="horizontal"
+        android:padding="@dimen/px24">
+
+        <RelativeLayout
+            android:layout_width="@dimen/px144"
+            android:layout_height="@dimen/px144"
+            android:layout_marginRight="@dimen/px15">
+
+            <com.haitao.view.CustomImageView
+                android:id="@+id/ivImage"
+                android:layout_width="@dimen/px144"
+                android:layout_height="@dimen/px144"
+                android:layout_centerVertical="true"
+                fresco:actualImageScaleType="centerInside"
+                fresco:failureImage="@mipmap/ic_default_240"
+                fresco:failureImageScaleType="centerInside"
+                fresco:placeholderImage="@mipmap/ic_default_240"
+                fresco:placeholderImageScaleType="centerCrop"
+                fresco:roundedCornerRadius="@dimen/px2" />
+
+            <TextView
+                android:id="@+id/tvTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/ivImage"
+                android:layout_alignParentBottom="true"
+                android:layout_alignRight="@id/ivImage"
+                android:background="@color/bg_discount_time"
+                android:gravity="center"
+                android:paddingBottom="@dimen/px2"
+                android:paddingTop="@dimen/px2"
+                android:text="@string/notification_expired"
+                android:textColor="@color/white"
+                android:textSize="10sp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/layoutStore"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.haitao.view.CustomImageView
+                    android:id="@+id/ivCountry"
+                    android:layout_width="@dimen/px20"
+                    android:layout_height="@dimen/px20"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/px10"
+                    android:scaleType="fitCenter"
+                    fresco:actualImageScaleType="fitCenter" />
+
+                <TextView
+                    android:id="@+id/tvStore"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/tvRebate"
+                    android:layout_toRightOf="@+id/ivCountry"
+                    android:maxLines="1"
+                    android:textColor="@color/grey"
+                    android:textSize="@dimen/text_size_small"
+                    tools:text="amazon" />
+
+                <TextView
+                    android:id="@+id/tvRebate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/border_round_corner_orange_4dp"
+                    android:paddingBottom="@dimen/px1"
+                    android:paddingLeft="@dimen/px6"
+                    android:paddingRight="@dimen/px6"
+                    android:paddingTop="@dimen/px1"
+                    android:textColor="@color/orangeFF804D"
+                    android:textSize="@dimen/text_size_small"
+                    tools:text="返10%" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/px10"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:lineSpacingExtra="@dimen/px3"
+                android:lines="2"
+                android:maxLines="2"
+                android:textColor="@color/midGrey2"
+                android:textSize="@dimen/text_size_medium"
+                tools:text="订单满$50送最新Future Rescue 修复精华样品" />
+
+            <TextView
+                android:id="@+id/tvPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/px15"
+                android:layout_marginTop="@dimen/px10"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/orangeFF804D"
+                android:textSize="@dimen/text_size_medium"
+                tools:text="降至$23.99（约153元）" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/viewSeparate"
+        style="@style/Divider_List_E6E6E6" />
+</LinearLayout>

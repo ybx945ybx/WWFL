@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:paddingBottom="@dimen/px24"
+    android:paddingLeft="@dimen/px24"
+    android:paddingTop="@dimen/px24">
+
+    <View
+        android:id="@+id/view_subtitle"
+        android:layout_width="@dimen/px6"
+        android:layout_height="@dimen/px21"
+        android:background="@color/brightOrange" />
+
+    <TextView
+        android:id="@+id/tv_subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/px8"
+        android:text="最新优惠"
+        android:textColor="@color/midGrey2"
+        android:textSize="@dimen/text_size_medium" />
+
+
+</LinearLayout>
+

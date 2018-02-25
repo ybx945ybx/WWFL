@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:orientation="vertical"
+    tools:context="com.haitao.activity.WithdrawUnavailableActivity">
+
+    <!-- 标题 -->
+    <com.haitao.view.HtHeadView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:center_text="@string/withdraw"
+        app:divider_visible="false" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingBottom="16dp"
+        android:paddingTop="24dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_withdraw_unavailable" />
+
+        <!-- 提示信息 -->
+        <TextView
+            android:id="@+id/tv_step_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/withdraw_unavailable_hint"
+            android:textColor="@color/grey78787D"
+            android:textSize="@dimen/text_size_medium" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <!-- 绑定手机号码 -->
+        <com.haitao.view.HtItemTextView
+            android:id="@+id/hitv_bind_phone_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:hitv_left_img="@mipmap/ic_complete"
+            app:hitv_title="@string/bind_phone_number" />
+
+        <!-- 提现密码 -->
+        <com.haitao.view.HtItemTextView
+            android:id="@+id/hitv_withdraw_pwd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:hitv_left_img="@mipmap/ic_uncomplete"
+            app:hitv_right_text="@string/not_set"
+            app:hitv_title="@string/withdraw_pwd" />
+
+        <!-- 提现账户 -->
+        <com.haitao.view.HtItemTextView
+            android:id="@+id/hitv_withdraw_account"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:hitv_left_img="@mipmap/ic_uncomplete"
+            app:hitv_right_text="@string/not_set"
+            app:hitv_title="@string/withdraw_account"
+            app:hitv_underline_visible="false" />
+    </LinearLayout>
+</LinearLayout>

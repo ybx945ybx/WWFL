@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@drawable/bg_item_selectable"
+              android:orientation="vertical"
+              tools:ignore="RtlHardcoded">
+
+    <include
+        layout="@layout/store_info_item_big"/>
+
+    <View
+        android:id="@+id/view_divider"
+        style="@style/Divider_List_E6E6E6"/>
+
+</LinearLayout>

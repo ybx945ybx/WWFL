@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:fresco="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/white"
+              android:orientation="vertical">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground">
+
+        <!-- 商家图标 -->
+        <com.haitao.view.CustomImageView
+            android:id="@+id/img_store_logo"
+            android:layout_width="66dp"
+            android:layout_height="66dp"
+            android:layout_marginBottom="16dp"
+            android:layout_marginStart="16dp"
+
+            android:layout_marginTop="16dp"
+            android:background="@drawable/border_e6e6e6_1dp"
+            android:padding="4dp"
+            fresco:actualImageScaleType="centerInside"
+            fresco:failureImage="@mipmap/ic_default_240"
+            fresco:layout_constraintBottom_toBottomOf="parent"
+            fresco:layout_constraintStart_toStartOf="parent"
+            fresco:layout_constraintTop_toTopOf="parent"
+            fresco:placeholderImage="@mipmap/ic_default_240" />
+
+        <!-- 商家名称 -->
+        <TextView
+            android:id="@+id/tv_store_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="14dp"
+            android:maxLines="1"
+            android:textColor="@color/grey1D1D1F"
+            android:textSize="@dimen/text_size_mediumx"
+            fresco:layout_constraintBottom_toTopOf="@+id/tv_time"
+            fresco:layout_constraintStart_toEndOf="@+id/img_store_logo"
+            fresco:layout_constraintTop_toTopOf="parent"
+            fresco:layout_constraintVertical_chainStyle="packed"
+            tools:text="Amazon" />
+
+        <!-- 状态 -->
+        <TextView
+            android:id="@+id/tv_status"
+            style="@style/TagSmallMuted"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/tv_store_name"
+            android:layout_marginStart="8dp"
+            fresco:layout_constraintStart_toEndOf="@+id/tv_time"
+            fresco:layout_constraintTop_toTopOf="@+id/tv_time"
+            fresco:layout_constraintVertical_chainStyle="packed"
+            tools:text="已生效" />
+
+        <!-- 返利 -->
+        <TextView
+            android:id="@+id/tv_rebate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_store_name"
+            android:layout_marginBottom="14dp"
+            android:layout_marginTop="6dp"
+            android:textColor="@color/orangeFF804D"
+            android:textSize="@dimen/text_size_medium"
+            fresco:layout_constraintBottom_toBottomOf="parent"
+            fresco:layout_constraintStart_toStartOf="@+id/tv_time"
+            fresco:layout_constraintTop_toBottomOf="@+id/tv_time"
+            fresco:layout_constraintVertical_chainStyle="packed"
+            tools:text="消费金额 $9.99" />
+
+        <!-- 消费 -->
+        <TextView
+            android:id="@+id/tv_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_store_name"
+            android:layout_marginStart="8dp"
+            android:textColor="@color/grey78787D"
+            android:textSize="@dimen/text_size_medium"
+            fresco:layout_constraintBottom_toBottomOf="@+id/tv_rebate"
+            fresco:layout_constraintStart_toEndOf="@+id/tv_rebate"
+            fresco:layout_constraintTop_toTopOf="@+id/tv_rebate"
+            tools:text="消费：$1.99" />
+
+        <!-- 时间 -->
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_rebate"
+            android:layout_marginTop="4dp"
+            android:textColor="@color/grey78787D"
+            android:textSize="@dimen/text_size_small"
+            fresco:layout_constraintBottom_toTopOf="@+id/tv_rebate"
+            fresco:layout_constraintStart_toStartOf="@+id/tv_store_name"
+            fresco:layout_constraintTop_toBottomOf="@+id/tv_store_name"
+            tools:text="2016-01-25" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="16dp"
+            android:src="@mipmap/ic_arrow_right_grey_24"
+            fresco:layout_constraintBottom_toBottomOf="parent"
+            fresco:layout_constraintEnd_toEndOf="parent"
+            fresco:layout_constraintTop_toTopOf="parent" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <View
+        android:id="@+id/view_divider"
+        style="@style/Divider_List_E6E6E6" />
+
+</LinearLayout>

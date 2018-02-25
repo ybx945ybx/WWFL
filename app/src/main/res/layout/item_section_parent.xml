@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/bg"
+    android:paddingTop="@dimen/px10">
+
+    <RelativeLayout android:id="@+id/layoutTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="@dimen/px15">
+        <TextView android:id="@+id/tvSectionName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="标题"
+            android:textColor="@color/darkGrey"
+            android:textSize="@dimen/text_size_mediumx" />
+        <TextView android:id="@+id/tvExpand"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableRight="@drawable/sl_arrow_default"
+            android:textColor="@color/midGrey"
+            android:textSize="@dimen/text_size_medium"
+            android:drawablePadding="@dimen/px6"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"/>
+    </RelativeLayout>
+
+
+</LinearLayout>

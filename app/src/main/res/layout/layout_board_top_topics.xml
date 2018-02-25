@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/bg"
+              android:orientation="vertical">
+
+
+    <!-- 置顶帖 -->
+    <com.haitao.view.FullListView
+        android:id="@+id/lvTopList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/px10"
+        android:divider="@color/transparent"
+        android:dividerHeight="0dp" />
+
+    <TextView
+        android:id="@+id/tvError"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:paddingBottom="@dimen/px150"
+        android:paddingTop="@dimen/px150"
+        android:text=""
+        android:textColor="@color/warmGrey"
+        android:textSize="@dimen/text_size_medium"
+        android:visibility="gone" />
+
+
+</LinearLayout>

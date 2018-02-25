@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg">
+    <include android:id="@+id/layoutTop"
+        layout="@layout/layout_common_header"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+        <TextView
+            android:id="@+id/tvCancle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:paddingRight="@dimen/px15"
+            android:paddingTop="@dimen/px15"
+            android:paddingBottom="@dimen/px15"
+            android:src="@mipmap/ic_post"
+            android:text="@string/cancel"
+            android:visibility="visible" />
+
+        <com.haitao.view.ClearEditText android:id="@+id/etSearch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/px15"
+            android:layout_toLeftOf="@id/tvCancle"
+            android:hint="@string/logistics_company_search"
+            style="@style/edit_search_style"
+            />
+    </RelativeLayout>
+    <View style="@style/SeparateLine"/>
+    <com.haitao.view.refresh.XListView
+        android:id="@+id/lvList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/px10"
+        android:dividerHeight="0dp"
+        android:divider="@color/transparent"></com.haitao.view.refresh.XListView>
+
+</LinearLayout>

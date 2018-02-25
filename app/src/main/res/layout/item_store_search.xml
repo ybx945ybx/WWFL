@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:fresco="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@drawable/bg_item_selectable"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/px24">
+
+        <ImageButton
+            android:id="@+id/btnChoose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@color/transparent"
+            android:paddingBottom="@dimen/px15"
+            android:paddingRight="@dimen/px15"
+            android:paddingTop="@dimen/px15"
+            android:src="@drawable/sl_filter_gou" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/btnChoose">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true">
+
+                <com.haitao.view.CustomImageView
+                    android:id="@+id/ivImage"
+                    android:layout_width="@dimen/px90"
+                    android:layout_height="@dimen/px90"
+                    android:background="@drawable/shape_bg_image"
+                    fresco:actualImageScaleType="fitCenter" />
+
+                <ImageView
+                    android:id="@+id/img_store_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/ic_store_label"
+                    android:visibility="invisible" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tvRebate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/tvTitle"
+                android:layout_marginLeft="@dimen/px15"
+                android:layout_toRightOf="@+id/tvTitle"
+                android:paddingBottom="@dimen/px1"
+                android:paddingLeft="@dimen/px10"
+                android:paddingRight="@dimen/px10"
+                android:paddingTop="@dimen/px1"
+                android:textColor="@color/orangeFF804D"
+                android:textSize="@dimen/text_size_mediumx"
+                tools:text="返10%" />
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/px10"
+                android:maxLines="1"
+                android:textColor="@color/darkGrey"
+                android:textSize="@dimen/text_size_mediumx"
+                tools:text="Amazon" />
+
+            <com.haitao.view.CustomImageView
+                android:id="@+id/ivCountry"
+                android:layout_width="@dimen/px20"
+                android:layout_height="@dimen/px20"
+                android:layout_alignLeft="@id/tvTitle"
+                android:layout_below="@id/tvTitle"
+                android:layout_marginRight="@dimen/px10"
+                android:layout_marginTop="@dimen/px15"
+                android:scaleType="fitCenter"
+                fresco:actualImageScaleType="fitCenter" />
+
+            <TextView
+                android:id="@+id/tvCategory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/ivCountry"
+                android:layout_toRightOf="@id/ivCountry"
+                android:gravity="center_vertical"
+                android:includeFontPadding="false"
+                android:textColor="@color/midGrey"
+                android:textSize="@dimen/text_size_small"
+                tools:text="户外运动" />
+
+            <TextView
+                android:id="@+id/tvOrderNum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ivCountry"
+                android:layout_marginTop="@dimen/px15"
+                android:gravity="center_vertical"
+                android:includeFontPadding="false"
+                android:textColor="@color/midGrey"
+                android:textSize="@dimen/text_size_small"
+                tools:text="户外运动" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/viewSeparate"
+        style="@style/Divider_ECECEC" />
+
+</LinearLayout>

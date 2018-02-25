@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context="com.haitao.activity.SuccessFeedbackActivity">
+
+    <!-- 标题 -->
+    <com.haitao.view.HtHeadView
+        android:id="@+id/hv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:center_text="@string/order_lost_feedback"
+        app:left_img="@mipmap/ic_close" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:src="@mipmap/ic_common_success_big" />
+
+    <TextView
+        android:id="@+id/tv_info_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="@string/order_lost_feedback_success"
+        android:textColor="@color/grey1D1D1F"
+        android:textSize="@dimen/text_size_mediumx"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_info_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="@string/order_lost_feedback_success_info"
+        android:textColor="@color/grey4F4F53"
+        android:textSize="@dimen/text_size_medium" />
+
+    <TextView
+        android:id="@+id/btn_ok"
+        style="@style/SubmitButtonOrange"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/already_known" />
+</LinearLayout>

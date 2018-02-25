@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/divider"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/px36"
+            android:paddingTop="@dimen/px36">
+
+            <!-- 推广奖励 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/promotion_reward"
+                android:textSize="@dimen/text_size_small" />
+
+            <!-- 推广奖励 金额 -->
+            <TextView
+                android:id="@+id/tv_promotion_reward"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#FF6E40"
+                android:textSize="20sp"
+                tools:text="$5.5" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/px36"
+            android:paddingTop="@dimen/px36">
+
+            <!-- 下级返利 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/lower_class_rebate"
+                android:textSize="@dimen/text_size_small" />
+
+            <!-- 下级返利 金额 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#333333"
+                android:textSize="20sp"
+                tools:text="$5.5" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- 邀请码 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/px12"
+        android:background="@color/white"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingTop="24dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="您的专属邀请码(点击复制)"
+            android:textColor="#999999"
+            android:textSize="@dimen/text_size_small" />
+
+        <TextView
+            android:id="@+id/tv_invite_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/brightOrange"
+            android:paddingBottom="8dp"
+            android:paddingLeft="32dp"
+            android:paddingRight="32dp"
+            android:paddingTop="8dp"
+            android:textColor="@color/white"
+            tools:text="B5716" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="32dp"
+            android:gravity="center"
+            android:lineSpacingMultiplier="1.2"
+            android:text="邀请好友通过APP注册55海淘，每邀请一名好友就可以获得$5美元奖励。"
+            android:textColor="#333" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/border_top_bottom"
+            android:gravity="center_vertical"
+            android:minHeight="48dp"
+            android:paddingLeft="16dp"
+            android:text="@string/share"
+            android:textColor="#333" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <!-- QQ -->
+            <TextView
+                android:id="@+id/tv_qq"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawablePadding="@dimen/px15"
+                android:drawableTop="@mipmap/ic_qq"
+                android:gravity="center"
+                android:text="@string/qq"
+                android:textColor="@color/midGrey"
+                android:textSize="@dimen/text_size_medium" />
+
+            <!-- Weibo -->
+            <TextView
+                android:id="@+id/tv_weibo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawablePadding="@dimen/px15"
+                android:drawableTop="@mipmap/ic_sina"
+                android:gravity="center"
+                android:text="@string/weibo"
+                android:textColor="@color/midGrey"
+                android:textSize="@dimen/text_size_medium" />
+
+            <!-- 微信 -->
+            <TextView
+                android:id="@+id/tv_wechat"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawablePadding="@dimen/px15"
+                android:drawableTop="@mipmap/ic_wx"
+                android:gravity="center"
+                android:text="@string/wechat"
+                android:textColor="@color/midGrey"
+                android:textSize="@dimen/text_size_medium" />
+
+            <!-- 朋友圈 -->
+            <TextView
+                android:id="@+id/tv_wechat_moments"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawablePadding="@dimen/px15"
+                android:drawableTop="@mipmap/ic_wechatmoments"
+                android:gravity="center"
+                android:text="@string/wechatmoments"
+                android:textColor="@color/midGrey"
+                android:textSize="@dimen/text_size_medium" />
+
+            <!-- 更多 -->
+            <TextView
+                android:id="@+id/tv_more"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawablePadding="@dimen/px15"
+                android:drawableTop="@mipmap/ic_more_circle"
+                android:gravity="center"
+                android:text="@string/more_share_type"
+                android:textColor="@color/midGrey"
+                android:textSize="@dimen/text_size_medium" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- 邀请hao -->
+    <TextView
+        android:id="@+id/tv_invite_friends_count"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/border_bottom_0_5dp"
+        android:gravity="center_vertical"
+        android:minHeight="48dp"
+        android:paddingLeft="16dp"
+        android:text="已邀请0个好友"
+        android:textColor="#333" />
+</LinearLayout>

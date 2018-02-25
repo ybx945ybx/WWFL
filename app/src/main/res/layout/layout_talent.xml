@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:fresco="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+    <com.haitao.view.SlideCycleView
+        android:id="@+id/layoutCircle"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px270" />
+
+    <LinearLayout
+        android:id="@+id/layoutRecommendTalent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <com.haitao.view.HtTitleView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:sub_title="@string/next_talent" />
+
+        <RelativeLayout
+            android:id="@+id/layoutNextTalent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_item_selectable"
+            android:padding="@dimen/px24">
+
+            <com.haitao.view.CustomImageView
+                android:id="@+id/ivImage"
+                android:layout_width="@dimen/px90"
+                android:layout_height="@dimen/px90"
+                android:layout_marginRight="@dimen/px15"
+                android:visibility="visible"
+                fresco:failureImage="@mipmap/ic_default_avator"
+                fresco:failureImageScaleType="centerInside"
+                fresco:placeholderImage="@mipmap/ic_default_avator"
+                fresco:placeholderImageScaleType="fitCenter"
+                fresco:roundAsCircle="true"
+                fresco:roundWithOverlayColor="@color/white" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="-1dp"
+                android:layout_marginTop="@dimen/px22"
+                android:gravity="center"
+                android:src="@mipmap/ic_recommend_small" />
+
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/ivImage"
+                android:textColor="@color/midGrey2"
+                android:textSize="@dimen/text_size_medium"
+                tools:text="达人名称" />
+
+            <TextView
+                android:id="@+id/tvLevel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/tvName"
+                android:layout_below="@+id/tvName"
+                android:layout_marginTop="@dimen/px8"
+                android:textColor="@color/grey"
+                android:textSize="@dimen/text_size_small"
+                tools:text="信用卡达人" />
+
+            <TextView
+                android:id="@+id/tvPostNum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/tvName"
+                android:layout_below="@+id/tvLevel"
+                android:layout_marginTop="@dimen/px8"
+                android:textColor="@color/grey"
+                android:textSize="@dimen/text_size_small"
+                tools:text="帖子：2222" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/ic_next_thin_black" />
+        </RelativeLayout>
+
+        <View style="@style/Divider_BG" />
+
+        <com.haitao.view.HtTitleView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:sub_title="@string/talent_in_55" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

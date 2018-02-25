@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:descendantFocusability="blocksDescendants">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_item_selectable"
+        android:padding="@dimen/px24">
+
+        <com.haitao.view.RoundedImageView
+            android:id="@+id/img_avatar"
+            android:layout_width="@dimen/px55"
+            android:layout_height="@dimen/px55"
+            android:layout_marginRight="@dimen/px15"
+            android:src="@mipmap/ic_default_avator" />
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/img_avatar"
+            android:textColor="@color/midGrey"
+            android:textSize="@dimen/text_size_medium"
+            tools:text="小胡的鸡蛋" />
+
+        <TextView
+            android:id="@+id/tvTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/img_avatar"
+            android:layout_toRightOf="@+id/img_avatar"
+            android:textColor="@color/lightGrey"
+            android:textSize="@dimen/text_size_small"
+            tools:text="1天前" />
+
+        <TextView
+            android:id="@+id/tvContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/img_avatar"
+            android:layout_marginTop="@dimen/px10"
+            android:layout_toRightOf="@+id/img_avatar"
+            android:ellipsize="end"
+            android:textColor="@color/middleGrey"
+            android:textSize="@dimen/text_size_medium" />
+
+        <com.haitao.view.FullGirdView
+            android:id="@+id/gv_order_pics"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/tvTime"
+            android:layout_below="@+id/tvContent"
+            android:layout_marginTop="@dimen/px15"
+            android:horizontalSpacing="@dimen/px15"
+            android:listSelector="@color/transparent"
+            android:numColumns="3"
+            android:verticalSpacing="@dimen/px15" />
+
+        <TextView
+            android:id="@+id/tvReply"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/gv_order_pics"
+            android:layout_marginTop="@dimen/px15"
+            android:layout_toRightOf="@+id/img_avatar"
+            android:background="@drawable/shape_mini_light_grey_solid_rectangle"
+            android:padding="@dimen/px15"
+            android:textSize="@dimen/text_size_medium" />
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/divider"
+        style="@style/Divider_BG" />
+
+</LinearLayout>

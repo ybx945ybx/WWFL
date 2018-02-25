@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:fresco="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@drawable/bg_item_selectable"
+              android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvOver"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg"
+        android:padding="@dimen/px15"
+        android:textColor="@color/darkGrey"
+        android:textSize="@dimen/text_size_mediumx"
+        android:visibility="gone"
+        tools:text="已结束" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/px24">
+
+        <com.haitao.view.CustomImageView
+            android:id="@+id/ivImage"
+            android:layout_width="@dimen/px150"
+            android:layout_height="@dimen/px150"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/px15"
+            fresco:actualImageScaleType="centerCrop"
+            fresco:failureImage="@mipmap/ic_default_240"
+            fresco:placeholderImage="@mipmap/ic_default_240" />
+
+        <LinearLayout
+            android:id="@+id/layoutStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/ivImage"
+            android:layout_alignParentBottom="true"
+            android:layout_alignRight="@id/ivImage"
+            android:background="@color/half_transparent"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tvStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/px3"
+                android:paddingTop="@dimen/px3"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_medium"
+                tools:text="24小时" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/ivImage"
+            android:gravity="top"
+            android:lineSpacingExtra="@dimen/px6"
+            android:lines="2"
+            android:maxLines="2"
+            android:textColor="@color/midGrey2"
+            android:textSize="@dimen/text_size_medium"
+            tools:text="订单满$50送最新Future Rescue 修复精华样品" />
+
+        <TextView
+            android:id="@+id/tvAmount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/tvTitle"
+            android:layout_below="@+id/tvTitle"
+            android:layout_marginTop="@dimen/px20"
+            android:lineSpacingExtra="@dimen/px6"
+            android:textColor="@color/middle_grey2"
+            android:textSize="@dimen/text_size_small"
+            tools:text="数量：10份\n申请人数：120人" />
+
+        <TextView
+            android:id="@+id/tvPost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/tvAmount"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/shape_dark_orange_rectangle"
+            android:paddingBottom="@dimen/px10"
+            android:paddingLeft="@dimen/px30"
+            android:paddingRight="@dimen/px30"
+            android:paddingTop="@dimen/px10"
+            android:text="提交报告"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_medium"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/viewSeparate"
+        style="@style/Divider_ECECEC" />
+
+</LinearLayout>

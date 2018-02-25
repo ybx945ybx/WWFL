@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+    <!-- 顶部 -->
+    <include android:id="@+id/layoutTop"
+        layout="@layout/layout_common_header"/>
+    <Button android:id="@+id/btnBuy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/darkOrange"
+        android:layout_alignParentBottom="true"
+        android:textSize="@dimen/text_size_medium"
+        android:textColor="@color/white"
+        android:text="@string/store_buy_rebate"/>
+    <com.haitao.view.refresh.XListView
+        android:id="@+id/lvList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:background="@color/bg"
+        android:layout_below="@id/layoutTop"
+        android:layout_above="@id/btnBuy"
+        android:dividerHeight="0dp"
+        android:divider="@color/transparent"
+        android:visibility="invisible">
+
+    </com.haitao.view.refresh.XListView>
+    <include layout="@layout/common_progress"/>
+</RelativeLayout>

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:fresco="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/bg"
+              android:orientation="vertical">
+
+    <com.haitao.view.HtHeadView
+        android:id="@+id/hv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:center_text="@string/my_update_user_title"
+        app:right_text="@string/submit"
+        app:right_text_color="@color/sl_submit_color"
+        app:right_text_enabled="true" />
+
+    <!-- 用户名 -->
+    <com.haitao.view.HtItemView
+        android:id="@+id/item_username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_item_selectable"
+        app:title="@string/username" />
+
+    <!-- 头像 -->
+    <RelativeLayout
+        android:id="@+id/rl_avatar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_item_selectable"
+        android:minHeight="@dimen/px130"
+        android:paddingLeft="@dimen/px24"
+        android:paddingRight="@dimen/px24">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/avatar"
+            android:textColor="@color/warmGrey"
+            android:textSize="@dimen/text_size_medium" />
+
+        <com.haitao.view.CustomImageView
+            android:id="@+id/img_avatar"
+            android:layout_width="@dimen/px80"
+            android:layout_height="@dimen/px80"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            fresco:failureImage="@mipmap/ic_default_avator"
+            fresco:failureImageScaleType="centerCrop"
+            fresco:placeholderImage="@mipmap/ic_default_avator"
+            fresco:placeholderImageScaleType="centerCrop"
+            fresco:roundAsCircle="true"
+            fresco:roundWithOverlayColor="@color/white" />
+
+    </RelativeLayout>
+
+    <View style="@style/Divider_ECECEC" />
+
+    <!--<LinearLayout
+        android:id="@+id/ll_gender"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_item_selectable"
+        android:gravity="center_vertical"
+        android:minHeight="@dimen/px130"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/px24">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/gender"
+            android:textColor="@color/warmGrey"
+            android:textSize="@dimen/text_size_medium" />
+
+        <TextView
+            android:id="@+id/tv_gender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/px24"
+            android:textColor="@color/midGrey2"
+            android:textSize="@dimen/text_size_small"
+            tools:text="男" />
+
+    </LinearLayout>-->
+
+    <!-- 性别 -->
+    <com.haitao.view.HtItemView
+        android:id="@+id/item_gender"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_item_selectable"
+        app:next_enabled="true"
+        app:title="@string/gender" />
+
+
+    <!-- 地区 -->
+    <com.haitao.view.HtItemView
+        android:id="@+id/item_area"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_item_selectable"
+        app:divider_enabled="false"
+        app:next_enabled="true"
+        app:title="@string/district" />
+
+    <!-- 地区 -->
+    <!--<LinearLayout
+        android:id="@+id/ll_area"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_item_selectable"
+        android:gravity="center_vertical"
+        android:minHeight="@dimen/px130"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/px24">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/district"
+            android:textColor="@color/warmGrey"
+            android:textSize="@dimen/text_size_medium" />
+
+        <TextView
+            android:id="@+id/tv_area"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/px24"
+            android:textColor="@color/midGrey2"
+            android:textSize="@dimen/text_size_small"
+            tools:text="湖北省  武汉市" />
+
+    </LinearLayout>-->
+
+</LinearLayout>

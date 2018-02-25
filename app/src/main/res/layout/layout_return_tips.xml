@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/transparent">
+    <TextView android:id="@+id/tvTips"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:text="双击顶部栏返回顶部"
+        android:textSize="@dimen/text_size_mediumx"
+        android:paddingLeft="@dimen/px30"
+        android:paddingRight="@dimen/px30"
+        android:paddingTop="@dimen/px15"
+        android:paddingBottom="@dimen/px15"
+        android:layout_marginTop="@dimen/px90"
+        android:layout_centerHorizontal="true"
+        android:visibility="visible"
+        android:background="@drawable/shape_half_rectangle"/>
+</RelativeLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.haitao.view.richEdit.DeletableEditText xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    android:cursorVisible="true"
+    android:lineSpacingExtra="10dp"
+    android:textColor="#444"
+    android:textSize="@dimen/text_size_mediumx"
+    android:textCursorDrawable="@drawable/cursor_shape" >
+
+</com.haitao.view.richEdit.DeletableEditText>

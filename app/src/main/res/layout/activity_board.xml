@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/bg"
+                android:orientation="vertical">
+    <!-- 顶部 -->
+    <include
+        android:id="@+id/layoutTop"
+        layout="@layout/layout_common_header" />
+
+    <LinearLayout
+        android:id="@+id/layoutContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/layoutTop"
+        android:orientation="vertical">
+
+        <!-- tab切换 -->
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tab"
+            style="@style/CustomTabLayout"
+            android:background="@color/white"
+            android:fillViewport="false" />
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/px1" />
+
+    </LinearLayout>
+
+    <include layout="@layout/layout_common_progress" />
+
+</RelativeLayout>

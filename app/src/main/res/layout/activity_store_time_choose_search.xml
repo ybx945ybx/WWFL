@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.haitao.view.HtHeadView
+        android:id="@+id/hv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:center_text="@string/choose_store_time"
+        app:divider_visible="false" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px75"
+        android:background="@color/white"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:paddingBottom="@dimen/px15"
+            android:paddingRight="@dimen/px15"
+            android:paddingTop="@dimen/px15"
+            android:src="@mipmap/ic_post"
+            android:text="@string/cancel"
+            android:visibility="visible" />
+
+        <com.haitao.view.ClearEditText
+            android:id="@+id/et_search"
+            style="@style/edit_search_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/px15"
+            android:layout_toLeftOf="@id/tv_cancel"
+            android:hint="@string/search_store_time" />
+
+        <View
+            style="@style/Divider_BG"
+            android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+
+    <com.haitao.view.MultipleStatusView
+        android:id="@+id/msv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.haitao.view.refresh.XListView
+            android:id="@+id/lv_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:divider="@null"
+            android:scrollbars="none" />
+    </com.haitao.view.MultipleStatusView>
+
+</LinearLayout>

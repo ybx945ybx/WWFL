@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ly_myinfo_changeaddress"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="返利说明"
+        android:textSize="@dimen/text_size_medium"
+        android:padding="@dimen/px15"
+        android:gravity="center"
+        android:textColor="@color/darkGrey"/>
+    <TextView
+        android:id="@+id/webRebate"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/midGrey"
+        android:textSize="@dimen/text_size_small"
+        android:lineSpacingExtra="@dimen/px6"
+        android:layout_marginLeft="@dimen/px15"
+        android:layout_above="@+id/llbottom_bbspage" />
+
+</LinearLayout>

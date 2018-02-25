@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:ignore="ContentDescription">
+
+    <ImageView
+        android:id="@+id/img_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:src="@mipmap/ic_close_dlg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/cl_dlg_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <!-- 图片 -->
+        <com.haitao.view.CustomImageView
+            android:id="@+id/img_cover"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="12dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintDimensionRatio="w,1:1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/img_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:src="@mipmap/ic_logo_orange_rect"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="@id/img_cover"
+            app:layout_constraintTop_toTopOf="@id/img_cover" />
+
+        <!-- 优惠信息 -->
+        <TextView
+            android:id="@+id/tv_deal_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="22dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="8dp"
+            android:ellipsize="end"
+            android:lineSpacingExtra="6sp"
+            android:maxLines="2"
+            android:textColor="@color/grey1D1D1F"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toStartOf="@+id/fl_qr_code"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/img_cover"
+            tools:text="[55专享] 优惠升级！Perricone MD 裴礼康官网：精选产品" />
+
+        <!-- 价格 -->
+        <TextView
+            android:id="@+id/tv_deal_price"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="22dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="4dp"
+            android:ellipsize="end"
+            android:lineSpacingExtra="10sp"
+            android:maxLines="1"
+            android:textAlignment="textStart"
+            android:textColor="@color/orangeFF804D"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toStartOf="@+id/fl_qr_code"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_deal_title"
+            tools:text="低至7折，再享额外6折" />
+
+        <FrameLayout
+            android:id="@+id/fl_qr_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="12dp"
+            android:layout_marginTop="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/img_cover">
+
+            <ImageView
+                android:id="@+id/img_qr_code"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:src="@mipmap/ic_close_dlg" />
+
+            <ImageView
+                android:id="@+id/img_qr_logo"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:src="@mipmap/ic_logo_default" />
+
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="25dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/long_press_to_scan_qr_code"
+            android:textAlignment="center"
+            android:textColor="@color/grey1D1D1F"
+            android:textSize="8sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/fl_qr_code"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/fl_qr_code"
+            app:layout_constraintTop_toBottomOf="@+id/fl_qr_code"
+            app:layout_constraintVertical_bias="0.0"
+            tools:ignore="SmallSp" />
+
+        <LinearLayout
+            android:id="@+id/ll_tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="2dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fl_qr_code">
+
+            <!-- 返利信息 -->
+            <TextView
+                android:id="@+id/tv_tag_rebate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/bg_round_corner_orange_gradient_4dp"
+                android:paddingLeft="4dp"
+                android:paddingRight="4dp"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                tools:ignore="SmallSp"
+                tools:layout_editor_absoluteX="12dp"
+                tools:layout_editor_absoluteY="480dp"
+                tools:text="最高返利99%" />
+
+            <!-- 国家 -->
+            <TextView
+                android:id="@+id/tv_tag_country"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/bg_round_corner_orange_1a_4dp"
+                android:paddingLeft="4dp"
+                android:paddingRight="4dp"
+                android:textColor="@color/orangeFF804D"
+                android:textSize="10sp"
+                tools:ignore="SmallSp"
+                tools:layout_editor_absoluteX="168dp"
+                tools:layout_editor_absoluteY="480dp"
+                tools:text="@string/china" />
+
+            <!-- 直邮 -->
+            <TextView
+                android:id="@+id/tv_tag_direct_post"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/bg_round_corner_orange_1a_4dp"
+                android:paddingLeft="4dp"
+                android:paddingRight="4dp"
+                android:text="@string/direct_post"
+                android:textColor="@color/orangeFF804D"
+                android:textSize="10sp"
+                tools:ignore="SmallSp"
+                tools:layout_editor_absoluteX="87dp"
+                tools:layout_editor_absoluteY="480dp" />
+
+            <!-- 支付宝 -->
+            <TextView
+                android:id="@+id/tv_tag_alipay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_round_corner_orange_1a_4dp"
+                android:paddingLeft="4dp"
+                android:paddingRight="4dp"
+                android:text="@string/alipay"
+                android:textColor="@color/orangeFF804D"
+                android:textSize="10sp"
+                tools:ignore="SmallSp"
+                tools:layout_editor_absoluteX="123dp"
+                tools:layout_editor_absoluteY="480dp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_store_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_grey_gradient"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/img_cover"
+            app:layout_constraintStart_toStartOf="@+id/img_cover"
+            tools:text="Perricone MD " />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:gravity="center_horizontal">
+
+        <!-- 保存 -->
+        <TextView
+            android:id="@+id/ic_save_pic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="4dp"
+            android:drawableTop="@mipmap/ic_save_pic_circle"
+            android:gravity="center"
+            android:text="@string/save"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+
+        <!-- qq -->
+        <TextView
+            android:id="@+id/ic_qq"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="28dp"
+            android:drawablePadding="4dp"
+            android:drawableTop="@mipmap/ic_qq"
+            android:gravity="center"
+            android:text="@string/login_qq"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+
+        <!-- 微博 -->
+        <TextView
+            android:id="@+id/ic_weibo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="28dp"
+            android:layout_marginRight="28dp"
+            android:drawablePadding="4dp"
+            android:drawableTop="@mipmap/ic_sina"
+            android:gravity="center"
+            android:text="@string/weibo"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+
+        <!-- 微信 -->
+        <TextView
+            android:id="@+id/ic_wechat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="28dp"
+            android:drawablePadding="4dp"
+            android:drawableTop="@mipmap/ic_wx"
+            android:gravity="center"
+            android:text="@string/login_wx"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+
+        <!-- 朋友圈 -->
+        <TextView
+            android:id="@+id/ic_moments"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="4dp"
+            android:drawableTop="@mipmap/ic_wechatmoments"
+            android:gravity="center"
+            android:text="@string/wechatmoments"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="white">#ffffffff</color>
+    <color name="black">#000000</color>
+    <color name="half_transparent">#77000000</color>
+    <color name="half_white">#77ffffff</color>
+
+    <color name="bg_discount_time">#661D1D1F</color>
+
+    <!-- 透明度 -->
+    <color name="tranparent_100">#FFFFFFFF</color>
+    <color name="tranparent_90">#E6FFFFFF</color>
+    <color name="tranparent_80">#CCFFFFFF</color>
+    <color name="tranparent_70">#B3FFFFFF</color>
+    <color name="tranparent_60">#99FFFFFF</color>
+    <color name="tranparent_50">#80FFFFFF</color>
+    <color name="tranparent_40">#66FFFFFF</color>
+    <color name="tranparent_30">#4DFFFFFF</color>
+    <color name="tranparent_20">#33FFFFFF</color>
+    <color name="tranparent_10">#1AFFFFFF</color>
+    <color name="transparent">#00000000</color>
+    <color name="transparent_white">#99FFFEFE</color>
+    <color name="common_transparent">#B21D1D1F</color>
+
+    <!-- grey -->
+    <color name="grey1D1D1F">#1D1D1F</color>
+    <color name="grey29292C">#29292C</color>
+    <color name="grey1D1D1Fgrey333333">#333333</color>
+    <color name="grey474748">#474748</color>
+    <color name="grey4F4F53">#4F4F53</color>
+    <color name="grey6D6D72">#6D6D72</color>
+    <color name="grey78787D">#78787D</color>
+    <color name="grey848588">#848588</color>
+    <color name="greyA5A5A8">#A5A5A8</color>
+    <color name="greyD1D2D8">#D1D2D8</color>
+    <color name="greyE6E6E6">#E6E6E6</color>
+    <color name="greyEEEEEF">#EEEEEF</color>
+
+    <!-- alpha grey -->
+    <color name="grey0029292C">#0029292C</color>
+    <color name="grey8029292C">#8029292C</color>
+
+    <color name="blackGrey">#1A1A1A</color>
+    <color name="darkGrey">#252525</color>
+    <color name="darkGrey2">#26241F</color>
+    <color name="midGrey">#636363</color>
+    <color name="warmGrey">#979797</color>
+    <color name="warmGrey2">#A7A7A7</color>
+    <color name="brightGrey2">#DFDFDF</color>
+    <color name="brightGrey">#EAEAEA</color>
+    <color name="Grey666666">#666666</color>
+
+    <color name="pinkFC7F7F">#FC7F7F</color>
+
+    <!-- orange -->
+    <color name="orangeFF804D">#ff804d</color>
+    <color name="orange1AFF804D">#1aff804d</color>
+    <color name="orangeF46E2F">#F46E2F</color>
+
+    <!-- yellow -->
+    <color name="yellowFFBD49">#FFBD49</color>
+    <color name="yellowFFD65E">#FFD65E</color>
+    <color name="yellowFEEB36">#FEEB36</color>
+
+    <!-- brown -->
+    <color name="brown945D08">#945D08</color>
+
+    <color name="brightOrange">#FF4200</color>
+    <color name="tagOrange">#FE5E27</color>
+    <color name="darkOrange">#FF3901</color>
+    <color name="midOrange">#FF7E00</color>
+    <color name="lightOrange">#FFB700</color>
+    <color name="lOrange">#FFB097</color>
+    <color name="half_orange">#9BFF3901</color>
+    <!-- blue -->
+    <color name="blue628CF9">#628CF9</color>
+    <color name="darkBlue">#078CD0</color>
+    <color name="midBlue">#08ADFA</color>
+    <color name="lightBlue">#BBE8FF</color>
+    <color name="blue_disable">#6CD0FF</color>
+    <color name="half_blue">#CC078CD0</color>
+    <!-- green -->
+    <color name="green">#26D26B</color>
+    <color name="greenWx">#65CC32</color>
+    <color name="green55C51F">#55C51F</color>
+
+    <!-- 分割线颜色 -->
+    <color name="divider">#CDCDCD</color>
+
+    <!-- 评论颜色 -->
+    <color name="midGrey2">#4F4F4F</color>
+    <color name="middleGrey">#565656</color>
+    <color name="middle_grey2">#979797</color>
+    <color name="grey">#A7A7A7</color>
+    <color name="lightGrey">#CBCBCB</color>
+    <color name="lightGrey2">#C0C0C0</color>
+    <color name="miniLightGrey">#F7F7F7</color>
+
+    <!-- -->
+    <color name="bg">#F5F5F5</color>
+    <color name="tab_bg">#F7F7F7</color>
+    <color name="tab_color">@color/brightOrange</color>
+    <color name="header_bg">#FBFBFB</color>
+    <color name="sub_title_color">#201F1F</color>
+    <color name="separate">#ECECEC</color>
+    <color name="bg_search">#E7E7E7</color>
+    <color name="store_head_color">#08ADFA</color>
+    <color name="store_type_color">#72CFFA</color>
+    <color name="province_line_border">#C7C7C7</color>
+    <color name="invite_num_background_color">#EA962B</color>
+    <color name="invite_backgorund_color">#FEC63D</color>
+    <color name="invite_text_color">#90401E</color>
+    <color name="invite_bg_color">#09ADFA</color>
+    <!-- 55闪淘以下-->
+    <color name="st_translucent">#BB000000</color>
+    <color name="st_transparent">#00000000</color>
+    <color name="st_tran_line">#cc000000</color>
+    <color name="st_backTransparent">#77000000</color>
+    <color name="st_darktext">#636363</color>
+    <color name="st_white">#FFFFFF</color>
+    <color name="st_black">#000000</color>
+    <color name="st_red">#ff0000</color>
+    <color name="st_green">#6bae26</color>
+    <color name="st_bg">#FFFFFF</color>
+    <color name="st_darkgray">#bfbfce</color>
+    <color name="st_pricetext">#656565</color>
+    <color name="st_price_num_text">#696969</color>
+
+    <!-- list -->
+    <color name="st_listItemSelected">#f3f3f3</color>
+    <color name="st_seperateLine">#C2C2C2</color>
+    <color name="st_orange_text">#f28e35</color>
+    <color name="st_blue_text">#6bae26</color>
+    <color name="st_descText">#999999</color>
+    <color name="st_searchBg">#a1a1a1</color>
+    <color name="st_dealBg">#f6f6f6</color>
+
+    <!-- comment -->
+    <color name="st_comment_name">#0e9191</color>
+
+    <!--  -->
+    <color name="st_product_bg">#E9E9E9</color>
+    <color name="st_darkred">#d12e25</color>
+    <color name="st_title_red_bg">#df3031</color>
+    <color name="st_title_white_bg">#f7f7f7</color>
+    <color name="st_title_white_bg_on">#7ff7f7f7</color>
+    <color name="st_title_black_text">#121212</color>
+    <color name="st_title_right_text_off">#ff0099ff</color>
+    <color name="st_title_right_text_on">#7f0099ff</color>
+    <color name="st_menu_bg">#f0101010</color>
+    <color name="st_tab_bg">#f6f6f6</color>
+    <color name="st_logon_bg">#efefef</color>
+    <color name="st_pop_menu_line">#333333</color>
+    <color name="st_pop_menu_text">#706f6e</color>
+    <color name="st_green_text">#61ac1e</color>
+    <color name="st_product_details_price_text">#656565</color>
+    <color name="st_time_text">#ca9a1c</color>
+    <color name="st_bottom_bg">#F7F5F6</color>
+    <color name="st_bottom_text_color">#5f646e</color>
+    <color name="st_divider_bg">#CBC8C8</color>
+    <color name="st_code_bg_on">#c6c6c6</color>
+    <color name="st_bbs_bg">#FFFFFF</color>
+    <color name="st_buy_bg">#fdb74c</color>
+
+    <!-- 新增 -->
+    <color name="st_dialog_bg">#e3393c</color>
+    <color name="st_text_gray">#636363</color>
+    <color name="st_text_small_gray_home">#9f9f9f</color>
+    <color name="st_bg_color">#f0f0f0</color>
+    <color name="st_text_title_break">#252525</color>
+    <color name="st_text_small_gray">#b4b4b4</color>
+    <color name="st_text_warm_color">#e02c2f</color>
+    <color name="st_text_color_yellow">#fcd937</color>
+    <color name="st_text_color_yellow_high">#ffee2d</color>
+    <color name="st_text_color_hint">#d0d0d0</color>
+    <color name="st_logon_part_color">#f3f3f3</color>
+    <color name="st_text_blue">#0294f0</color>
+    <color name="st_text_checkins_for_taday">#e8b151</color>
+    <color name="st_ed">#EDEDED</color>
+    <color name="st_text_green">#16d11b</color>
+    <color name="st_light_gray">#c2c2c2</color>
+
+    <!-- 上拉下拉刷新文字颜色 -->
+    <color name="st_refresh_tip_color">#646464</color>
+    <color name="st_refresh_time_color">#afafaf</color>
+    <color name="st_navpage">#FFE1E8EB</color>
+
+    <!-- 身份证拍照 -->
+    <color name="st_viewfinder_frame">#ff000000</color>
+    <color name="st_viewfinder_laser">#ffff0000</color>
+    <color name="st_viewfinder_mask">#99333333</color>
+
+    <!-- 二维码扫描 -->
+    <color name="st_result_view">#b0000000</color>
+    <color name="st_possible_result_points">#c0ffff00</color>
+    <color name="st_province_line_border">#C7C7C7</color>
+    <!--支付宝-->
+    <color name="TextColorBlack">#FF000000</color>
+    <color name="TextColorWhite">#FFFFFFFF</color>
+    <color name="TextColorGray">#FF505050</color>
+    <color name="ToastBgColor">#FF424242</color>
+    <color name="btnColor">#FFFFFF</color>
+    <color name="textColorforItemTitle">#FF666666</color>
+    <color name="secondbtntextColor">#FF496ea3</color>
+    <color name="textColorforCheckBox">#FF333333</color>
+    <color name="bgColor">#FFF2F2F2</color>
+    <color name="downLoadTextNomal">#FF3366CC</color>
+    <color name="downLoadTextPressed">#FFFFFFFF</color>
+    <color name="downLoadBackNomal">#FFFFFFFF</color>
+    <color name="downLoadBackFocus">#FF6698E7</color>
+    <color name="downLoadBackPressed">#FF3366CC</color>
+    <color name="dialog_tiltle_blue">#2277BB</color>
+    <color name="app_body_bg">#ffe8e8e8</color>
+
+    <!-- 主页tab字体选中颜色 -->
+    <color name="tab_text_selected">#FF7D46</color>
+
+    <color name="tab_indicator_selected">@color/orangeFF804D</color>
+
+    <!-- 待生效 -->
+    <color name="wait_work">#15D8DE</color>
+    <!-- 已生效 -->
+    <color name="already_work">#15DE88</color>
+    <!-- 待审核 -->
+    <color name="wait_check">#08ADFA</color>
+
+
+    <color name="xn_sdk_head_bg">@color/brightOrange</color>
+
+    <!-- 筛选tag，灰色 -->
+    <color name="filter_tag_grey">#D1D3D4</color>
+
+
+    <!-- //////////////////////////// 线下返利的颜色 ///////////////////////////// -->
+    <!--紫色-->
+    <color name="colorPurple81A7FC">#81A7FC</color>
+    <color name="colorPurpleA083F1">#A083F1</color>
+    <color name="colorPurple779CFC">#779CFC</color>
+    <!--灰色-->
+    <color name="colorGray6D6D72">#6D6D72</color>
+    <color name="colorGrayF5F5F5">#F5F5F5</color>
+    <!--红色-->
+    <color name="colorRed6FF5647">#FF5647</color>
+
+    <!-- 80%透明黑 -->
+    <color name="colorBlur80">#CC000000</color>
+
+    <!-- 60%透明黑 -->
+    <color name="colorBlur60">#99000000</color>
+
+    <!-- 50%透明黑 -->
+    <color name="colorBlur50">#7F000000</color>
+
+    <!-- 40%透明黑 -->
+    <color name="colorBlur40">#66000000</color>
+
+    <!-- 100%透明黑 -->
+    <color name="colorBlur100">#00000000</color>
+</resources>

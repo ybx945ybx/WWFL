@@ -1,0 +1,50 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="bottom">
+    <!-- 顶部 -->
+    <RelativeLayout
+        android:id="@+id/layoutTop"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px75"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:id="@+id/layoutSearch"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/px15"
+            android:background="@drawable/shape_bg_search"
+            android:gravity="center">
+
+            <TextView
+                style="@style/main_search_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/search_hint" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <com.haitao.view.refresh.XListView
+        android:id="@+id/layoutScroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/layoutTop"
+        android:divider="@color/transparent"
+        android:dividerHeight="0dp"
+        android:scrollbars="none">
+
+    </com.haitao.view.refresh.XListView>
+
+    <!-- 活动入口 -->
+    <com.haitao.view.CustomImageView
+        android:id="@+id/img_event"
+        style="@style/ImgEvent" />
+
+    <include layout="@layout/common_progress" />
+
+    <include layout="@layout/layout_common_error" />
+
+</RelativeLayout>

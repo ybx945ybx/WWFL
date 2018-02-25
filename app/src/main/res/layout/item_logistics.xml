@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:fresco="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/white"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/px15">
+
+        <ImageView
+            android:id="@+id/icGo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/ic_next" />
+
+        <com.haitao.view.CustomImageView
+            android:id="@+id/ivImage"
+            android:layout_width="@dimen/px180"
+            android:layout_height="@dimen/px75"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/px15"
+            android:src="@mipmap/ic_photo_loading"
+            fresco:actualImageScaleType="fitCenter" />
+
+        <TextView
+            android:id="@+id/tvNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/ivImage"
+            android:textColor="@color/darkGrey"
+            android:textSize="@dimen/text_size_mediumx"
+            tools:text="kdlkdldd" />
+
+        <TextView
+            android:id="@+id/tvCompany"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/tvNumber"
+            android:layout_below="@+id/tvNumber"
+            android:layout_marginTop="@dimen/px10"
+            android:layout_toRightOf="@+id/ivImage"
+            android:textColor="@color/lightGrey"
+            android:textSize="@dimen/text_size_medium"
+            tools:text="极兔中国" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/viewSeparate"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px1"
+        android:background="@color/bg" />
+
+
+</LinearLayout>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/black">
+
+    <ImageView
+        android:id="@id/ivImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY" />
+
+    <com.haitao.view.photoView.MultiTouchViewPager
+        android:id="@+id/vpView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px75"
+        android:background="@color/header_bg">
+
+        <ImageButton
+            android:id="@+id/btnLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:padding="@dimen/px15"
+            android:src="@drawable/ic_back" />
+
+        <ImageButton
+            android:id="@+id/btnRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@color/transparent"
+            android:padding="@dimen/px15"
+            android:src="@drawable/ic_radio_button" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/header_bg">
+
+        <TextView
+            android:id="@+id/btnComplete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:paddingBottom="@dimen/px22"
+            android:paddingLeft="@dimen/px6"
+            android:paddingRight="@dimen/px22"
+            android:paddingTop="@dimen/px22"
+            android:text="@string/photo_pick_complete"
+            android:textColor="@color/orangeFF804D"
+            android:textSize="@dimen/text_size_mediumx" />
+
+        <TextView
+            android:id="@+id/tvNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/btnComplete"
+            android:background="@drawable/bg_circle_orange"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_medium"
+            tools:text="9" />
+    </RelativeLayout>
+
+</RelativeLayout>

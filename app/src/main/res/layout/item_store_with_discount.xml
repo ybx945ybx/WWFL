@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:fresco="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@drawable/bg_item_selectable"
+              android:orientation="vertical"
+              tools:ignore="RtlHardcoded">
+
+    <View
+        android:id="@+id/view_divider"
+        style="@style/Divider_BG" />
+
+    <!-- 商家信息 -->
+    <include layout="@layout/store_info_item_mini" />
+
+    <View
+        android:id="@+id/title_divider"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@color/greyE6E6E6" />
+
+    <!-- 优惠信息 -->
+    <LinearLayout
+        android:id="@+id/ll_discount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal">
+
+        <!-- 优惠1 -->
+        <RelativeLayout
+            android:id="@+id/rl_discount1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/bg_item_selectable">
+
+            <!-- 优惠图1 -->
+            <com.haitao.view.CustomImageView
+                android:id="@+id/img_discount_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                fresco:failureImage="@mipmap/ic_default_240"
+                fresco:failureImageScaleType="centerInside"
+                fresco:placeholderImage="@mipmap/ic_default_240"
+                fresco:placeholderImageScaleType="centerCrop"
+                fresco:viewAspectRatio="1" />
+
+            <!-- 限时 -->
+            <TextView
+                android:id="@+id/tv_timeout_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/img_discount_1"
+                android:background="@color/bg_discount_time"
+                android:gravity="center"
+                android:paddingBottom="2dp"
+                android:paddingTop="2dp"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                tools:ignore="SmallSp"
+                tools:text="剩余：23小时59分" />
+
+            <!-- 优惠标题1 -->
+            <TextView
+                android:id="@+id/tv_discount_name_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/img_discount_1"
+                android:layout_marginTop="4dp"
+                android:ellipsize="end"
+                android:lineSpacingExtra="@dimen/px3"
+                android:maxLines="2"
+                android:textColor="@color/grey1D1D1F"
+                android:textSize="14sp"
+                tools:text="金蘑菇菇同款！【英国免费直邮】Zatchels 栗色..." />
+
+            <!-- 价格1 -->
+            <TextView
+                android:id="@+id/tv_price_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_discount_name_1"
+                android:layout_marginTop="8dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/orangeFF804D"
+                android:textSize="@dimen/text_size_medium"
+                tools:text="$15.99（约111元）" />
+
+        </RelativeLayout>
+
+        <!-- 优惠2 -->
+        <RelativeLayout
+            android:id="@+id/rl_discount2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_item_selectable">
+
+            <!-- 优惠图2 -->
+            <com.haitao.view.CustomImageView
+                android:id="@+id/img_discount_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                fresco:failureImage="@mipmap/ic_default_240"
+                fresco:failureImageScaleType="centerInside"
+                fresco:placeholderImage="@mipmap/ic_default_240"
+                fresco:placeholderImageScaleType="centerCrop"
+                fresco:viewAspectRatio="1" />
+
+            <!-- 限时 -->
+            <TextView
+                android:id="@+id/tv_timeout_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/img_discount_2"
+                android:background="@color/bg_discount_time"
+                android:gravity="center"
+                android:paddingBottom="2dp"
+                android:paddingTop="2dp"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                tools:ignore="SmallSp"
+                tools:text="剩余：23小时59分" />
+
+            <!-- 优惠标题2 -->
+            <TextView
+                android:id="@+id/tv_discount_name_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/img_discount_2"
+                android:layout_marginTop="4dp"
+                android:ellipsize="end"
+                android:lineSpacingExtra="@dimen/px3"
+                android:maxLines="2"
+                android:textColor="@color/grey1D1D1F"
+                android:textSize="14sp"
+                tools:text="金蘑菇菇同款！【英国免费直邮】Zatchels 栗色..." />
+
+            <!-- 价格2 -->
+            <TextView
+                android:id="@+id/tv_price_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_discount_name_2"
+                android:layout_marginTop="8dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/orangeFF804D"
+                android:textSize="@dimen/text_size_medium"
+                tools:text="$15.99（约111元）" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:roundedimageview="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/px15"
+    android:background="@color/white">
+    <RelativeLayout android:id="@+id/layoutUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/px30"
+        android:layout_centerHorizontal="true">
+        <com.haitao.view.RoundedImageView android:id="@+id/img_avatar"
+            android:layout_width="@dimen/px124"
+            android:layout_height="@dimen/px124"
+            android:layout_marginRight="@dimen/px36"
+            android:scaleType="fitCenter"
+            roundedimageview:border_outside_color="@color/white"/>
+        <TextView android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/img_avatar"
+            android:layout_toRightOf="@+id/img_avatar"
+            android:layout_marginTop="@dimen/px6"
+            android:textSize="@dimen/text_size_mediumx"
+            android:textColor="@color/darkGrey"
+            android:text="姓名"/>
+        <TextView android:id="@+id/tvLevel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvName"
+            android:layout_alignLeft="@+id/tvName"
+            android:textSize="@dimen/text_size_medium"
+            android:textColor="@color/midGrey"
+            android:layout_marginTop="@dimen/px15"
+            android:gravity="center"
+            android:text="海淘三年级"/>
+        <LinearLayout android:id="@+id/layoutThread"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvLevel"
+            android:layout_alignLeft="@+id/tvName"
+            android:layout_marginTop="@dimen/px15"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+            <TextView android:id="@+id/tvThread"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_size_medium"
+                android:textColor="@color/midGrey"
+                android:text="主题：222"/>
+
+            <View
+                android:layout_width="@dimen/px1"
+                android:layout_height="@dimen/px15"
+                android:background="@color/midGrey"
+                android:layout_marginRight="@dimen/px30"
+                android:layout_marginLeft="@dimen/px30"/>
+
+            <TextView android:id="@+id/tvEssence"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_size_medium"
+                android:textColor="@color/midGrey"
+                android:layout_marginLeft="@dimen/px15"
+                android:text="精华：11"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+    <RelativeLayout android:id="@+id/tab_msgs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layoutUser"
+        android:layout_alignLeft="@+id/layoutUser"
+        android:layout_alignRight="@+id/layoutUser"
+        android:layout_marginTop="@dimen/px30"
+        android:layout_marginBottom="@dimen/px30"
+        android:background="@drawable/shape_send_message"
+        android:padding="@dimen/px15"
+        >
+        <TextView android:id="@+id/tvMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:drawableLeft="@mipmap/ic_send_message"
+            android:drawablePadding="@dimen/px15"
+            android:gravity="center"
+            android:textColor="@color/midGrey"
+            android:textSize="@dimen/text_size_mediumx"
+            android:text="发送消息"/>
+
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px15"
+        android:layout_below="@+id/tab_msgs"
+        android:background="@color/bg"/>
+</RelativeLayout>

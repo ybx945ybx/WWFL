@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/content_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <!-- 错误信息 -->
+        <TextView
+            android:id="@+id/tv_error_info"
+            style="@style/DefaultViewImgTxt"
+            android:drawableTop="@mipmap/ic_error_logo"
+            android:text="@string/network_load_error" />
+
+        <!-- 刷新 -->
+        <TextView
+            android:id="@+id/error_retry_view"
+            style="@style/DefaultViewBtn"
+            android:text="@string/refresh" />
+    </LinearLayout>
+</ScrollView>

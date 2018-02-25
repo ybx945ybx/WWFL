@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:fresco="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <!--<com.haitao.view.RoundImageView
+        android:id="@+id/ivImage"
+        android:layout_width="@dimen/px157"
+        android:layout_height="@dimen/px157"
+        android:layout_centerInParent="true"
+        android:contentDescription="@null"
+        android:scaleType="fitCenter"
+        app:borderRadius="3dp"
+        app:type="round" />-->
+
+    <com.haitao.view.CustomImageView
+        android:id="@+id/ivImage"
+        android:layout_width="@dimen/px157"
+        android:layout_height="@dimen/px157"
+        android:visibility="visible"
+        fresco:failureImage="@mipmap/ic_default_240"
+        android:layout_centerInParent="true"
+        fresco:failureImageScaleType="centerInside"
+        fresco:placeholderImage="@mipmap/ic_default_240"
+        fresco:placeholderImageScaleType="fitCenter"
+        fresco:roundedCornerRadius="@dimen/px2" />
+
+    <ImageView
+        android:id="@+id/ivAdd"
+        android:layout_width="@dimen/px157"
+        android:layout_height="@dimen/px157"
+        android:layout_centerInParent="true"
+        android:contentDescription="@null"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/ic_add"
+        android:visibility="gone" />
+
+</RelativeLayout>

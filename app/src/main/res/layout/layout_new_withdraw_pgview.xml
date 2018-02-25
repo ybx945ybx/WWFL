@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cl_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/img_progress_a"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:src="@mipmap/ic_check_orange"
+        app:layout_constraintEnd_toStartOf="@+id/img_line_a"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/img_line_a"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:scaleType="fitXY"
+        android:src="@mipmap/ic_progress_line_empty"
+        app:layout_constraintBottom_toBottomOf="@+id/img_progress_a"
+        app:layout_constraintEnd_toStartOf="@+id/img_progress_b"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/img_progress_a"
+        app:layout_constraintTop_toTopOf="@+id/img_progress_a" />
+
+    <ImageView
+        android:id="@+id/img_progress_b"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ic_yes_circle_grey"
+        app:layout_constraintEnd_toStartOf="@+id/img_line_b"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/img_line_a"
+        app:layout_constraintTop_toTopOf="@+id/img_progress_a" />
+
+    <ImageView
+        android:id="@+id/img_line_b"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:scaleType="fitXY"
+        android:src="@mipmap/ic_progress_line_empty"
+        app:layout_constraintBottom_toBottomOf="@+id/img_progress_b"
+        app:layout_constraintEnd_toStartOf="@+id/img_progress_c"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/img_progress_b"
+        app:layout_constraintTop_toTopOf="@+id/img_progress_b" />
+
+    <ImageView
+        android:id="@+id/img_progress_c"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:src="@mipmap/ic_dollar_circle_grey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/img_line_b"
+        app:layout_constraintTop_toTopOf="@+id/img_progress_b" />
+
+
+    <TextView
+        android:id="@+id/tv_progerss_a"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:layout_marginTop="6dp"
+        android:gravity="center"
+        android:textColor="@color/orangeFF804D"
+        android:textSize="@dimen/text_size_small"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/img_progress_a"
+        app:layout_constraintStart_toStartOf="@+id/img_progress_a"
+        app:layout_constraintTop_toBottomOf="@+id/img_progress_a"
+        tools:text="审核中" />
+
+    <TextView
+        android:id="@+id/tv_progerss_b"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:gravity="center"
+        android:textColor="@color/greyA5A5A8"
+        android:textSize="@dimen/text_size_small"
+        app:layout_constraintEnd_toEndOf="@+id/img_progress_b"
+        app:layout_constraintStart_toStartOf="@+id/img_progress_b"
+        app:layout_constraintTop_toBottomOf="@+id/img_progress_b"
+        tools:text="审核通过" />
+
+    <TextView
+        android:id="@+id/tv_progress_b_sub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:text="（待付款）"
+        android:textColor="@color/greyA5A5A8"
+        android:textSize="@dimen/text_size_smallsmall"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_progerss_b" />
+
+    <TextView
+        android:id="@+id/tv_progerss_c"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:gravity="center"
+        android:textColor="@color/greyA5A5A8"
+        android:textSize="@dimen/text_size_small"
+        app:layout_constraintEnd_toEndOf="@+id/img_progress_c"
+        app:layout_constraintStart_toStartOf="@+id/img_progress_c"
+        app:layout_constraintTop_toBottomOf="@+id/img_progress_c"
+        tools:text="提现成功" />
+
+</android.support.constraint.ConstraintLayout>
